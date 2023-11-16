@@ -39,7 +39,7 @@ const BusinessModel = () => {
 
     useEffect(() => {
         if(contentRef){
-            setVideoHeight(contentRef.current.clientHeight + 40)
+            setVideoHeight(contentRef.current.clientHeight)
         }
     }, [contentRef])
 
