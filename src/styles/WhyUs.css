@@ -1,0 +1,23 @@
+.why-us{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 140px;
+}
+.why-us_left{
+    width: 100%;
+    padding: 50px;
+    background-color: #FFED00;
+    display: grid;
+    row-gap: 45px;
+}
+.why-us_left-head{
+    width: 100%;
+    display: grid;
+    row-gap: 24px;
+}
+.why-us_right{
+    width: 100%;
+}
+.why-us_right-img{
+    width: 100%;
+}

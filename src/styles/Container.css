@@ -1,0 +1,31 @@
+.container{
+    padding: 0 360px;
+}
+@media(max-width: 1883px){
+    .container{
+        padding: 0 300px;
+    }
+}
+
+@media(max-width: 1647px){
+    .container{
+        padding: 0 250px;
+    }
+}
+
+@media(max-width: 1547px){
+    .container{
+        padding: 0 200px;
+    }
+}
+
+/*@media(max-width: 1663px){*/
+/*    .container{*/
+/*        padding: 0 200px;*/
+/*    }*/
+/*}*/
+/*@media(max-width: 1564px){*/
+/*    .container{*/
+/*        padding: 0 120px;*/
+/*    }*/
+/*}*/

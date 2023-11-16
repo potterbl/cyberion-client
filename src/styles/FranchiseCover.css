@@ -1,0 +1,51 @@
+.franchise-cover{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.franchise-cover_left{
+    z-index: 1;
+    display: grid;
+    row-gap: 58px;
+}
+.franchise-cover_left-head{
+    display: grid;
+    row-gap: 33px;
+}
+.franchise-cover_left-footer{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.franchise-cover_right{
+    display: inline-block;
+    position: relative;
+    width: 0;
+    height: 0;
+}
+.franchise-cover_right-image{
+    z-index: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    translate: 0 -50%;
+    width: 508px;
+    height: 476px;
+}
+.franchise-cover_right-image-background{
+    z-index: -1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    scale: 1.2;
+    translate: 0 -50%;
+    width: 508px;
+    height: 476px;
+    border-radius: 50%;
+    filter: blur(14px);
+    background: radial-gradient(#FFED00 30%, transparent 70%);
+}

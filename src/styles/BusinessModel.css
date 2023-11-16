@@ -1,0 +1,15 @@
+.business-model{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 89px 0;
+}
+.business-model_content{
+    grid-column: 2;
+    width: 100%;
+    display: grid;
+    row-gap: 20px;
+}
+.business-model_content-head{
+    text-transform: uppercase;
+}

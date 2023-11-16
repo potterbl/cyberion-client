@@ -1,0 +1,83 @@
+.philosophy{
+    padding: 75px 0 134px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+}
+.philosophy-left{
+    width: 100%;
+    display: grid;
+    row-gap: 20px;
+}
+.philosophy-left_head{
+    width: 100%;
+}
+.philosophy-left_body-list{
+    list-style-type: none;
+    padding-left: 20px;
+}
+.philosophy-left_body{
+    width: 100%;
+    display: grid;
+    row-gap: 50px;
+}
+.philosophy-right{
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 36px;
+    position: relative;
+}
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.slide-custom{
+    width: 100%;
+    height: 100%;
+    background-color: #AFAFAF;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.next-slide,
+.prev-slide{
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFED00;
+    background-position: center;
+    background-size: 9px auto;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.next-slide{
+    right: 20px;
+    background-image: url('../img/nextSlide.svg');
+}
+.prev-slide{
+    left: 20px;
+    background-image: url('../img/prevSlide.svg');
+}
+.swiper-custom-pagination{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.swiper-custom-bullet{
+    width: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #333333;
+    cursor: pointer;
+}
+.swiper-custom-bullet-active{
+    background-color: #FFED00;
+}
