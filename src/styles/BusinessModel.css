@@ -2,13 +2,18 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
     padding: 89px 0;
 }
+.business-model_video{
+    display: flex;
+    justify-content: flex-end;
+}
 .business-model_content{
-    grid-column: 2;
     width: 100%;
     display: grid;
     row-gap: 20px;
+    height: max-content;
 }
 .business-model_content-head{
     text-transform: uppercase;

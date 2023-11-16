@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import '../styles/BusinessModel.css'
 
 import {motion} from "framer-motion";
 
 const BusinessModel = () => {
+
+    const contentRef = useRef(null)
+    const youtubeRef = useRef(null)
+    const [videoHeight, setVideoHeight] = useState(0)
 
     const variants = {
         hidden: {
@@ -33,11 +37,23 @@ const BusinessModel = () => {
         }
     }
 
+    useEffect(() => {
+        if(contentRef){
+            setVideoHeight(contentRef.current.clientHeight + 40)
+        }
+    }, [contentRef])
+
     return (
         <div
             className={"business-model"}
         >
-            <div className="business-model_content">
+            <div className="business-model_video">
+                {
+                    contentRef &&
+                    <iframe ref={youtubeRef} height={`${videoHeight}`} style={{aspectRatio: '16/9'}} src="https://www.youtube.com/embed/N6qU-Fohhkk?si=zORCCZmZqq1DQ8Ml" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                }
+            </div>
+            <div className="business-model_content" ref={contentRef}>
                 <motion.h3
                     variants={variants}
                     className="business-model_content-head heading-smaller"
