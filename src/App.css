@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("./fonts/HelveticaNeueCyr-Medium.ttf") format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
