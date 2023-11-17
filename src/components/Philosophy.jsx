@@ -51,7 +51,6 @@ const Philosophy = () => {
                                 staggerChildren: 0.3
                             }}
                         >
-
                             <motion.li customDelay={1} variants={listVariants} className={"body-text"}>Широкі ігрові
                                 мекрежі
                             </motion.li>
