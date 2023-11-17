@@ -4,9 +4,8 @@
 }
 @media(max-width: 1200px){
     .container{
-        width: unset;
-        margin: unset;
-        padding: 0 360px;
+        width: calc(100% - 64px);
+        margin: 0 32px;
     }
 }
 

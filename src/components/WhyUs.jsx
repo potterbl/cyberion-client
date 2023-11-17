@@ -8,13 +8,15 @@ import {motion} from "framer-motion";
 const WhyUs = () => {
     const animationVariants = {
         hiddenParent: {
-            background: 'black',
+            opacity: 0,
+            clipPath: 'circle(0% at 50% 50%)'
         },
         visibleParent: {
             transition: {
-                duration: 5,
+                duration: 0.5,
             },
-            background: '#FFED00',
+            opacity: 1,
+            clipPath: 'circle(100% at 50% 50%)'
         },
         linkHidden: {
             x: -100,
@@ -33,7 +35,12 @@ const WhyUs = () => {
 
     return (
         <div className="why-us">
-            <div className="why-us_left">
+            <motion.div
+                className="why-us_left"
+                variants={animationVariants}
+                initial="hiddenParent"
+                whileInView="visibleParent"
+            >
                 <div className="why-us_left-head">
                     <h2 className="heading uppercase black-font">Чому ми обрали саме цю нішу</h2>
                     <p className="body-text-bigger black-font">
@@ -48,7 +55,7 @@ const WhyUs = () => {
                 <motion.div variants={animationVariants} initial="linkHidden" whileInView="linkVisible" className="why-us_left-footer">
                     <a href="https://t.me/Artem_Natanzon" className="body-text-bigger bold uppercase black-font">задати питання у telegram →</a>
                 </motion.div>
-            </div>
+            </motion.div>
             <div className="why-us_right">
                 <img src={whyImage} alt="" className="why-us_right-img"/>
             </div>
