@@ -98,7 +98,7 @@ const WhyUs = () => {
                         <br/>
                         тисни на кнопку нижче...<br/>
                     </p>
-                    <a href="#" className="body-text-bigger">Задати питання у Telegram→</a>
+                    <a href="https://t.me/Artem_Natanzon" className="body-text-bigger">Задати питання у Telegram→</a>
                 </motion.div>
 
             </div>
