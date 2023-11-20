@@ -6,9 +6,8 @@ import {motion} from "framer-motion";
 
 const BusinessModel = () => {
 
-    const contentRef = useRef(null)
-    const youtubeRef = useRef(null)
-    const [videoHeight, setVideoHeight] = useState(0)
+    const videoContainerRef = useRef(null)
+    const [videoWidth, setVideoWidth] = useState(0)
 
     const variants = {
         hidden: {
@@ -38,22 +37,22 @@ const BusinessModel = () => {
     }
 
     useEffect(() => {
-        if(contentRef){
-            setVideoHeight(contentRef.current.clientHeight)
+        if(videoContainerRef){
+            setVideoWidth(videoContainerRef.current.clientWidth)
         }
-    }, [contentRef])
+    }, [videoContainerRef])
 
     return (
         <div
             className={"business-model"}
         >
-            <div className="business-model_video">
+            <div className="business-model_video" ref={videoContainerRef}>
                 {
-                    contentRef &&
-                    <iframe ref={youtubeRef} height={`${videoHeight}`} style={{aspectRatio: '16/9'}} src="https://www.youtube.com/embed/N6qU-Fohhkk?si=zORCCZmZqq1DQ8Ml" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    videoContainerRef &&
+                    <iframe width={`${videoWidth}`} style={{aspectRatio: '16/9'}} src="https://www.youtube.com/embed/N6qU-Fohhkk?si=zORCCZmZqq1DQ8Ml" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 }
             </div>
-            <div className="business-model_content" ref={contentRef}>
+            <div className="business-model_content">
                 <motion.h3
                     variants={variants}
                     className="business-model_content-head heading-smaller"

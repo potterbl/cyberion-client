@@ -2,64 +2,119 @@ import React from 'react';
 
 import '../styles/WhyUs.css'
 
-import whyImage from '../img/whyUs.png'
+import whyImage from '../img/whyUsPeople.png'
 import {motion} from "framer-motion";
 
 const WhyUs = () => {
-    const animationVariants = {
-        hiddenParent: {
-            opacity: 0,
-            clipPath: 'circle(0% at 50% 50%)'
-        },
-        visibleParent: {
-            transition: {
-                duration: 0.5,
-            },
-            opacity: 1,
-            clipPath: 'circle(100% at 50% 50%)'
-        },
-        linkHidden: {
-            x: -100,
+
+    const containerAnimation= {
+        initial: {
+            scaleX: 0,
             opacity: 0,
         },
-        linkVisible: {
-            x: 0,
+        visible: {
+            scaleX: 1,
             opacity: 1,
             transition: {
-                duration: 1,
-                type: "spring",
-                bounce: 0.4
+                duration: 0.35,
             }
         }
     }
 
+    const circleAnimation = {
+        initial: {
+            opacity: 0.15,
+            x: "-100%"
+        },
+        visible: {
+            bounce: 0.5,
+            opacity: 1,
+            x: 0,
+            transition: {
+                type: "spring",
+                bounce: 0.3,
+                delay: 0.5,
+                duration: 0.6,
+            }
+        }
+    }
+
+    const textAnimation = {
+        initial: {
+            opacity: 0,
+            x: "-100%"
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: 0.9
+            }
+        }
+    }
+
+    const imageAnimation = {
+        initial: {
+            y: "100%",
+            opacity: 0
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.25,
+                delay: 0.9,
+            },
+        }
+    }
+
     return (
-        <div className="why-us">
-            <motion.div
-                className="why-us_left"
-                variants={animationVariants}
-                initial="hiddenParent"
-                whileInView="visibleParent"
-            >
-                <div className="why-us_left-head">
-                    <h2 className="heading uppercase black-font">Чому ми обрали саме цю нішу</h2>
-                    <p className="body-text-bigger black-font">
-                        Давайте разом проаналізуємо, як
-                        ми прийшли до рішення
-                        відкриття кіберспортивних клубів,
-                        що наштовхнуло на це і які
-                        можливості існують у цьому бізнесі
+        <motion.div
+            className="why-us"
+            initial="initial"
+            whileInView="visible"
+            variants={containerAnimation}
+        >
+            <div className="why-us_left">
+                <motion.div
+                    className="why-us_left-inner"
+                    variants={textAnimation}
+                >
+                    <h2 className="heading span-yellow uppercase">
+                        ЧОМУ МИ<br/>
+                        ОБРАЛИ САМЕ<br/>
+                        ЦЮ НІШУ?<br/>
+                    </h2>
+                    <p className="body-text">
+                        Давайте разом проаналізуємо, як<br/>
+                        ми прийшли до рішення<br/>
+                        відкриття кіберспортивних клубів,<br/>
+                        що наштовхнуло на це і які<br/>
+                        можливості існують у цьому бізнесі<br/>
                     </p>
-                    <p className="body-text black-font">Якщо ти вже знаєш чому цей бізнес актуальний, тисни на кнопку нижче...</p>
-                </div>
-                <motion.div variants={animationVariants} initial="linkHidden" whileInView="linkVisible" className="why-us_left-footer">
-                    <a href="https://t.me/Artem_Natanzon" className="body-text-bigger bold uppercase black-font">задати питання у telegram →</a>
+                    <p className="body-text">
+                        Якщо ти вже знаєш чому цей бізнес актуальний,<br/>
+                        <br/>
+                        тисни на кнопку нижче...<br/>
+                    </p>
+                    <a href="#" className="body-text-bigger">Задати питання у Telegram→</a>
                 </motion.div>
-            </motion.div>
-            <div className="why-us_right">
-                <img src={whyImage} alt="" className="why-us_right-img"/>
+
             </div>
-        </div>
+            <div className="why-us_right">
+                <motion.div
+                    className="why-us_right-circle"
+                    variants={circleAnimation}
+                >
+                </motion.div>
+            </div>
+            <motion.img
+                src={whyImage}
+                className="why-us_image"
+                variants={imageAnimation}
+            />
+        </motion.div>
     );
 };
 

@@ -1,0 +1,12 @@
+.cybersport{
+    display: grid;
+    grid-template-columns: max-content auto;
+    padding: 56px 0 125px 0;
+}
+.cybersport-left{
+    width: max-content;
+    padding: 58px 117px 133px 0;
+}
+.cybersport-right_image{
+    width: 100%;
+}

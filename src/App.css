@@ -27,32 +27,29 @@ button{
 }
 .title{
     font-size: 80px;
-    font-weight: 700;
-    line-height: 90px;
+    font-weight: bold;
+    line-height: 100%;
     text-transform: uppercase;
 }
 .heading{
-    font-weight: 700;
-    line-height: 52px;
-    font-size: 47px;
+    font-weight: bold;
+    line-height: 100%;
+    font-size: 60px;
 }
 .heading-smaller{
-    font-weight: 700;
-    line-height: 44px;
-    font-size: 36px;
-}
-.body-text{
-    color: #AFAFAF;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-weight: bold;
+    line-height: 100%;
+    font-size: 40px;
 }
 .body-text-bigger{
-    color: black;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
+     font-size: 30px;
+     line-height: 100%;
+ }
+.body-text{
+    font-size: 18px;
+    line-height: 120%;
 }
+
 .bold{
     font-weight: bold;
 }

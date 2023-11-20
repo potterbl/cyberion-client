@@ -7,6 +7,9 @@ import FranchiseCover from "../components/FranchiseCover";
 import BusinessModel from "../components/BusinessModel";
 import Philosophy from "../components/Philosophy";
 import WhyUs from "../components/WhyUs";
+import Proposition from "../components/Proposition";
+import CyberSport from "../components/CyberSport";
+import Infrastructure from "../components/Infrastructure";
 
 const FranchisePage = () => {
     return (
@@ -16,6 +19,9 @@ const FranchisePage = () => {
                 <BusinessModel/>
                 <Philosophy/>
                 <WhyUs/>
+                <Proposition/>
+                <CyberSport/>
+                <Infrastructure/>
             </div>
         </Container>
     );
