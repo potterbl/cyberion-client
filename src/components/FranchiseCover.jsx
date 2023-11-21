@@ -4,7 +4,6 @@ import '../styles/FranchiseCover.css'
 
 import cover from '../img/FranchiseCover.png'
 
-import CustomButton from "./CustomButton";
 import {motion, useScroll, useTransform} from "framer-motion";
 import Btn from "./Btn";
 
