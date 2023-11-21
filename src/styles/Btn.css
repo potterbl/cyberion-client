@@ -1,0 +1,25 @@
+
+.btn{
+    padding: 20px 60px;
+    border-radius: 80px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+.btn-primary{
+    background-color: #ffed00;
+    color: black;
+    font-weight: bold;
+}
+.btn-primary:disabled{
+    background-color: #171717;
+    color: #333;
+}
+.primary-active{
+    background-color: transparent;
+}
+.btn-second{
+    border: 1px solid #ffed00;
+    color: #ffed00;
+}

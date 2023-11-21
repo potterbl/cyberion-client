@@ -62,41 +62,4 @@ button{
 .black-font{
     color: black;
 }
-.primary-button{
-    font-weight: 700;
-    font-size: 16px;
-    color: black;
-    background-color: #FFED00;
-    border-radius: 80px;
-    padding: 20px 60px;
-    transition: all .3s ease;
-    width: max-content;
-    height: max-content;
-}
-.primary-button:hover{
-    background-color: #FFFAB5;
-}
-.primary-button:active{
-    color: #FFED00;
-    background-color: #000;
-}
-.primary-button:disabled{
-    color: #333333;
-    background-color: #171717;
-}
-.secondary-button{
-    font-weight: 700;
-    font-size: 16px;
-    color: #FFED00;
-    background-color: transparent;
-    border: 1px solid #FFED00;
-    border-radius: 80px;
-    padding: 20px 60px;
-    transition: all .3s ease;
-    width: max-content;
-    height: max-content;
-}
-.secondary-button:active{
-    color: black;
-    background-color: #FFED00;
-}
+

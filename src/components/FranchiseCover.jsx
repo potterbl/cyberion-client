@@ -6,6 +6,7 @@ import cover from '../img/FranchiseCover.png'
 
 import CustomButton from "./CustomButton";
 import {motion, useScroll, useTransform} from "framer-motion";
+import Btn from "./Btn";
 
 const FranchiseCover = () => {
     const coverRef = useRef(null);
@@ -42,12 +43,12 @@ const FranchiseCover = () => {
                     </p>
                 </div>
                 <div className="franchise-cover_left-footer">
-                    <CustomButton customStyle={'primary-button'}>
+                    <Btn type={'primary'}>
                         Відкрити власний клуб
-                    </CustomButton>
-                    <CustomButton customStyle={'secondary-button'}>
+                    </Btn>
+                    <Btn type={'second'}>
                         Задати питання у телеграм
-                    </CustomButton>
+                    </Btn>
                 </div>
             </div>
             <div className="franchise-cover_right">
