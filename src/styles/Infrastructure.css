@@ -23,17 +23,25 @@
     display: flex;
     align-items: flex-end;
     padding: 14px;
+    overflow: hidden;
 }
-.infrastructure-right_box::before {
-    content: "";
+.infrastructure-right_box-gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent 62.5%, #FF0F0F 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.infrastructure-right_box-image{
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.5%, #FF0F0F 100%);
-    background-size: cover;
-    z-index: 1;
+    z-index: 0;
 }
 .infrastructure-right_box-content_x{
     height: 46px;

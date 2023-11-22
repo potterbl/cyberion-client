@@ -18,8 +18,8 @@ const Btn = (props) => {
             }
         },
         hover: {
-            backgroundImage: 'radial-gradient(#FFFAB5 0% 100%)',
-            backgroundSize: '100% 100%',
+            backgroundImage: 'radial-gradient(#FFFAB5 0% 50%, transparent 75%)',
+            backgroundSize: '200% 200%',
             transition: {
                 duration: 0.25
             }
@@ -27,7 +27,7 @@ const Btn = (props) => {
         click: {
             backgroundImage: 'radial-gradient(transparent)',
             backgroundPosition: '50% 50%',
-            backgroundSize: '0% 100%',
+            backgroundSize: '0% 00%',
             color: '#FFED00',
             transition: {
                 duration: 0.025
@@ -38,14 +38,14 @@ const Btn = (props) => {
     const secondAnimations = {
         initial: {
             backgroundPosition: '50% 50%',
-            backgroundSize: '0% 100%',
+            backgroundSize: '0% 150%',
             backgroundImage: 'radial-gradient(transparent)',
         },
         hover: {
         },
         click: {
-            backgroundSize: '100% 100%',
-            backgroundImage: 'radial-gradient(#FFED00 0% 100%)',
+            backgroundSize: '200% 200%',
+            backgroundImage: 'radial-gradient(#FFED00 50%, transparent 50%)',
             color: 'black',
             transition: {
                 duration: 0.025
