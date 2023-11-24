@@ -4,8 +4,8 @@
 }
 @media(max-width: 1200px){
     .container{
-        width: calc(100% - 64px);
-        margin: 0 32px;
+        width: calc(100% - 144px);
+        margin: 0 auto;
     }
 }
 

@@ -60,8 +60,18 @@ const BusinessModel = () => {
                     whileInView="visible"
                 >
                         <span className="span-yellow">
-                            Готова бізнес-модель та<br/>
-                            стандарти роботи для вашого<br/>
+                            Готова бізнес
+                            {
+                                window.innerWidth < 1200 &&
+                                <br/>
+                            }
+                            -модель та<br/>
+                            стандарти роботи
+                            {
+                                window.innerWidth < 1200 &&
+                                <br/>
+                            }
+                            для вашого<br/>
                             розвитку<br/>
                         </span>
                 </motion.h3>

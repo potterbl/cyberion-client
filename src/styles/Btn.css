@@ -1,5 +1,6 @@
 
 .btn{
+    width: max-content;
     padding: 20px 60px;
     border-radius: 80px;
     box-sizing: border-box;
@@ -22,4 +23,9 @@
 .btn-second{
     border: 1px solid #ffed00;
     color: #ffed00;
+}
+@media (max-width: 1200px) {
+    .btn {
+        padding: 14px 22px;
+    }
 }

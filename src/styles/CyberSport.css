@@ -10,3 +10,13 @@
 .cybersport-right_image{
     width: 100%;
 }
+@media (max-width: 1200px){
+    .cybersport{
+        align-items: center;
+    }
+    .cybersport-left{
+        align-self: center;
+        height: max-content;
+        padding: 0 32px 0 0;
+    }
+}

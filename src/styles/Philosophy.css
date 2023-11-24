@@ -82,3 +82,15 @@
 .swiper-custom-bullet-active{
     background-color: #FFED00;
 }
+@media (max-width: 1200px) {
+    .philosophy{
+        padding: 75px 0 134px 0;
+        display: grid;
+        grid-template-columns: unset;
+        column-gap: 40px;
+        row-gap: 24px;
+    }
+    .philosophy-right{
+        aspect-ratio: 4/3;
+    }
+}

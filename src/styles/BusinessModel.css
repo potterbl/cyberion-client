@@ -17,3 +17,8 @@
 .business-model_video{
     width: 100%;
 }
+@media (max-width: 1200px) {
+    .business-model_content{
+        width: max-content;
+    }
+}

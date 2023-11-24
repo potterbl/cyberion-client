@@ -27,7 +27,7 @@ const Btn = (props) => {
         click: {
             backgroundImage: 'radial-gradient(transparent)',
             backgroundPosition: '50% 50%',
-            backgroundSize: '0% 00%',
+            backgroundSize: '0% 100%',
             color: '#FFED00',
             transition: {
                 duration: 0.025

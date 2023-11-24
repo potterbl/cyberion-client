@@ -25,7 +25,7 @@ const FranchiseCover = () => {
             <div className="franchise-cover_left">
                 <div className="franchise-cover_left-head">
                     <motion.h1
-                        className="title"
+                        className="title uppercase"
                         style={{
                             opacity: coverRef.current ? opacity : 0
                         }}

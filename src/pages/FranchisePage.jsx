@@ -10,6 +10,9 @@ import WhyUs from "../components/WhyUs";
 import Proposition from "../components/Proposition";
 import CyberSport from "../components/CyberSport";
 import Infrastructure from "../components/Infrastructure";
+import NewFormat from "../components/NewFormat";
+import YellowSection from "../components/YellowSection";
+import OurExperience from "../components/OurExperience";
 
 const FranchisePage = () => {
     return (
@@ -22,6 +25,9 @@ const FranchisePage = () => {
                 <Proposition/>
                 <CyberSport/>
                 <Infrastructure/>
+                <NewFormat/>
+                <YellowSection/>
+                <OurExperience/>
             </div>
         </Container>
     );

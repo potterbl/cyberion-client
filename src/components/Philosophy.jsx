@@ -36,37 +36,37 @@ const Philosophy = () => {
                     </h2>
                 </div>
                 <div className="philosophy-left_body">
-                    <p className={"body-text"}>
+                    <p className={"body-text gray-text"}>
                         Ми використали весь наш досвід та існуючі тенденції, для
                         того, щоб створити ідеальне місце для тренувань з
                         кіберспорту та просто відпочинку.
                     </p>
                     <div className="philosophy-left_body-list-wrapper">
-                        <p className={"body-text bold uppercase"}>наші переваги:</p>
+                        <p className={"body-text bold uppercase gray-text"}>наші переваги:</p>
                         <motion.ul
-                            className={"philosophy-left_body-list"}
+                            className={"philosophy-left_body-list gray-text"}
                             initial="hidden"
                             whileInView="visible"
                             transition={{
                                 staggerChildren: 0.3
                             }}
                         >
-                            <motion.li customDelay={1} variants={listVariants} className={"body-text"}>Широкі ігрові
+                            <motion.li customDelay={1} variants={listVariants} className={"body-text gray-text"}>Широкі ігрові
                                 мекрежі
                             </motion.li>
-                            <motion.li customDelay={2} variants={listVariants} className={"body-text"}>Потужні Ігрові
+                            <motion.li customDelay={2} variants={listVariants} className={"body-text gray-text"}>Потужні Ігрові
                                 ПК
                             </motion.li>
-                            <motion.li customDelay={3} variants={listVariants} className={"body-text"}>Комфортні
+                            <motion.li customDelay={3} variants={listVariants} className={"body-text gray-text"}>Комфортні
                                 крісла
                             </motion.li>
-                            <motion.li customDelay={4} variants={listVariants} className={"body-text"}>Найкраще
+                            <motion.li customDelay={4} variants={listVariants} className={"body-text gray-text"}>Найкраще
                                 обладнання від топових постачальників
                             </motion.li>
-                            <motion.li customDelay={5} variants={listVariants} className={"body-text"}>Буткемпи для
+                            <motion.li customDelay={5} variants={listVariants} className={"body-text gray-text"}>Буткемпи для
                                 тренувань
                             </motion.li>
-                            <motion.li customDelay={6} variants={listVariants} className={"body-text"}>Комфортні TV зони
+                            <motion.li customDelay={6} variants={listVariants} className={"body-text gray-text"}>Комфортні TV зони
                                 з PS5
                             </motion.li>
                         </motion.ul>

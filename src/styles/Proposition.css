@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 52px 0 160px 0;
-    overflow: hidden;
 }
 .proposition_left{
     display: grid;
@@ -48,4 +47,9 @@
     translate: -32px 0;
     inset: 0;
     width: 232px;
+}
+@media (max-width: 1200px) {
+    .proposition{
+        grid-template-columns: max-content auto;
+    }
 }

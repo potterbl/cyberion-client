@@ -81,7 +81,7 @@ const WhyUs = () => {
                     className="why-us_left-inner"
                     variants={textAnimation}
                 >
-                    <h2 className="heading span-yellow uppercase">
+                    <h2 className={`${window.innerWidth < 1200 ? 'heading-smaller' : 'heading'} span-yellow uppercase`}>
                         ЧОМУ МИ<br/>
                         ОБРАЛИ САМЕ<br/>
                         ЦЮ НІШУ?<br/>

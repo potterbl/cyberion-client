@@ -11,11 +11,19 @@ const CyberSport = () => {
                 <h3 className="heading-smaller">
                     <span className="span-yellow">
                     В 2020 РОЦІ<br/>
-                    КІБЕРСПОРТ<br/>
+                    КІБЕРСПОРТ
+                        {
+                            window.innerWidth > 1200 &&
+                            <br/>
+                        }
                     В УКРАЇНІ<br/>
                     </span>
                     ОФІЦІЙНО<br/>
-                    ВИЗНАНО<br/>
+                    ВИЗНАНО
+                    {
+                        window.innerWidth > 1200 &&
+                        <br/>
+                    }
                     ВИДОМ СПОРТУ<br/>
                 </h3>
             </div>
