@@ -75,7 +75,7 @@ const Infrastructure = () => {
                         variants={textAnimation}
                     >
                         <img src={x} alt="" className="infrastructure-right_box-content_x"/>
-                        <p className={`${window.innerWidth > 1200 ? 'body-text-bigger' : 'body-text-card'} uppercase`}>
+                        <p className={`body-text-card uppercase`}>
                             поганий<br/>
                             сервіс
                         </p>
@@ -98,7 +98,7 @@ const Infrastructure = () => {
                         variants={textAnimation}
                     >
                         <img src={x} alt="" className="infrastructure-right_box-content_x"/>
-                        <p className={`${window.innerWidth > 1200 ? 'body-text-bigger' : 'body-text-card'} uppercase`}>
+                        <p className={`body-text-card uppercase`}>
                             старе<br/>
                             обладнання
                         </p>
@@ -121,7 +121,7 @@ const Infrastructure = () => {
                         variants={textAnimation}
                     >
                         <img src={x} alt="" className="infrastructure-right_box-content_x"/>
-                        <p className={`${window.innerWidth > 1200 ? 'body-text-bigger' : 'body-text-card'} uppercase`}>
+                        <p className={`body-text-card uppercase`}>
                             немає<br/>
                             атмосфери
                         </p>
@@ -144,7 +144,7 @@ const Infrastructure = () => {
                         variants={textAnimation}
                     >
                         <img src={x} alt="" className="infrastructure-right_box-content_x"/>
-                        <p className={`${window.innerWidth > 1200 ? 'body-text-bigger' : 'body-text-card'} uppercase`}>
+                        <p className={`body-text-card uppercase`}>
                             відсутні<br/>
                             турніри
                         </p>

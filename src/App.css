@@ -67,6 +67,9 @@ button{
 .break-word{
     word-break: break-word;
 }
+.body-text-card{
+    font-size: 28px;
+}
 @media (max-width: 1200px) {
     .title{
         font-size: 60px;
@@ -87,10 +90,9 @@ button{
         font-size: 16px;
     }
 }
-@media(max-width: 1024px){
-
+@media(max-width: 1077px){
     .body-text-card{
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 @media (max-width: 1000px) {
