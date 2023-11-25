@@ -19,6 +19,15 @@
 }
 @media (max-width: 1200px) {
     .business-model_content{
-        width: max-content;
+        width: 100%;
+    }
+}
+@media(max-width: 1000px){
+    .business-model{
+        display: grid;
+        grid-template-columns: unset;
+        column-gap: unset;
+        row-gap: 30px;
+        padding: 89px 0;
     }
 }

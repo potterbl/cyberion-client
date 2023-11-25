@@ -49,3 +49,19 @@
     filter: blur(14px);
     background: radial-gradient(#FFED00 30%, transparent 70%);
 }
+@media(max-width: 1000px){
+    .franchise-cover_right-image{
+        translate: 50% -50%;
+    }
+    .franchise-cover_right-image-background{
+        translate: 50% -50%;
+    }
+}
+@media (max-width: 800px) {
+    .franchise-cover_right-image{
+        translate: 75% -50%;
+    }
+    .franchise-cover_right-image-background{
+        translate: 75% -50%;
+    }
+}

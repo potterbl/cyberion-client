@@ -22,3 +22,9 @@
 .new-format_body-img{
     width: 100%;
 }
+@media (max-width: 858px) {
+    .new-format_body{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+}

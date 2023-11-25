@@ -64,7 +64,9 @@ button{
 .black-font{
     color: black;
 }
-
+.break-word{
+    word-break: break-word;
+}
 @media (max-width: 1200px) {
     .title{
         font-size: 60px;
@@ -83,5 +85,26 @@ button{
     }
     .body-text{
         font-size: 16px;
+    }
+}
+@media(max-width: 1024px){
+
+    .body-text-card{
+        font-size: 14px;
+    }
+}
+@media (max-width: 1000px) {
+    .body-text-card{
+        font-size: 36px;
+    }
+}
+@media (max-width: 926px) {
+    .body-text-card{
+        font-size: 28px;
+    }
+}
+@media (max-width: 791px) {
+    .body-text-card{
+        font-size: 24px;
     }
 }

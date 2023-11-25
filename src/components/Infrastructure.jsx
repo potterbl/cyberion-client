@@ -41,7 +41,7 @@ const Infrastructure = () => {
                     <span className="span-yellow">гравці є</span> -
                     інфраструктури немає
                 </h2>
-                <p className="body-text">
+                <p className="body-text gray-text">
                     На кожне велике місто в середньому припадає<br/>
                     лише 1 комп'ютерний клуб старого формату.
                 </p>

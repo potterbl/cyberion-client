@@ -27,9 +27,25 @@ const WhyUs = () => {
             x: "-100%"
         },
         visible: {
-            bounce: 0.5,
             opacity: 1,
             x: 0,
+            transition: {
+                type: "spring",
+                bounce: 0.3,
+                delay: 0.5,
+                duration: 0.6,
+            }
+        }
+    }
+
+    const circleMobileAnimation = {
+        initial: {
+            opacity: 0,
+            y: '100%'
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
             transition: {
                 type: "spring",
                 bounce: 0.3,
@@ -81,7 +97,7 @@ const WhyUs = () => {
                     className="why-us_left-inner"
                     variants={textAnimation}
                 >
-                    <h2 className={`${window.innerWidth < 1200 ? 'heading-smaller' : 'heading'} span-yellow uppercase`}>
+                    <h2 className={`${window.innerWidth <= 1000 ? 'heading' : window.innerWidth <= 1200 ? 'heading-smaller' : 'heading'} span-yellow uppercase`}>
                         ЧОМУ МИ<br/>
                         ОБРАЛИ САМЕ<br/>
                         ЦЮ НІШУ?<br/>
@@ -105,7 +121,7 @@ const WhyUs = () => {
             <div className="why-us_right">
                 <motion.div
                     className="why-us_right-circle"
-                    variants={circleAnimation}
+                    variants={window.innerWidth > 1000 ? circleAnimation : circleMobileAnimation}
                 >
                 </motion.div>
             </div>

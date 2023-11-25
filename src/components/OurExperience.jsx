@@ -14,8 +14,22 @@ const OurExperience = () => {
         <div className="our-experience">
             <div className="our-experience_head">
                 <h3 className="heading-smaller">
-                    НАША КОМАНДА МАЄ ВЕЛИКИЙ<br/>
-                    ДОСВІД ВІДКРИТТЯ КІБЕР КЛУБІВ
+                    НАША КОМАНДА МАЄ
+                    {
+                        window.innerWidth <= 1000 &&
+                        <br/>
+                    }
+                    ВЕЛИКИЙ
+                    {
+                        window.innerWidth > 1000 &&
+                        <br/>
+                    }
+                    ДОСВІД
+                    {
+                        window.innerWidth <= 1000 &&
+                        <br/>
+                    }
+                    ВІДКРИТТЯ КІБЕР КЛУБІВ
                 </h3>
                 <div className="our-experience_head-container_right">
                     <p className="our-experience_nine span-yellow">
@@ -34,68 +48,145 @@ const OurExperience = () => {
                 </div>
             </div>
             <div className="our-experience_body">
-                <div className="our-experience_body-progressbar">
-                    <div className="our-experience_body-progressbar_container">
-                        <div className="our-experience_body-progressbar_circle"></div>
-                        <p className="body-text bold">
-                            2018-2020
-                        </p>
-                    </div>
-                    <div className="our-experience_body-progressbar_container">
-                        <div className="our-experience_body-progressbar_circle"></div>
-                        <p className="body-text bold">
-                            2021
-                        </p>
-                    </div>
-                    <div className="our-experience_body-progressbar_container">
-                        <div className="our-experience_body-progressbar_circle"></div>
-                        <p className="body-text bold">
-                            2022
-                        </p>
-                    </div>
-                    <div className="our-experience_body-progressbar_container">
-                        <div className="our-experience_body-progressbar_circle"></div>
-                        <p className="body-text bold">
-                            2023
-                        </p>
-                    </div>
-                </div>
-                <div className="our-experience_body-text">
-                    <div className="our-experience_body-text_container">
-                        <p className="body-text gray-text">
-                            Збудували найбільшу мережу<br/>
-                            кібер клубів України власноруч, 5<br/>
-                            закладів відкриті та продовжують<br/>
-                            успішно працювати навіть в<br/>
-                            період пандемії та війни<br/>
-                        </p>
-                    </div>
-                    <div className="our-experience_body-text_container">
-                        <p className="body-text gray-text">
-                            Опрацювання всього досвіду<br/>
-                            ведення мережі та допущених<br/>
-                            помилок, прийняття рішення про<br/>
-                            створення Франшизи CYBERION,<br/>
-                            розробка брендбуку та стандартів<br/>
-                        </p>
-                    </div>
-                    <div className="our-experience_body-text_container">
-                        <p className="body-text gray-text">
-                            Відкриття трьох нових<br/>
-                            кіберспортивних клубів<br/>
-                            під брендом CYBERION!<br/>
-                        </p>
-                    </div>
-                    <div className="our-experience_body-text_container">
-                        <p className="body-text gray-text">
-                            Відкриття нового клубу<br/>
-                            під брендом CYBERION<br/>
-                            в Києві на КПІ та<br/>
-                            будівництво ще трьох<br/>
-                            нових клубів<br/>
-                        </p>
-                    </div>
-                </div>
+                {
+                    window.innerWidth > 858 ?
+                        <>
+                            <div className="our-experience_body-progressbar">
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2018-2020
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2021
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2022
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="our-experience_body-text">
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Збудували найбільшу мережу<br/>
+                                        кібер клубів України власноруч, 5<br/>
+                                        закладів відкриті та продовжують<br/>
+                                        успішно працювати навіть в<br/>
+                                        період пандемії та війни<br/>
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Опрацювання всього досвіду<br/>
+                                        ведення мережі та допущених<br/>
+                                        помилок, прийняття рішення про<br/>
+                                        створення Франшизи CYBERION,<br/>
+                                        розробка брендбуку та стандартів<br/>
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Відкриття трьох нових<br/>
+                                        кіберспортивних клубів<br/>
+                                        під брендом CYBERION!<br/>
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Відкриття нового клубу<br/>
+                                        під брендом CYBERION<br/>
+                                        в Києві на КПІ та<br/>
+                                        будівництво ще трьох<br/>
+                                        нових клубів<br/>
+                                    </p>
+                                </div>
+                            </div>
+                        </>
+                        :
+                        <>
+                            <div className="our-experience_body-progressbar">
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2018-2020
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2021
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="our-experience_body-text">
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Збудували найбільшу мережу
+                                        кібер клубів України власноруч, 5
+                                        закладів відкриті та продовжують
+                                        успішно працювати навіть в
+                                        період пандемії та війни
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Опрацювання всього досвіду
+                                        ведення мережі та допущених
+                                        помилок, прийняття рішення про
+                                        створення Франшизи CYBERION,
+                                        розробка брендбуку та стандартів
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="our-experience_body-progressbar">
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2022
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-progressbar_container">
+                                    <div className="our-experience_body-progressbar_circle"></div>
+                                    <p className="body-text bold">
+                                        2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="our-experience_body-text">
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Відкриття трьох нових
+                                        кіберспортивних клубів
+                                        під брендом CYBERION!
+                                    </p>
+                                </div>
+                                <div className="our-experience_body-text_container">
+                                    <p className="body-text gray-text">
+                                        Відкриття нового клубу
+                                        під брендом CYBERION
+                                        в Києві на КПІ та
+                                        будівництво ще трьох
+                                        нових клубів
+                                    </p>
+                                </div>
+                            </div>
+                        </>
+                }
+
+
             </div>
             <div className="our-experience_footer">
                 <img src={ourTeam1} alt="our-team" className="our-experience_footer-image"/>

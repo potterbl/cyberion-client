@@ -2,6 +2,7 @@
     padding: 84px 0;
     display: grid;
     row-gap: 73px;
+    width: 100%;
 }
 .our-experience_head{
     display: flex;
@@ -61,11 +62,26 @@
     width: 100%;
 }
 .our-experience_footer{
-    display: flex;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: flex-end;
     column-gap: 20px;
 }
 .our-experience_footer-image{
-    width: 129px;
+    width: 100%;
+}
+@media (max-width: 1000px) {
+    .our-experience_head{
+        width: 100%;
+    }
+}
+@media (max-width: 858px) {
+    .our-experience_body-progressbar{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .our-experience_body-text{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

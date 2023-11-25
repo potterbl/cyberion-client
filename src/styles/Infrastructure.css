@@ -52,9 +52,37 @@
     height: max-content;
     column-gap: 14px;
     z-index: 2;
+    word-break: break-word;
 }
 @media (max-width: 1200px){
     .infrastructure-left{
         align-self: center;
+    }
+    .infrastructure-right_box-content_x{
+        height: 40px;
+    }
+}
+@media (max-width: 1024px){
+    .infrastructure-right_box-content_x{
+        height: 35px;
+    }
+}
+@media (max-width: 1000px) {
+    .infrastructure{
+        grid-template-columns: unset;
+        row-gap: 30px;
+    }
+    .infrastructure-right_box-content_x{
+        height: 68px;
+    }
+}
+@media (max-width: 926px) {
+    .infrastructure-right_box-content_x{
+        height: 48px;
+    }
+}
+@media (max-width: 791px) {
+    .infrastructure-right_box-content_x{
+        height: 36px;
     }
 }

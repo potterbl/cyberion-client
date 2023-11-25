@@ -7,7 +7,11 @@ const YellowSection = () => {
 
     useEffect(() => {
         const updateSectionLeft = () => {
-            if (window && window.innerWidth <= 1200) {
+            if(window && window.innerWidth <= 702){
+                setSectionLeft(20)
+            } else if(window && window.innerWidth <= 1000) {
+                setSectionLeft(167 /2)
+            } else if (window && window.innerWidth <= 1200) {
                 setSectionLeft(72);
             } else {
                 setSectionLeft((window.innerWidth - 1200) / 2);

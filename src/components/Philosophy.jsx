@@ -27,7 +27,7 @@ const Philosophy = () => {
         <div className={"philosophy"}>
             <div className="philosophy-left">
                 <div className="philosophy-left_head">
-                    <h2 className="heading-smaller uppercase">
+                    <h2 className={`${window.innerWidth > 1000 ? 'heading-smaller' : 'heading'} uppercase`}>
                         наша філософія<br/>
                         <span className={"span-yellow"}>
                             Максимальний<br/>
