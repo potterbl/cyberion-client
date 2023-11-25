@@ -30,8 +30,9 @@ const YellowSection = () => {
                 <p className="body-text-bigger black-font bold">
                     Інвестиції від
                     {
-                        window.innerWidth < 1200 &&
+                        window.innerWidth < 1200 ?
                         <br/>
+                            : ' '
                     }
                     70 000 $
                 </p>
@@ -40,8 +41,9 @@ const YellowSection = () => {
                 <p className="body-text-bigger black-font bold">
                     Прибуток від
                     {
-                        window.innerWidth < 1200 &&
+                        window.innerWidth < 1200 ?
                         <br/>
+                            : ' '
                     }
                     5 000 $
                 </p>
@@ -50,8 +52,9 @@ const YellowSection = () => {
                 <p className="body-text-bigger black-font bold">
                     Окупність від
                     {
-                        window.innerWidth < 1200 &&
+                        window.innerWidth < 1200 ?
                         <br/>
+                            : ' '
                     }
                     14 місяців
                 </p>
