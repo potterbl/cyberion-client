@@ -78,7 +78,7 @@ const Proposition = () => {
                     <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-3">
                         <div className="proposition_right-col_circle-inner">
                             <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font bold`}>577 млн.</p>
-                            <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} bold`}>в 2024</p>
+                            <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font`}>в 2024</p>
                         </div>
                     </motion.div>
                 </div>
