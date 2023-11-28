@@ -8,14 +8,16 @@ import ButtonSlide from "./ButtonSlide";
 const VideoCarousel = () => {
 
     const [videos, setVideos] = useState([
+
+    ])
+
+    setVideos([
         {link: 'https://www.youtube.com/embed/4Uw_X6dLmfQ?si=36epocfBTJjYF-B7', title: ''},
         {link: 'https://www.youtube.com/embed/Z665kqXEGz4?si=6kdowOBpK7HddZ50', title: ''},
         {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
         {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
         {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
     ])
-
-    setVideos(videos)
 
     const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
 
@@ -28,7 +30,7 @@ const VideoCarousel = () => {
         .then((data) => {
             // const videos = data.items;
 
-            console.log(data)
+            // console.log(data)
 
             // const embedLinks = videos.map((video) => {
             //     return `https://www.youtube.com/embed/${video.id.videoId}`;
