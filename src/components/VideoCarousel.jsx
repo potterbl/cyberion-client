@@ -19,25 +19,25 @@ const VideoCarousel = () => {
         {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
     ])
 
-    const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
+    // const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
+    //
+    // const channelId = "UCSHRxvJENC5Hn71y4beRkcQ";
+    //
+    // const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=50&key=${API_KEY}`;
 
-    const channelId = "UCSHRxvJENC5Hn71y4beRkcQ";
-
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=50&key=${API_KEY}`;
-
-    fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-            // const videos = data.items;
-
-            // console.log(data)
-
-            // const embedLinks = videos.map((video) => {
-            //     return `https://www.youtube.com/embed/${video.id.videoId}`;
-            // });
-
-            // console.log(embedLinks);
-        });
+    // fetch(url)
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         // const videos = data.items;
+    //
+    //         // console.log(data)
+    //
+    //         // const embedLinks = videos.map((video) => {
+    //         //     return `https://www.youtube.com/embed/${video.id.videoId}`;
+    //         // });
+    //
+    //         // console.log(embedLinks);
+    //     });
 
     return (
         <div className="video-carousel">
