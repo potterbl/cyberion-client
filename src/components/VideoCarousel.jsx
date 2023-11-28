@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import '../styles/VideoCarousel.css'
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -11,13 +11,15 @@ const VideoCarousel = () => {
 
     ])
 
-    setVideos([
-        {link: 'https://www.youtube.com/embed/4Uw_X6dLmfQ?si=36epocfBTJjYF-B7', title: ''},
-        {link: 'https://www.youtube.com/embed/Z665kqXEGz4?si=6kdowOBpK7HddZ50', title: ''},
-        {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
-        {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
-        {link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: ''},
-    ])
+    useEffect(() => {
+        setVideos([
+            { link: 'https://www.youtube.com/embed/4Uw_X6dLmfQ?si=36epocfBTJjYF-B7', title: '' },
+            { link: 'https://www.youtube.com/embed/Z665kqXEGz4?si=6kdowOBpK7HddZ50', title: '' },
+            { link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: '' },
+            { link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: '' },
+            { link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: '' },
+        ]);
+    }, []);
 
     // const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
     //
@@ -60,7 +62,7 @@ const VideoCarousel = () => {
                             <SwiperSlide>
                                 <div className="video-carousel_slide">
                                     <iframe className="video-carousel_video" title={"v"} src={v.link}
-                                            frameBorder="0"></iframe>
+                                            frameBorder="0" allowFullScreen></iframe>
                                 </div>
                             </SwiperSlide>
                         ))
