@@ -7,10 +7,10 @@ const YellowSection = () => {
 
     useEffect(() => {
         const updateSectionLeft = () => {
-            if(window && window.innerWidth <= 702){
+            if(window && window.innerWidth <= 768){
+                setSectionLeft(80)
+            } else if(window && window.innerWidth <= 1024) {
                 setSectionLeft(20)
-            } else if(window && window.innerWidth <= 1000) {
-                setSectionLeft(167 /2)
             } else if (window && window.innerWidth <= 1200) {
                 setSectionLeft(72);
             } else {
@@ -30,7 +30,7 @@ const YellowSection = () => {
                 <p className="body-text-bigger black-font bold">
                     Інвестиції від
                     {
-                        window.innerWidth < 1200 ?
+                        window.innerWidth < 1200 && window.innerWidth > 768 ?
                         <br/>
                             : ' '
                     }
@@ -41,7 +41,7 @@ const YellowSection = () => {
                 <p className="body-text-bigger black-font bold">
                     Прибуток від
                     {
-                        window.innerWidth < 1200 ?
+                        window.innerWidth < 1200 && window.innerWidth > 768 ?
                         <br/>
                             : ' '
                     }
@@ -52,7 +52,7 @@ const YellowSection = () => {
                 <p className="body-text-bigger black-font bold">
                     Окупність від
                     {
-                        window.innerWidth < 1200 ?
+                        window.innerWidth < 1200 && window.innerWidth > 768 ?
                         <br/>
                             : ' '
                     }

@@ -1,0 +1,25 @@
+.video-carousel{
+    padding: 120px 0;
+    height: max-content;
+}
+.video-carousel_inner{
+    position: relative;
+    height: max-content;
+    z-index: 2;
+}
+.video-carousel_gradient{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, black 0%, transparent 20% 80%, black 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.video-carousel_video{
+    width: 100%;
+    aspect-ratio: 16/9;
+}

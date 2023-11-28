@@ -1,12 +1,32 @@
+.franchise-hero{
+    width: 100%;
+    height: max-content;
+    display: block;
+    max-width: 1300px;
+    clip-path: polygon(0% 0%, 120% 0%, 120% 100%, 0% 100%, 0% 0%);
+    position: relative;
+}
+.franchise-hero_gradient{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 5%;
+    background-image: linear-gradient(0deg, black 0%, transparent 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .franchise-cover{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 .franchise-cover_left{
-    z-index: 1;
     display: grid;
     row-gap: 58px;
 }
@@ -20,13 +40,12 @@
     align-items: center;
 }
 .franchise-cover_right{
-    display: inline-block;
     position: relative;
     width: 0;
     height: 0;
 }
 .franchise-cover_right-image{
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     display: block;
     top: 0;
@@ -36,15 +55,15 @@
     height: 476px;
 }
 .franchise-cover_right-image-background{
-    z-index: -1;
     position: absolute;
-    display: block;
     top: 0;
     right: 0;
-    scale: 1.2;
-    translate: 0 -50%;
+    z-index: -2;
+    display: block;
     width: 508px;
     height: 476px;
+    scale: 1.1;
+    translate: 0 -50%;
     border-radius: 50%;
     filter: blur(14px);
     background: radial-gradient(#FFED00 30%, transparent 70%);

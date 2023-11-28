@@ -37,7 +37,7 @@ const Infrastructure = () => {
     return (
         <div className="infrastructure">
             <div className="infrastructure-left">
-                <h2 className="heading uppercase">
+                <h2 className={`${window.innerWidth > 1024 ? 'heading' : 'heading-smaller'} uppercase`}>
                     <span className="span-yellow">гравці є</span> -
                     інфраструктури немає
                 </h2>

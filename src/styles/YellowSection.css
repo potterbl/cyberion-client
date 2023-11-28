@@ -18,3 +18,9 @@
     background-color: #ffed00;
     z-index: 0;
 }
+@media (max-width: 768px) {
+    .yellow-section{
+        grid-template-columns: unset;
+        row-gap: 45px;
+    }
+}

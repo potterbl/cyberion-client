@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 
 import '../styles/Philosophy.css'
 
@@ -6,11 +6,9 @@ import 'swiper/css'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
 import { motion } from "framer-motion";
+import ButtonSlide from "./ButtonSlide";
 
 const Philosophy = () => {
-    const prevSlideRef = useRef(null)
-    const nextSlideRef = useRef(null)
-
     const listVariants = {
         hidden: {
             opacity: 0,
@@ -27,11 +25,25 @@ const Philosophy = () => {
         <div className={"philosophy"}>
             <div className="philosophy-left">
                 <div className="philosophy-left_head">
-                    <h2 className={`${window.innerWidth > 1000 ? 'heading-smaller' : 'heading'} uppercase`}>
-                        наша філософія<br/>
+                    <h2 className="heading uppercase">
+                        наша філософія:
+                        {
+                            window.innerWidth >= 1024 || window.innerWidth <= 786 ?
+                            <br/>
+                                : ' '
+                        }
                         <span className={"span-yellow"}>
-                            Максимальний<br/>
-                            комфорт гравця<br/>
+                            Максимальний
+                            {
+                                window.innerWidth >= 1024 || window.innerWidth <= 786 ?
+                                    <br/>
+                                    : ' '
+                            }
+                            комфорт гравця
+                            {
+                                (window.innerWidth >= 1024 || window.innerWidth <= 786) &&
+                                <br/>
+                            }
                         </span>
                     </h2>
                 </div>
@@ -90,12 +102,12 @@ const Philosophy = () => {
                         type: "bullets"
                     }}
                     navigation={{
-                        nextEl: nextSlideRef.current,
-                        prevEl: prevSlideRef.current
+                        nextEl: '#nextSlidePhilosophy',
+                        prevEl: '#prevSlidePhilosophy'
                     }}
                     onBeforeInit={(swiper) => {
-                        swiper.params.navigation.prevEl = prevSlideRef.current
-                        swiper.params.navigation.nextEl = nextSlideRef.current
+                        swiper.params.navigation.prevEl = "#prevSlidePhilosophy"
+                        swiper.params.navigation.nextEl = "#nextSlidePhilosophy"
                     }}
                     style={{width: '100%', height: '100%'}}
                     spaceBetween={0}
@@ -117,12 +129,8 @@ const Philosophy = () => {
                             <span className="span-yellow bold heading">3</span>
                         </div>
                     </SwiperSlide>
-                    <button className="next-slide" ref={nextSlideRef}>
-
-                    </button>
-                    <button className="prev-slide" ref={prevSlideRef}>
-
-                    </button>
+                    <ButtonSlide type={'prev'} id={'prevSlidePhilosophy'}/>
+                    <ButtonSlide type={'next'} id={'nextSlidePhilosophy'}/>
 
                 </Swiper>
             </div>

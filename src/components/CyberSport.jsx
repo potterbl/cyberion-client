@@ -13,7 +13,7 @@ const CyberSport = () => {
                     В 2020 РОЦІ<br/>
                     КІБЕРСПОРТ
                         {
-                            window.innerWidth > 1200 &&
+                            window.innerWidth > 1024 &&
                             <br/>
                         }
                     В УКРАЇНІ<br/>
@@ -21,7 +21,7 @@ const CyberSport = () => {
                     ОФІЦІЙНО<br/>
                     ВИЗНАНО
                     {
-                        window.innerWidth > 1200 &&
+                        window.innerWidth > 1024 &&
                         <br/>
                     }
                     ВИДОМ СПОРТУ<br/>

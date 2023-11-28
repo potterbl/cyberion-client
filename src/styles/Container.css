@@ -1,6 +1,8 @@
 .container{
     width: calc(1920px - 720px);
     margin: 0 auto;
+    position: relative;
+    background-color: black;
 }
 @media(max-width: 1200px){
     .container{
@@ -8,15 +10,15 @@
         margin: 0 auto;
     }
 }
-@media(max-width: 1000px){
+@media(max-width: 1024px){
     .container{
-        width: calc(100% - 167px);
+        width: calc(100% - 40px);
         margin: 0 auto;
     }
 }
-@media (max-width: 702px) {
+@media (max-width: 768px) {
     .container{
-        width: calc(100% - 40px);
+        width: calc(100% - 160px);
         margin: 0 auto;
     }
 }

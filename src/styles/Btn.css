@@ -24,8 +24,3 @@
     border: 1px solid #ffed00;
     color: #ffed00;
 }
-@media (max-width: 1200px) {
-    .btn {
-        padding: 14px 22px;
-    }
-}

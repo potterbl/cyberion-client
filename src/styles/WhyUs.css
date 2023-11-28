@@ -90,6 +90,8 @@
         border-radius: 500px;
     }
     .why-us_left{
+        width: 100%;
+        aspect-ratio: 1;
         padding: 0;
         justify-content: unset;
         height: max-content;

@@ -4,7 +4,7 @@ import Container from "../components/Container";
 
 import '../styles/FranchisePage.css'
 import FranchiseCover from "../components/FranchiseCover";
-import BusinessModel from "../components/BusinessModel";
+import VideoCarousel from "../components/VideoCarousel";
 import Philosophy from "../components/Philosophy";
 import WhyUs from "../components/WhyUs";
 import Proposition from "../components/Proposition";
@@ -13,13 +13,14 @@ import Infrastructure from "../components/Infrastructure";
 import NewFormat from "../components/NewFormat";
 import YellowSection from "../components/YellowSection";
 import OurExperience from "../components/OurExperience";
+import VideosSection from "../components/VideosSection";
 
 const FranchisePage = () => {
     return (
-        <Container>
-            <div className="franchise">
+        <div className="franchise">
+            <Container>
                 <FranchiseCover/>
-                <BusinessModel/>
+                <VideoCarousel/>
                 <Philosophy/>
                 <WhyUs/>
                 <Proposition/>
@@ -28,8 +29,9 @@ const FranchisePage = () => {
                 <NewFormat/>
                 <YellowSection/>
                 <OurExperience/>
-            </div>
-        </Container>
+                <VideosSection/>
+            </Container>
+        </div>
     );
 };
 

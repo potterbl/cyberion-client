@@ -6,14 +6,16 @@ import cover from '../img/FranchiseCover.png'
 
 import {motion, useScroll, useTransform} from "framer-motion";
 import Btn from "./Btn";
+import TypewriterComponent from "typewriter-effect";
 
 const FranchiseCover = () => {
     const coverRef = useRef(null);
     const { scrollY } = useScroll();
     const [sectionHeight, setSectionHeight] = useState(0)
 
-    let y = useTransform(scrollY, [0, sectionHeight], ['0%', '-75%']);
-    let y2 = useTransform(scrollY, [0, sectionHeight], ['0%', '-50%']);
+    let yHero = useTransform(scrollY, [0, sectionHeight], [0, sectionHeight])
+    let y = useTransform(scrollY, [0, sectionHeight], ['0%', '-100%']);
+    let y2 = useTransform(scrollY, [0, sectionHeight], ['0%', '-80%']);
     let opacity = useTransform(scrollY, [0, sectionHeight / 2], ['100%', '0%']);
 
     useEffect(() => {
@@ -21,51 +23,64 @@ const FranchiseCover = () => {
     }, [coverRef])
 
     return (
-        <div className={'franchise-cover'} ref={coverRef}>
-            <div className="franchise-cover_left">
-                <div className="franchise-cover_left-head">
-                    <motion.h1
-                        className="title uppercase"
+        <div className="franchise-hero">
+            <div className="franchise-hero_gradient"></div>
+            <motion.div className={'franchise-cover'} ref={coverRef} style={{y: yHero}}>
+                <div className="franchise-cover_left">
+                    <div className="franchise-cover_left-head">
+                        <motion.h1
+                            className="title uppercase"
+                            style={{
+                                opacity: coverRef.current ? opacity : 0
+                            }}
+                        >
+                            Франшиза<br/>
+                            кіберклубів<br/>
+                            <span className={"span-yellow"}>
+                                <TypewriterComponent
+                                    options={{
+                                        strings: ['CYBERION'],
+                                        autoStart: true,
+                                        loop: false,
+                                        wrapperClassName: 'span-yellow',
+                                        deleteSpeed: Infinity
+                                    }}
+                                />
+                            </span><br/>
+                        </motion.h1>
+                        <p className={"body-text"}>
+                            Перетворюємо поняття комп'ютерних клубів з 90-х<br/>
+                            у сучасний та перспективний бізнес у сфері кіберспорт.<br/>
+                            Будуємо найбільшу мережу кіберспортивних клубів<br/>
+                            України для найвибагливіших геймерів та кіберспортсменів!<br/>
+                        </p>
+                    </div>
+                    <div className="franchise-cover_left-footer">
+                        <Btn type={'primary'}>
+                            Відкрити власний клуб
+                        </Btn>
+                        <Btn type={'second'}>
+                            Задати питання у телеграм
+                        </Btn>
+                    </div>
+                </div>
+                <div className="franchise-cover_right">
+                    <motion.img
+                        src={cover}
+                        alt="cover"
+                        className={'franchise-cover_right-image'}
                         style={{
-                            opacity: coverRef.current ? opacity : 0
+                            y: coverRef.current ? y : 0
                         }}
-                    >
-                        Франшиза<br/>
-                        кіберклубів<br/>
-                        <span className={"span-yellow"}>Cyberion</span><br/>
-                    </motion.h1>
-                    <p className={"body-text"}>
-                        Перетворюємо поняття комп'ютерних клубів з 90-х<br/>
-                        у сучасний та перспективний бізнес у сфері кіберспорт.<br/>
-                        Будуємо найбільшу мережу кіберспортивних клубів<br/>
-                        України для найвибагливіших геймерів та кіберспортсменів!<br/>
-                    </p>
+                    />
+                    <motion.div
+                        style={{
+                            y: coverRef.current ? y2 : 0
+                        }}
+                        className={'franchise-cover_right-image-background'}
+                    />
                 </div>
-                <div className="franchise-cover_left-footer">
-                    <Btn type={'primary'}>
-                        Відкрити власний клуб
-                    </Btn>
-                    <Btn type={'second'}>
-                        Задати питання у телеграм
-                    </Btn>
-                </div>
-            </div>
-            <div className="franchise-cover_right">
-                <motion.img
-                    src={cover}
-                    alt="cover"
-                    className={'franchise-cover_right-image'}
-                    style={{
-                        y: coverRef.current ? y : 0
-                    }}
-                />
-                <motion.div
-                    style={{
-                        y: coverRef.current ? y2 : 0
-                    }}
-                    className={'franchise-cover_right-image-background'}
-                />
-            </div>
+            </motion.div>
         </div>
     );
 };

@@ -10,19 +10,22 @@
 .cybersport-right_image{
     width: 100%;
 }
-@media (max-width: 1200px){
+/*@media (max-width: 1200px){*/
+/*    .cybersport{*/
+/*        align-items: center;*/
+/*    }*/
+/*    .cybersport-left{*/
+/*        align-self: center;*/
+/*        height: max-content;*/
+/*        padding: 0 32px 0 0;*/
+/*    }*/
+/*}*/
+@media (max-width: 1024px) {
     .cybersport{
-        align-items: center;
+        column-gap: 20px;
     }
     .cybersport-left{
-        align-self: center;
-        height: max-content;
-        padding: 0 32px 0 0;
-    }
-}
-@media (max-width: 1000px) {
-    .cybersport{
-        grid-template-columns: unset;
-        row-gap: 24px;
+        align-self: flex-end;
+        padding: 0;
     }
 }
