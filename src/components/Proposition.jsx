@@ -62,7 +62,7 @@ const Proposition = () => {
                     <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-1">
                         <div className="proposition_right-col_circle-inner">
                             <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} black-font bold`}>436 млн.</p>
-                            <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} bold`}>в 2020</p>
+                            <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} black-font`}>в 2020</p>
                         </div>
                     </motion.div>
                 </div>
@@ -70,7 +70,7 @@ const Proposition = () => {
                     <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-2">
                         <div className="proposition_right-col_circle-inner">
                             <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font bold`}>474 млн.</p>
-                            <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} bold`}>в 2021</p>
+                            <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font`}>в 2021</p>
                         </div>
                     </motion.div>
                 </div>
