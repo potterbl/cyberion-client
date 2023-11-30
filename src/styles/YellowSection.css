@@ -3,6 +3,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    z-index: 4;
 }
 .yellow-section_container{
     width: 100%;

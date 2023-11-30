@@ -1,8 +1,10 @@
-import React from 'react';
+/* eslint-disable */
+import React, {useEffect, useRef, useState} from 'react';
 
 import Container from "../components/Container";
 
 import '../styles/FranchisePage.css'
+
 import FranchiseCover from "../components/FranchiseCover";
 import VideoCarousel from "../components/VideoCarousel";
 import Philosophy from "../components/Philosophy";
@@ -13,23 +15,129 @@ import Infrastructure from "../components/Infrastructure";
 import NewFormat from "../components/NewFormat";
 import YellowSection from "../components/YellowSection";
 import OurExperience from "../components/OurExperience";
-import VideosSection from "../components/VideosSection";
+import {useDispatch} from "react-redux";
+import {actions} from "../store/slices/blocks.slice";
 
 const FranchisePage = () => {
+
+    const dispatch = useDispatch()
+
+    const [currentSection, setCurrentSection] = useState(0)
+    const [isWhyUsInView, setIsWhyUsInView] = useState(false)
+    const [isPropositionInView, setIsPropositionInView] = useState(false)
+    const [isCybersportInView, setIsCybersportInView] = useState(false)
+    const [isInfrastructureInView, setIsInfrastructureInView] = useState(false)
+    const [isNewFormatInView, setIsNewFormatInView] = useState(false)
+
+    const sections = [
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+    ]
+
+    const callbackFunctions = (setVisible) => (entries) => {
+        const [ entry ] = entries
+        setVisible(entry.isIntersecting)
+    }
+
+    const options = {
+        root: null,
+        threshold: 0.2
+    }
+
+    useEffect(() => {
+        const whyUsObserver = new IntersectionObserver(callbackFunctions(setIsWhyUsInView), options)
+        const propostitionObserver = new IntersectionObserver(callbackFunctions(setIsPropositionInView), options)
+        const cybersportObserver = new IntersectionObserver(callbackFunctions(setIsCybersportInView), options)
+        const infrastructureObserver = new IntersectionObserver(callbackFunctions(setIsInfrastructureInView), options)
+        const newFormatObserver = new IntersectionObserver(callbackFunctions(setIsNewFormatInView), options)
+
+        if(
+            sections[0].current &&
+            sections[1].current &&
+            sections[2].current &&
+            sections[3].current &&
+            sections[4].current
+        ){
+            whyUsObserver.observe(sections[0].current)
+            propostitionObserver.observe(sections[1].current)
+            cybersportObserver.observe(sections[2].current)
+            infrastructureObserver.observe(sections[3].current)
+            newFormatObserver.observe(sections[4].current)
+        }
+
+        return () => {
+            whyUsObserver.unobserve(sections[0].current)
+            propostitionObserver.unobserve(sections[1].current)
+            cybersportObserver.unobserve(sections[2].current)
+            infrastructureObserver.unobserve(sections[3].current)
+            newFormatObserver.unobserve(sections[4].current)
+        }
+    }, [setIsWhyUsInView, setIsPropositionInView, setIsCybersportInView, setIsInfrastructureInView, setIsNewFormatInView, sections])
+
+    useEffect(() => {
+        const sectionsVisible = [
+            isWhyUsInView,
+            isPropositionInView,
+            isCybersportInView,
+            isInfrastructureInView,
+            isNewFormatInView,
+        ]
+
+        const currentVisibleSection = sectionsVisible.findIndex((visible, index) => visible && index !== currentSection);
+
+        if (currentSection !== currentVisibleSection && sections[currentVisibleSection]) {
+            const targetSection = sections[currentVisibleSection].current;
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: Math.round(targetSection.getBoundingClientRect().top + window.scrollY),
+                    behavior: "smooth",
+                });
+
+                setTimeout(() => setCurrentSection(currentVisibleSection), 500);
+            }
+        }
+    }, [
+        isWhyUsInView,
+        isPropositionInView,
+        isCybersportInView,
+        isInfrastructureInView,
+        isNewFormatInView,
+        currentSection
+    ]);
+
+    useEffect(() => {
+        if(sections[4].current && sections[0].current){
+            const updateOffset = () => {
+                dispatch(actions.setBlocksBottomOffset(sections[4].current.getBoundingClientRect().bottom + window.scrollY))
+                dispatch(actions.setBlocksTopOffset(sections[0].current.getBoundingClientRect().top + window.scrollY))
+            }
+            updateOffset()
+
+            window.addEventListener('scroll', updateOffset)
+
+            return () => {
+                window.removeEventListener('scroll', updateOffset)
+            }
+        }
+    }, [sections[4], sections[0]])
+
     return (
         <div className="franchise">
             <Container>
                 <FranchiseCover/>
                 <VideoCarousel/>
                 <Philosophy/>
-                <WhyUs/>
-                <Proposition/>
-                <CyberSport/>
-                <Infrastructure/>
-                <NewFormat/>
+                <WhyUs ref={sections[0]}/>
+                <Proposition ref={sections[1]}/>
+                <CyberSport ref={sections[2]}/>
+                <Infrastructure ref={sections[3]}/>
+                <NewFormat ref={sections[4]}/>
                 <YellowSection/>
                 <OurExperience/>
-                <VideosSection/>
             </Container>
         </div>
     );

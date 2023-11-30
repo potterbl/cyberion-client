@@ -1,3 +1,8 @@
+.infrastructure-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
 .infrastructure{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

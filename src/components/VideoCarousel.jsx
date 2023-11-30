@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useEffect, useState} from 'react';
 
 import '../styles/VideoCarousel.css'
@@ -8,38 +9,28 @@ import ButtonSlide from "./ButtonSlide";
 const VideoCarousel = () => {
 
     const [videos, setVideos] = useState([
-
     ])
 
+    const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
+
+    const channelId = "UC5CzPPsxGrh9jdI5HuTA_-A";
+
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=10&key=${API_KEY}`;
+
     useEffect(() => {
-        setVideos([
-            { link: 'https://www.youtube.com/embed/4Uw_X6dLmfQ?si=36epocfBTJjYF-B7', title: '' },
-            { link: 'https://www.youtube.com/embed/Z665kqXEGz4?si=6kdowOBpK7HddZ50', title: '' },
-            { link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: '' },
-            { link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: '' },
-            { link: 'https://www.youtube.com/embed/kAEpt7y4HVc?si=pl1hAUbqPG6KRSaL', title: '' },
-        ]);
-    }, []);
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                const videos = data.items;
 
-    // const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
-    //
-    // const channelId = "UCSHRxvJENC5Hn71y4beRkcQ";
-    //
-    // const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=50&key=${API_KEY}`;
+                const embedLinks = videos.map((video) => {
+                    return {link: `https://www.youtube.com/embed/${video.id.videoId}`, title: video.snippet.title}
+                });
 
-    // fetch(url)
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         // const videos = data.items;
-    //
-    //         // console.log(data)
-    //
-    //         // const embedLinks = videos.map((video) => {
-    //         //     return `https://www.youtube.com/embed/${video.id.videoId}`;
-    //         // });
-    //
-    //         // console.log(embedLinks);
-    //     });
+                setVideos(embedLinks.slice(1))
+            });
+    }, [])
+
 
     return (
         <div className="video-carousel">
@@ -61,8 +52,8 @@ const VideoCarousel = () => {
                         videos.map(v => (
                             <SwiperSlide>
                                 <div className="video-carousel_slide">
-                                    <iframe className="video-carousel_video" title={"v"} src={v.link}
-                                            frameBorder="0" allowFullScreen></iframe>
+                                    <iframe className="video-carousel_video" src={v.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                                    <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>
                                 </div>
                             </SwiperSlide>
                         ))

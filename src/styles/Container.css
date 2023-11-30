@@ -2,7 +2,6 @@
     width: calc(1920px - 720px);
     margin: 0 auto;
     position: relative;
-    background-color: black;
 }
 @media(max-width: 1200px){
     .container{

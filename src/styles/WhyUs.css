@@ -1,4 +1,11 @@
+.why-us_container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
 .why-us{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border: 14px solid white;
@@ -7,6 +14,15 @@
     overflow: hidden;
     height: max-content;
     position: relative;
+    left: 0;
+    z-index: 3;
+}
+.why-us_top{
+    width: max-content;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    translate: -50% calc(-25% - (137px / 2));
 }
 .why-us_left{
     width: 100%;

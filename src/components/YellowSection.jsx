@@ -20,7 +20,6 @@ const YellowSection = () => {
 
         updateSectionLeft();
     }, []);
-    console.log(sectionLeft)
 
     return (
         <div className="yellow-section">

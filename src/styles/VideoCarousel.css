@@ -18,6 +18,11 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: 2;
+    pointer-events: none;
+}
+.video-carousel_slide{
+    display: grid;
+    row-gap: 12px;
 }
 .video-carousel_video{
     width: 100%;
