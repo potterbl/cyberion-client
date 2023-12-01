@@ -44,7 +44,7 @@ const FranchisePage = () => {
 
     const options = {
         root: null,
-        threshold: 0.2
+        threshold: 0.15
     }
 
     useEffect(() => {
@@ -84,20 +84,44 @@ const FranchisePage = () => {
             isCybersportInView,
             isInfrastructureInView,
             isNewFormatInView,
-        ]
+        ];
 
-        const currentVisibleSection = sectionsVisible.findIndex((visible, index) => visible && index !== currentSection);
+        const currentVisibleSection = sectionsVisible.findIndex(
+            (visible, index) => visible && index !== currentSection
+        );
 
         if (currentSection !== currentVisibleSection && sections[currentVisibleSection]) {
             const targetSection = sections[currentVisibleSection].current;
 
             if (targetSection) {
-                window.scrollTo({
-                    top: Math.round(targetSection.getBoundingClientRect().top + window.scrollY),
-                    behavior: "smooth",
-                });
+                const start = window.scrollY;
+                const end = Math.round(targetSection.getBoundingClientRect().top + start);
+                const duration = 300; // Укажите нужное значение времени анимации
 
-                setTimeout(() => setCurrentSection(currentVisibleSection), 500);
+                let startTime;
+
+                function scrollToTop(timestamp) {
+                    if (!startTime) {
+                        startTime = timestamp;
+                    }
+
+                    const elapsed = timestamp - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const currentPosition = start + progress * (end - start);
+
+                    window.scrollTo({
+                        top: currentPosition,
+                        behavior: 'auto', // Важно использовать 'auto' вместо 'smooth' для использования requestAnimationFrame
+                    });
+
+                    if (progress < 1) {
+                        requestAnimationFrame(scrollToTop);
+                    } else {
+                        setCurrentSection(currentVisibleSection);
+                    }
+                }
+
+                requestAnimationFrame(scrollToTop);
             }
         }
     }, [
@@ -106,7 +130,7 @@ const FranchisePage = () => {
         isCybersportInView,
         isInfrastructureInView,
         isNewFormatInView,
-        currentSection
+        currentSection,
     ]);
 
     useEffect(() => {
