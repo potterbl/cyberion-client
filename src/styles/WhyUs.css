@@ -22,7 +22,7 @@
     position: fixed;
     left: 50%;
     top: 0;
-    translate: -50% calc(-25% - (137px / 2));
+    translate: -50% calc((-25% - (137px / 2)) + 60px);
 }
 .why-us_left{
     width: 100%;

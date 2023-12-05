@@ -20,6 +20,45 @@
     align-items: center;
     justify-content: flex-start;
 }
+.new-format_body-card{
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #ffed00;
+    padding: 12px;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(18px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 18px);
+}
+.new-format_body-card_content{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 12px) calc(100% - 12px), calc(100% - 36px) calc(100% - 12px), calc(100% - 48px) 100%, 0% 100%, 0% 12px);
+    overflow: hidden;
+    position: relative;
+}
+.new-format_body-card_content-bottom{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+}
+.new-format_body-card_content-bottom_info-wrapper{
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 12px;
+    row-gap: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(0deg, rgba(175, 175, 175, 0.5), rgba(175, 175, 175, 0.1));
+}
 .new-format_body-container{
     display: grid;
     row-gap: 20px;

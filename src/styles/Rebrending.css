@@ -1,0 +1,52 @@
+.rebrending{
+    position: relative;
+    width: 100vw;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.rebrending-main{
+    width: 50vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rebrending-other{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+.rebrending-other_column{
+    height: 100%;
+    width: 100%;
+    row-gap: 24px;
+}
+.rebrending-other_column-img{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+#firstColumnRebrending{
+    display: grid;
+    padding: 24px;
+}
+#secondColumnRebrending{
+    row-gap: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#thirdColumnRebrending{
+    display: grid;
+    padding: 24px;
+}

@@ -1,25 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import '../styles/YellowSection.css'
+import {useSelector} from "react-redux";
 
 const YellowSection = () => {
-    const [sectionLeft, setSectionLeft] = useState(0)
-
-    useEffect(() => {
-        const updateSectionLeft = () => {
-            if(window && window.innerWidth <= 768){
-                setSectionLeft(80)
-            } else if(window && window.innerWidth <= 1024) {
-                setSectionLeft(20)
-            } else if (window && window.innerWidth <= 1200) {
-                setSectionLeft(72);
-            } else {
-                setSectionLeft((window.innerWidth - 1200) / 2);
-            }
-        };
-
-        updateSectionLeft();
-    }, []);
+    const {offsetLeft: sectionLeft} = useSelector(state => state.container)
 
     return (
         <div className="yellow-section">

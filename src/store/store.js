@@ -1,8 +1,10 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {reducer} from "./slices/blocks.slice";
+import {reducer as blocksReducer} from "./slices/blocks.slice";
+import {reducer as containerReducer} from "./slices/container.slice";
 
 const reducers = combineReducers({
-    blocks: reducer
+    blocks: blocksReducer,
+    container: containerReducer
 })
 
 export const store = configureStore({

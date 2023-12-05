@@ -17,12 +17,15 @@ import YellowSection from "../components/YellowSection";
 import OurExperience from "../components/OurExperience";
 import {useDispatch} from "react-redux";
 import {actions} from "../store/slices/blocks.slice";
+import OurAdvantages from "../components/OurAdvantages";
+import BigYellowSection from "../components/Rebrending";
+import MoreTime from "../components/MoreTime";
 
 const FranchisePage = () => {
 
     const dispatch = useDispatch()
 
-    const [currentSection, setCurrentSection] = useState(0)
+    const [currentSection, setCurrentSection] = useState(-1)
     const [isWhyUsInView, setIsWhyUsInView] = useState(false)
     const [isPropositionInView, setIsPropositionInView] = useState(false)
     const [isCybersportInView, setIsCybersportInView] = useState(false)
@@ -69,11 +72,11 @@ const FranchisePage = () => {
         }
 
         return () => {
-            whyUsObserver.unobserve(sections[0].current)
-            propostitionObserver.unobserve(sections[1].current)
-            cybersportObserver.unobserve(sections[2].current)
-            infrastructureObserver.unobserve(sections[3].current)
-            newFormatObserver.unobserve(sections[4].current)
+            whyUsObserver.disconnect()
+            propostitionObserver.disconnect()
+            cybersportObserver.disconnect()
+            infrastructureObserver.disconnect()
+            newFormatObserver.disconnect()
         }
     }, [setIsWhyUsInView, setIsPropositionInView, setIsCybersportInView, setIsInfrastructureInView, setIsNewFormatInView, sections])
 
@@ -96,7 +99,7 @@ const FranchisePage = () => {
             if (targetSection) {
                 const start = window.scrollY;
                 const end = Math.round(targetSection.getBoundingClientRect().top + start);
-                const duration = 300; // Укажите нужное значение времени анимации
+                const duration = 300;
 
                 let startTime;
 
@@ -111,7 +114,7 @@ const FranchisePage = () => {
 
                     window.scrollTo({
                         top: currentPosition,
-                        behavior: 'auto', // Важно использовать 'auto' вместо 'smooth' для использования requestAnimationFrame
+                        behavior: 'auto',
                     });
 
                     if (progress < 1) {
@@ -162,6 +165,9 @@ const FranchisePage = () => {
                 <NewFormat ref={sections[4]}/>
                 <YellowSection/>
                 <OurExperience/>
+                <OurAdvantages/>
+                <BigYellowSection/>
+                <MoreTime/>
             </Container>
         </div>
     );
