@@ -20,6 +20,8 @@ import {actions} from "../store/slices/blocks.slice";
 import OurAdvantages from "../components/OurAdvantages";
 import BigYellowSection from "../components/Rebrending";
 import MoreTime from "../components/MoreTime";
+import GetProposition from "../components/GetProposition";
+import Footer from "../components/Footer";
 
 const FranchisePage = () => {
 
@@ -168,6 +170,8 @@ const FranchisePage = () => {
                 <OurAdvantages/>
                 <BigYellowSection/>
                 <MoreTime/>
+                <GetProposition/>
+                <Footer/>
             </Container>
         </div>
     );

@@ -8,6 +8,10 @@ import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
 import { motion } from "framer-motion";
 import ButtonSlide from "./ButtonSlide";
 
+import img1 from '../img/cyber-32.jpg'
+import img2 from '../img/cyber-72.jpg'
+import img3 from '../img/cyber-60.jpg'
+
 const Philosophy = () => {
     const listVariants = {
         hidden: {
@@ -115,18 +119,30 @@ const Philosophy = () => {
                 >
 
                     <SwiperSlide>
-                        <div className="slide-custom">
-                            <span className="span-yellow bold heading">1</span>
+                        <div
+                            className="slide-custom"
+                            style={{
+                                backgroundImage: `url("${img1}")`
+                            }}
+                        >
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="slide-custom">
-                            <span className="span-yellow bold heading">2</span>
+                        <div
+                            className="slide-custom"
+                            style={{
+                                backgroundImage: `url("${img2}")`
+                            }}
+                        >
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="slide-custom">
-                            <span className="span-yellow bold heading">3</span>
+                        <div
+                            className="slide-custom"
+                            style={{
+                                backgroundImage: `url("${img3}")`
+                            }}
+                        >
                         </div>
                     </SwiperSlide>
                     <ButtonSlide type={'prev'} id={'prevSlidePhilosophy'}/>

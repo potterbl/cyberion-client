@@ -1,0 +1,14 @@
+.footer{
+    padding: 110px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.footer-col{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    row-gap: 10px;
+}
+.footer-header{
+    color: #333333;
+}

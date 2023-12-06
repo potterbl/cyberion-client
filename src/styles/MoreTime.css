@@ -1,5 +1,9 @@
 .more-time{
     padding: 90px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: max-content auto;
+}
+.more-time_right{
+    display: grid;
+    row-gap: 50px;
 }

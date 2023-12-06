@@ -1,0 +1,23 @@
+.get-proposition{
+    width: 100vw;
+    padding: 208px 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.get-proposition_right{
+    display: grid;
+    row-gap: 30px;
+}
+.get-proposition_right-form{
+    display: grid;
+    row-gap: 30px;
+}
+.get-proposition_right-form_input{
+    height: 64px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid #AFAFAF;
+}
+.get-proposition_right-form_input::placeholder{
+    color: #AFAFAF;
+}
