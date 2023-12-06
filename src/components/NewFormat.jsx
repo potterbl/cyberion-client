@@ -6,7 +6,12 @@ import pc20 from '../img/cyber-72.jpg'
 import pc30 from '../img/cyber-70.jpg'
 import pc40 from '../img/cyber-116.jpg'
 
+import model30 from '../img/model30.svg'
+import model40 from '../img/Group 35745.svg'
+import model60 from '../img/Group 35747.svg'
+
 import {motion} from "framer-motion";
+import Btn from "./Btn";
 
 const NewFormat = React.forwardRef((props, ref) => {
 
@@ -35,22 +40,6 @@ const NewFormat = React.forwardRef((props, ref) => {
         }
     }
 
-    const textAnimation = {
-        initial: {
-            y: "100%",
-            opacity: 0
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                bounce: 0.3,
-                type: 'spring',
-                delay: 0.3
-            }
-        }
-    }
-
     return (
         <div className="new-format-container" ref={ref}>
             <div className="new-format">
@@ -70,29 +59,21 @@ const NewFormat = React.forwardRef((props, ref) => {
                             initial="initial"
                             whileHover="visible"
                         >
-                            <div className="new-format_body-card_content-bottom">
-                                <motion.p
-                                    className="body-text-bigger"
-                                    variants={modelAnimation}
-                                >
-                                    Модель 20 ПК
-                                </motion.p>
-                            </div>
+                            <motion.div
+                                className="new-format_body-card_content-bottom"
+                                variants={modelAnimation}
+                                style={{
+                                    backgroundImage: `url("${model30}")`
+                                }}
+                            >
+                            </motion.div>
                             <motion.div
                                 className="new-format_body-card_content-bottom_info-wrapper"
                                 variants={bgAnimation}
                             >
-                                <motion.p
-                                    className="body-text"
-                                    variants={textAnimation}
-                                >
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut luctus urna. Donec ullamcorper tempus dui, sit amet volutpat massa pharetra condimentum. Sed felis urna, iaculis eget vestibulum eget, ornare sit amet lorem. Praesent volutpat molestie congue. Vestibulum in placerat massa. Pellentesque tincidunt, lorem id dictum ultrices, urna purus tincidunt velit, vitae malesuada ex sapien at velit. Donec dolor ex, scelerisque congue elementum ut, tincidunt at massa.
-                                </motion.p>
-                                <motion.p
-                                    variants={textAnimation}
-                                    className="body-text"
-                                >
-                                    Тисни щоб дізнатись більше</motion.p>
+                                <Btn type={"primary"}>
+                                    Отримати модель
+                                </Btn>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -103,29 +84,21 @@ const NewFormat = React.forwardRef((props, ref) => {
                             initial="initial"
                             whileHover="visible"
                         >
-                            <div className="new-format_body-card_content-bottom">
-                                <motion.p
-                                    className="body-text-bigger"
-                                    variants={modelAnimation}
-                                >
-                                    Модель 30 ПК
-                                </motion.p>
-                            </div>
+                            <motion.div
+                                className="new-format_body-card_content-bottom"
+                                variants={modelAnimation}
+                                style={{
+                                    backgroundImage: `url("${model40}")`
+                                }}
+                            >
+                            </motion.div>
                             <motion.div
                                 className="new-format_body-card_content-bottom_info-wrapper"
                                 variants={bgAnimation}
                             >
-                                <motion.p
-                                    className="body-text"
-                                    variants={textAnimation}
-                                >
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut luctus urna. Donec ullamcorper tempus dui, sit amet volutpat massa pharetra condimentum. Sed felis urna, iaculis eget vestibulum eget, ornare sit amet lorem. Praesent volutpat molestie congue. Vestibulum in placerat massa. Pellentesque tincidunt, lorem id dictum ultrices, urna purus tincidunt velit, vitae malesuada ex sapien at velit. Donec dolor ex, scelerisque congue elementum ut, tincidunt at massa.
-                                </motion.p>
-                                <motion.p
-                                    variants={textAnimation}
-                                    className="body-text"
-                                >
-                                    Тисни щоб дізнатись більше</motion.p>
+                                <Btn type={"primary"}>
+                                    Отримати модель
+                                </Btn>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -136,29 +109,21 @@ const NewFormat = React.forwardRef((props, ref) => {
                             initial="initial"
                             whileHover="visible"
                         >
-                            <div className="new-format_body-card_content-bottom">
-                                <motion.p
-                                    className="body-text-bigger"
-                                    variants={modelAnimation}
-                                >
-                                    Модель 40 ПК
-                                </motion.p>
-                            </div>
+                            <motion.div
+                                className="new-format_body-card_content-bottom"
+                                variants={modelAnimation}
+                                style={{
+                                    backgroundImage: `url("${model60}")`
+                                }}
+                            >
+                            </motion.div>
                             <motion.div
                                 className="new-format_body-card_content-bottom_info-wrapper"
                                 variants={bgAnimation}
                             >
-                                <motion.p
-                                    className="body-text"
-                                    variants={textAnimation}
-                                >
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut luctus urna. Donec ullamcorper tempus dui, sit amet volutpat massa pharetra condimentum. Sed felis urna, iaculis eget vestibulum eget, ornare sit amet lorem. Praesent volutpat molestie congue. Vestibulum in placerat massa. Pellentesque tincidunt, lorem id dictum ultrices, urna purus tincidunt velit, vitae malesuada ex sapien at velit. Donec dolor ex, scelerisque congue elementum ut, tincidunt at massa.
-                                </motion.p>
-                                <motion.p
-                                    variants={textAnimation}
-                                    className="body-text"
-                                >
-                                    Тисни щоб дізнатись більше</motion.p>
+                                <Btn type={"primary"}>
+                                    Отримати модель
+                                </Btn>
                             </motion.div>
                         </motion.div>
                     </div>
