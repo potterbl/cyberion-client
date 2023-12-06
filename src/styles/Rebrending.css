@@ -7,7 +7,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
+    overflow: clip;
 }
 .rebrending-main{
     width: 50vw;
@@ -17,8 +17,8 @@
     background-repeat: no-repeat;
 }
 .rebrending-other{
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    top: 0;
     left:0;
     width: 100vw;
     height: 100vh;

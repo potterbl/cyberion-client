@@ -32,7 +32,7 @@ button{
 }
 .App{
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 .title{
     font-size: 80px;

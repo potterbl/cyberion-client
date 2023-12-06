@@ -49,7 +49,7 @@ const Rebrending = () => {
     }, [bodyRef, scrollY]);
 
     let scale = useTransform(scrollY, [top, bottom - window.innerHeight], [2, 1])
-    let y = useTransform(scrollY, [top, bottom - window.innerHeight], ['-250%', '0%'])
+    let y = useTransform(scrollY, [top, bottom - window.innerHeight], ['50%', '0%'])
 
     return (
         <div className="rebrending" ref={bodyRef} style={

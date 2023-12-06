@@ -18,10 +18,9 @@ import OurExperience from "../components/OurExperience";
 import {useDispatch} from "react-redux";
 import {actions} from "../store/slices/blocks.slice";
 import OurAdvantages from "../components/OurAdvantages";
-import BigYellowSection from "../components/Rebrending";
-import MoreTime from "../components/MoreTime";
 import GetProposition from "../components/GetProposition";
 import Footer from "../components/Footer";
+import Rebrending from "../components/Rebrending";
 
 const FranchisePage = () => {
 
@@ -168,8 +167,7 @@ const FranchisePage = () => {
                 <YellowSection/>
                 <OurExperience/>
                 <OurAdvantages/>
-                <BigYellowSection/>
-                <MoreTime/>
+                <Rebrending/>
                 <GetProposition/>
                 <Footer/>
             </Container>

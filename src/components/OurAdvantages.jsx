@@ -100,17 +100,30 @@ const OurAdvantages = () => {
 
 
     useEffect(() => {
-        const lastIndex = visibleSections.lastIndexOf(true);
+        if(
+            sections[0].current &&
+            sections[1].current &&
+            sections[2].current &&
+            sections[3].current &&
+            sections[4].current &&
+            sections[5].current &&
+            sections[6].current &&
+            sections[7].current &&
+            sections[8].current &&
+            sections[9].current
+        ) {
+            const lastIndex = visibleSections.lastIndexOf(true);
 
-        if (lastIndex !== -1) {
-            const section = sections[lastIndex].current;
-            const body = bodyRef.current;
-            const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-            const bodyTop = body.getBoundingClientRect().top + window.scrollY;
-            const newProgress = sectionTop - bodyTop;
+            if (lastIndex !== -1) {
+                const section = sections[lastIndex].current;
+                const body = bodyRef.current;
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+                const bodyTop = body.getBoundingClientRect().top + window.scrollY;
+                const newProgress = sectionTop - bodyTop;
 
-            if (newProgress !== progress) {
-                setProgress(newProgress);
+                if (newProgress !== progress) {
+                    setProgress(newProgress);
+                }
             }
         }
         //eslint-disable-next-line
