@@ -114,7 +114,7 @@ const OurAdvantages = () => {
         ) {
             const lastIndex = visibleSections.lastIndexOf(true);
 
-            if (lastIndex !== -1) {
+            if (lastIndex !== -1 && sections[lastIndex] &&sections[lastIndex].current) {
                 const section = sections[lastIndex].current;
                 const body = bodyRef.current;
                 const sectionTop = section.getBoundingClientRect().top + window.scrollY;
