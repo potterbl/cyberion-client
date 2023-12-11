@@ -31,23 +31,23 @@ const Footer = () => {
                 </p>
             </div>
             <div className="footer-col">
-                <p className="body-text">
-
+                <p className="body-text footer-header">
+                    Клуби
                 </p>
                 <p className="body-text">
-
+                    Київ, CYBERION RiverMall
                 </p>
                 <p className="body-text">
-                    
+                    Київ, CYBERION LikoHrad
                 </p>
                 <p className="body-text">
-
+                    Київ, CYBERION Polytech
                 </p>
                 <p className="body-text">
-
+                    Київ, CYBERION Observatorna
                 </p>
                 <p className="body-text">
-
+                    Ужгород, CYBERION CITY
                 </p>
             </div>
             <div className="footer-col">
