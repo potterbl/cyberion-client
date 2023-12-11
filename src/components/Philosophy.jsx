@@ -55,10 +55,9 @@ const Philosophy = () => {
                     <p className={"body-text gray-text"}>
                         Ми використали весь наш досвід та існуючі тенденції, для
                         того, щоб створити ідеальне місце для тренувань з
-                        кіберспорту та просто відпочинку.
+                        кіберспорту та просто відпочинку:
                     </p>
                     <div className="philosophy-left_body-list-wrapper">
-                        <p className={"body-text bold uppercase gray-text"}>наші переваги:</p>
                         <motion.ul
                             className={"philosophy-left_body-list gray-text"}
                             initial="hidden"

@@ -58,9 +58,9 @@ button{
     font-size: 18px;
     line-height: 120%;
 }
-.gray-text{
-    color: #AFAFAF;
-}
+/*.gray-text{*/
+/*    color: #AFAFAF;*/
+/*}*/
 .bold{
     font-weight: bold;
 }

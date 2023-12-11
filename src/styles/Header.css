@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 13px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7px);
+}
+.header-logo{
+    width: 310px;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+.header-list{
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    list-style-type: none;
+}
+.header-list_item{
+    color: #BFBFBF;
+}
+.header-btn{
+    background-color: #ffed00;
+    padding: 7px 23px;
+    border-radius: 40px;
+}

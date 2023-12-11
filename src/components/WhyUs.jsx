@@ -8,7 +8,8 @@ import {motion, useScroll, useTransform} from "framer-motion";
 import {useSelector} from "react-redux";
 
 const WhyUs = React.forwardRef((props, ref) => {
-    const {offsetTop, offsetBottom} = useSelector(state => state.blocks)
+    const {offsetTop, offsetBottom, isInView: opacity} = useSelector(state => state.blocks)
+    console.log(opacity)
     const childrenRef = useRef(null)
 
     const {scrollY} = useScroll()
@@ -16,7 +17,7 @@ const WhyUs = React.forwardRef((props, ref) => {
     const [blockHeight, setBlockHeight] = useState(0)
     const [isInView, setIsInView] = useState(false)
 
-    let scale = useTransform(scrollY, [offsetTop, offsetTop + (blockHeight * 0.7)], [1, 0.25])
+    let scale = useTransform(scrollY, [offsetTop, offsetTop + (blockHeight * 0.7)], [1, 0.2])
 
     useEffect(() => {
         if(ref.current){
@@ -148,9 +149,15 @@ const WhyUs = React.forwardRef((props, ref) => {
                 }}
                 ref={childrenRef}
             >
-                <div className="why-us_left">
+                <motion.div
+                    className="why-us_left"
+                    style={{
+                        opacity: opacity ? 0 : 1
+                    }}
+                >
 
                     <motion.div
+
                         className="why-us_left-inner"
                         variants={textAnimation}
                     >
@@ -168,7 +175,6 @@ const WhyUs = React.forwardRef((props, ref) => {
                         </p>
                         <p className="body-text">
                             Якщо ти вже знаєш чому цей бізнес актуальний,<br/>
-                            <br/>
                             тисни на кнопку нижче...<br/>
                         </p>
                         <a href="https://t.me/Artem_Natanzon" className="body-text-bigger">
@@ -176,7 +182,7 @@ const WhyUs = React.forwardRef((props, ref) => {
                             Telegram→
                         </a>
                     </motion.div>
-                </div>
+                </motion.div>
                 <div className="why-us_right">
                     <motion.div
                         className="why-us_right-circle"

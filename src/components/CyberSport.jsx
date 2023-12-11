@@ -8,6 +8,9 @@ const CyberSport = React.forwardRef((props, ref) => {
     return (
         <div className="cybersport-container" ref={ref}>
             <div className="cybersport">
+                <div className="cybersport-right">
+                    <img src={cybersportImg} alt="" className="cybersport-right_image"/>
+                </div>
                 <div className="cybersport-left">
                     <h3 className="heading-smaller">
                     <span className="span-yellow">
@@ -27,9 +30,6 @@ const CyberSport = React.forwardRef((props, ref) => {
                         }
                         ВИДОМ СПОРТУ<br/>
                     </h3>
-                </div>
-                <div className="cybersport-right">
-                    <img src={cybersportImg} alt="" className="cybersport-right_image"/>
                 </div>
             </div>
         </div>

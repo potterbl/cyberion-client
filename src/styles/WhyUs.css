@@ -22,7 +22,7 @@
     position: fixed;
     left: 50%;
     top: 0;
-    translate: -50% calc((-25% - (137px / 2)) + 60px);
+    translate: -50% calc(-30% - (110px / 2) + 82px);
 }
 .why-us_left{
     width: 100%;
@@ -33,7 +33,7 @@
 .why-us_left-inner{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 100%;
 }
 .why-us_left-head{

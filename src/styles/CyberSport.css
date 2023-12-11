@@ -5,10 +5,12 @@
 }
 .cybersport{
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: auto max-content;
+    column-gap: 24px;
     padding: 56px 0 125px 0;
 }
 .cybersport-left{
+    text-align: right;
     width: max-content;
     padding: 58px 117px 133px 0;
 }

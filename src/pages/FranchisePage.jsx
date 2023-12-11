@@ -21,8 +21,12 @@ import OurAdvantages from "../components/OurAdvantages";
 import GetProposition from "../components/GetProposition";
 import Footer from "../components/Footer";
 import Rebrending from "../components/Rebrending";
+import Header from "../components/Header";
+import Loader from "../components/Loader";
 
 const FranchisePage = () => {
+
+    const [isLoaded, setIsLoaded] = useState()
 
     const dispatch = useDispatch()
 
@@ -90,6 +94,13 @@ const FranchisePage = () => {
             isNewFormatInView,
         ];
 
+        dispatch(actions.setInView(
+            isPropositionInView ||
+            isCybersportInView ||
+            isInfrastructureInView ||
+            isNewFormatInView
+        ))
+
         const currentVisibleSection = sectionsVisible.findIndex(
             (visible, index) => visible && index !== currentSection
         );
@@ -153,8 +164,24 @@ const FranchisePage = () => {
         }
     }, [sections[4], sections[0]])
 
+    useEffect(() => {
+        const body = document.querySelector('body')
+
+        body.style = 'overflow: hidden;';
+
+        if (document.readyState) {
+            body.style = ''
+            setIsLoaded(true)
+        }
+    }, []);
+
     return (
         <div className="franchise">
+            {
+                !isLoaded &&
+                <Loader/>
+            }
+            <Header/>
             <Container>
                 <FranchiseCover/>
                 <VideoCarousel/>

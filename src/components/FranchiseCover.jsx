@@ -7,11 +7,24 @@ import cover from '../img/FranchiseCover.png'
 import {motion, useScroll, useTransform} from "framer-motion";
 import Btn from "./Btn";
 import TypewriterComponent from "typewriter-effect";
+import {useInView} from "react-intersection-observer";
+import {useDispatch} from "react-redux";
+import {actions} from "../store/slices/header.slice";
 
 const FranchiseCover = () => {
+    const dispatch = useDispatch()
+
     const coverRef = useRef(null);
     const { scrollY } = useScroll();
     const [sectionHeight, setSectionHeight] = useState(0)
+
+    const {ref, inView} = useInView({
+        threshold: 0
+    })
+
+    useEffect(() => {
+        dispatch(actions.setInView(inView))
+    }, [inView, dispatch])
 
     let yHero = useTransform(scrollY, [0, sectionHeight], [0, sectionHeight])
     let y = useTransform(scrollY, [0, sectionHeight], ['0%', '-100%']);
@@ -23,7 +36,7 @@ const FranchiseCover = () => {
     }, [coverRef])
 
     return (
-        <div className="franchise-hero">
+        <div className="franchise-hero" ref={ref}>
             <div className="franchise-hero_gradient"></div>
             <motion.div className={'franchise-cover'} ref={coverRef} style={{y: yHero}}>
                 <div className="franchise-cover_left">

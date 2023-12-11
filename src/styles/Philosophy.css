@@ -13,13 +13,13 @@
     width: 100%;
 }
 .philosophy-left_body-list{
-    margin-top: 4px;
-    list-style-type: none;
+    padding-left: 14px;
+    list-style: radial-gradient(#ffed00 0% 50%, transparent 50% 100%);
 }
 .philosophy-left_body{
     width: 100%;
     display: grid;
-    row-gap: 50px;
+    row-gap: 20px;
 }
 .philosophy-right{
     width: 100%;

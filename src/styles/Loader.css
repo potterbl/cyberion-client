@@ -1,0 +1,81 @@
+.loader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000000;
+    display: grid;
+    place-items: center;
+}
+.loader-content{
+    display: grid;
+    grid-template-columns: max-content auto;
+    column-gap: 12px;
+}
+.loader-switcher{
+    border: 2px solid white;
+    border-radius: 500px;
+    aspect-ratio: 2/1;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    animation: animateSwitcher;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.loader-circle{
+    height: 80%;
+    aspect-ratio: 1;
+    background-color: #ffed00;
+    border-radius: 50%;
+    animation: animateCircle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 3;
+}
+.loader-n{
+    margin-top: 10px;
+    margin-left: 14px;
+    justify-self: flex-start;
+    grid-column: 2;
+    animation: animateN;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animateN {
+    0% {
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+}
+@keyframes animateCircle {
+    20%{
+        translate: 0;
+    }
+    40%{
+        translate: calc(100% + 14px) 0;
+
+    }
+    100%{
+        translate: calc(100% + 14px) 0;
+    }
+}
+@keyframes animateSwitcher {
+    0%{
+        rotate: 0deg;
+    }
+    60%{
+        rotate: 0deg;
+    }
+    80%{
+        rotate: -180deg;
+    }
+    100%{
+        rotate: -180deg;
+    }
+}

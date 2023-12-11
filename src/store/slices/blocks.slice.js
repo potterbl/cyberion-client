@@ -3,7 +3,8 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState = {
     height: 0,
     offsetTop: 0,
-    offsetBottom: 0
+    offsetBottom: 0,
+    isInView: false
 }
 
 export const blocksSlice = createSlice({
@@ -18,6 +19,9 @@ export const blocksSlice = createSlice({
         },
         setBlocksTopOffset: (state, action) => {
             state.offsetTop = action.payload
+        },
+        setInView: (state, action) => {
+            state.isInView = action.payload
         }
     }
 })
