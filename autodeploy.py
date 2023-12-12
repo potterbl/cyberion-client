@@ -2,7 +2,7 @@
 
 import subprocess
 import time
-import curses
+import pygame
 
 def deploy():
     subprocess.call(["git", "add", "."])
@@ -13,22 +13,18 @@ if __name__ == "__main__":
     deploy_interval = 30 * 60
     session = True
 
-    # Инициализация curses
-    stdscr = curses.initscr()
-    curses.cbreak()
-    stdscr.keypad(True)
+    pygame.init()
+    clock = pygame.time.Clock()
 
     while session:
         deploy()
         print("Проект успешно задеплоен.")
 
         # Проверка нажатия клавиши 'x'
-        key = stdscr.getch()
-        if key == ord('x'):
-            print("Нажата клавиша 'x'. Остановка сессии.")
-            break
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_x:
+                print("Нажата клавиша 'x'. Остановка сессии.")
+                session = False
 
+        clock.tick(10)
         time.sleep(deploy_interval)
-
-    # Завершение curses
-    curses.endwin()
