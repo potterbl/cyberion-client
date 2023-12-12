@@ -104,6 +104,12 @@
     .proposition{
         grid-template-columns: max-content auto;
     }
+    .proposition_left{
+        height: max-content;
+    }
+    .proposition_left-head{
+        height: max-content;
+    }
 }
 @media (max-width: 890px) {
     .proposition_right{

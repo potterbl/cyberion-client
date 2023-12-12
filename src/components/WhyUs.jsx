@@ -17,7 +17,9 @@ const WhyUs = React.forwardRef((props, ref) => {
     const [blockHeight, setBlockHeight] = useState(0)
     const [isInView, setIsInView] = useState(false)
 
-    let scale = useTransform(scrollY, [offsetTop, offsetTop + (blockHeight * 0.7)], [1, 0.2])
+    let scale = window.innerWidth > 770 ?
+        useTransform(scrollY, [offsetTop, offsetTop + (blockHeight * 0.7)], [1, 0.2])
+        : 1
 
     useEffect(() => {
         if(ref.current){
@@ -140,7 +142,7 @@ const WhyUs = React.forwardRef((props, ref) => {
     return (
         <div className="why-us_container" ref={ref}>
             <motion.div
-                className={`why-us ${isInView ? 'why-us_top' : ''}`}
+                className={`why-us ${isInView && window.innerWidth > 770 ? 'why-us_top' : ''}`}
                 initial="initial"
                 whileInView="visible"
                 variants={containerAnimation}
@@ -166,13 +168,17 @@ const WhyUs = React.forwardRef((props, ref) => {
                             ОБРАЛИ САМЕ<br/>
                             ЦЮ НІШУ?<br/>
                         </h2>
-                        <p className="body-text">
-                            Давайте разом проаналізуємо, як<br/>
-                            ми прийшли до рішення<br/>
-                            відкриття кіберспортивних клубів,<br/>
-                            що наштовхнуло на це і які<br/>
-                            можливості існують у цьому бізнесі<br/>
-                        </p>
+                        {
+                            window.innerWidth > 854 ?
+                                <p className="body-text">
+                                    Давайте разом проаналізуємо, як<br/>
+                                    ми прийшли до рішення<br/>
+                                    відкриття кіберспортивних клубів,<br/>
+                                    що наштовхнуло на це і які<br/>
+                                    можливості існують у цьому бізнесі<br/>
+                                </p>
+                                : null
+                        }
                         <p className="body-text">
                             Якщо ти вже знаєш чому цей бізнес актуальний,<br/>
                             тисни на кнопку нижче...<br/>

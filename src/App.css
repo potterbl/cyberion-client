@@ -85,6 +85,40 @@ button{
     }
 }
 
+@media (max-width: 1100px){
+    .title{
+        font-size: 64px;
+    }
+    .heading{
+        font-size: 46px;
+    }
+    .heading-smaller{
+        font-size: 36px;
+    }
+    .body-text-bigger{
+        font-size: 25px;
+    }
+    .body-text{
+        font-size: 16px;
+    }
+}
+@media (max-width: 918px){
+    .title{
+        font-size: 60px;
+    }
+    .heading{
+        font-size: 42px;
+    }
+    .heading-smaller{
+        font-size: 32px;
+    }
+    .body-text-bigger{
+        font-size: 22px;
+    }
+    .body-text{
+        font-size: 14px;
+    }
+}
 @media (max-width: 768px){
     .title{
         font-size: 54px;

@@ -17,16 +17,18 @@ const CyberSport = React.forwardRef((props, ref) => {
                     В 2020 РОЦІ<br/>
                     КІБЕРСПОРТ
                         {
-                            window.innerWidth > 1024 &&
+                            window.innerWidth > 1024 ?
                             <br/>
+                                : ' '
                         }
                         В УКРАЇНІ<br/>
                     </span>
                         ОФІЦІЙНО<br/>
                         ВИЗНАНО
                         {
-                            window.innerWidth > 1024 &&
-                            <br/>
+                            window.innerWidth > 1024 ?
+                                <br/>
+                                : ' '
                         }
                         ВИДОМ СПОРТУ<br/>
                     </h3>

@@ -13,8 +13,12 @@
     width: 100%;
 }
 .philosophy-left_body-list{
-    padding-left: 14px;
-    list-style: radial-gradient(#ffed00 0% 50%, transparent 50% 100%);
+    list-style-type: none;
+}
+.philosophy-left_body-list li::before{
+    content: '\2022';
+    color: #ffed00;
+    margin-right: 6px;
 }
 .philosophy-left_body{
     width: 100%;
@@ -71,6 +75,7 @@
         aspect-ratio: 4/2;
     }
 }
+
 /*@media (max-width: 1200px) {*/
 /*    .philosophy{*/
 /*        padding: 75px 0 134px 0;*/
