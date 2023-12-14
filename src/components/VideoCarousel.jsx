@@ -41,7 +41,9 @@ const VideoCarousel = () => {
                 <Swiper
                     modules={[A11y, Navigation]}
                     slidesPerView={
-                    window.innerWidth > 768 ?
+                    window.innerWidth < 670 ?
+                        1.5
+                        : window.innerWidth > 768 ?
                         3.5
                         : 2.5
                     }

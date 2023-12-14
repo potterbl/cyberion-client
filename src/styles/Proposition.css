@@ -163,3 +163,8 @@
         width: 106px;
     }
 }
+@media (max-width: 750px) {
+    .proposition{
+        grid-template-columns: unset;
+    }
+}

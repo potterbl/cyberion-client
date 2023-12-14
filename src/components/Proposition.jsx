@@ -51,45 +51,49 @@ const Proposition = React.forwardRef((props, ref) => {
                         </p>
                     </div>
                 </div>
-                <motion.div
-                    className="proposition_right"
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                        staggerChildren: 0.5
-                    }}
-                >
-                    <div className="proposition_right-col">
-                        <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-1">
-                            <div className="proposition_right-col_circle-inner">
-                                <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} black-font bold`}>436
-                                    млн.</p>
-                                <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} black-font`}>в
-                                    2020</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                    <div className="proposition_right-col">
-                        <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-2">
-                            <div className="proposition_right-col_circle-inner">
-                                <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font bold`}>474
-                                    млн.</p>
-                                <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font`}>в
-                                    2021</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                    <div className="proposition_right-col">
-                        <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-3">
-                            <div className="proposition_right-col_circle-inner">
-                                <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font bold`}>577
-                                    млн.</p>
-                                <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font`}>в
-                                    2024</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                </motion.div>
+                {
+                    window.innerWidth > 750 &&
+                    <motion.div
+                        className="proposition_right"
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{
+                            staggerChildren: 0.5
+                        }}
+                    >
+                        <div className="proposition_right-col">
+                            <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-1">
+                                <div className="proposition_right-col_circle-inner">
+                                    <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} black-font bold`}>436
+                                        млн.</p>
+                                    <p className={`${window.innerWidth > 890 ? 'body-text' : 'body-text'} black-font`}>в
+                                        2020</p>
+                                </div>
+                            </motion.div>
+                        </div>
+                        <div className="proposition_right-col">
+                            <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-2">
+                                <div className="proposition_right-col_circle-inner">
+                                    <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font bold`}>474
+                                        млн.</p>
+                                    <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font`}>в
+                                        2021</p>
+                                </div>
+                            </motion.div>
+                        </div>
+                        <div className="proposition_right-col">
+                            <motion.div variants={circleAnimation} className="proposition_right-col_circle circle-3">
+                                <div className="proposition_right-col_circle-inner">
+                                    <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font bold`}>577
+                                        млн.</p>
+                                    <p className={`${window.innerWidth > 890 ? 'body-text-bigger' : 'body-text'} black-font`}>в
+                                        2024</p>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </motion.div>
+                }
+
             </div>
 
         </div>
