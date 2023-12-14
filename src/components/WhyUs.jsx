@@ -169,7 +169,7 @@ const WhyUs = React.forwardRef((props, ref) => {
                             ЦЮ НІШУ?<br/>
                         </h2>
                         {
-                            window.innerWidth > 854 ?
+                            window.innerWidth > 854 || window.innerWidth <= 768 ?
                                 <p className="body-text">
                                     Давайте разом проаналізуємо, як<br/>
                                     ми прийшли до рішення<br/>

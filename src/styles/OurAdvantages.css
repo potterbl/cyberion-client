@@ -45,3 +45,8 @@
     display: grid;
     place-items: center;
 }
+@media (max-width: 768px) {
+    .our-advantages_body{
+        margin: 0;
+    }
+}

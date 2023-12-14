@@ -67,8 +67,8 @@
     }
 }
 @media (max-width: 918px) {
-    .why-us_left{
-        padding-left: 45px;
+    .why-us{
+        margin-top: 2px;
     }
 }
 @media (max-width: 770px){

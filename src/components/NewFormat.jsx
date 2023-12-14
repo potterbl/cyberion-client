@@ -67,15 +67,26 @@ const NewFormat = React.forwardRef((props, ref) => {
                                 }}
                             >
                             </motion.div>
-                            <motion.div
-                                className="new-format_body-card_content-bottom_info-wrapper"
-                                variants={bgAnimation}
-                            >
+                            {
+                                window.innerWidth > 768 &&
+                                <motion.div
+                                    className="new-format_body-card_content-bottom_info-wrapper"
+                                    variants={bgAnimation}
+                                >
+                                    <Btn type={"primary"}>
+                                        Отримати модель
+                                    </Btn>
+                                </motion.div>
+                            }
+                        </motion.div>
+                        {
+                            window.innerWidth <= 768 &&
+                            <div className="new-format_body-card_under-section">
                                 <Btn type={"primary"}>
                                     Отримати модель
                                 </Btn>
-                            </motion.div>
-                        </motion.div>
+                            </div>
+                        }
                     </div>
                     <div className="new-format_body-card">
                         <motion.div
@@ -92,15 +103,26 @@ const NewFormat = React.forwardRef((props, ref) => {
                                 }}
                             >
                             </motion.div>
-                            <motion.div
-                                className="new-format_body-card_content-bottom_info-wrapper"
-                                variants={bgAnimation}
-                            >
+                            {
+                                window.innerWidth > 768 &&
+                                <motion.div
+                                    className="new-format_body-card_content-bottom_info-wrapper"
+                                    variants={bgAnimation}
+                                >
+                                    <Btn type={"primary"}>
+                                        Отримати модель
+                                    </Btn>
+                                </motion.div>
+                            }
+                        </motion.div>
+                        {
+                            window.innerWidth <= 768 &&
+                            <div className="new-format_body-card_under-section">
                                 <Btn type={"primary"}>
                                     Отримати модель
                                 </Btn>
-                            </motion.div>
-                        </motion.div>
+                            </div>
+                        }
                     </div>
                     <div className="new-format_body-card">
                         <motion.div
@@ -117,15 +139,26 @@ const NewFormat = React.forwardRef((props, ref) => {
                                 }}
                             >
                             </motion.div>
-                            <motion.div
-                                className="new-format_body-card_content-bottom_info-wrapper"
-                                variants={bgAnimation}
-                            >
+                            {
+                                window.innerWidth > 768 &&
+                                <motion.div
+                                    className="new-format_body-card_content-bottom_info-wrapper"
+                                    variants={bgAnimation}
+                                >
+                                    <Btn type={"primary"}>
+                                        Отримати модель
+                                    </Btn>
+                                </motion.div>
+                            }
+                        </motion.div>
+                        {
+                            window.innerWidth <= 768 &&
+                            <div className="new-format_body-card_under-section">
                                 <Btn type={"primary"}>
                                     Отримати модель
                                 </Btn>
-                            </motion.div>
-                        </motion.div>
+                            </div>
+                        }
                     </div>
                     {/*<div className="new-format_body-container">*/}
                     {/*    <h4 className="body-text-bigger bold span-yellow">*/}

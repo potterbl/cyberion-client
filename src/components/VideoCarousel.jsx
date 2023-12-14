@@ -40,7 +40,11 @@ const VideoCarousel = () => {
                 <div className="video-carousel_gradient"></div>
                 <Swiper
                     modules={[A11y, Navigation]}
-                    slidesPerView={3.5}
+                    slidesPerView={
+                    window.innerWidth > 768 ?
+                        3.5
+                        : 2.5
+                    }
                     spaceBetween="10"
                     navigation={{
                         nextEl: "#nextSlideVideos",
@@ -52,7 +56,10 @@ const VideoCarousel = () => {
                         videos.map(v => (
                             <SwiperSlide>
                                 <div className="video-carousel_slide">
-                                    <iframe className="video-carousel_video" src={v.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                                    <iframe className="video-carousel_video" src={v.link} title="YouTube video player"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen></iframe>
                                     <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>
                                 </div>
                             </SwiperSlide>

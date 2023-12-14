@@ -36,3 +36,13 @@
         padding: 0;
     }
 }
+@media (max-width: 768px){
+    .cybersport{
+        grid-template-columns: unset;
+        row-gap: 20px;
+    }
+    .cybersport-left{
+        align-self: flex-start;
+        text-align: left;
+    }
+}

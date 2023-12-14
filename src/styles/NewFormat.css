@@ -88,3 +88,18 @@
         row-gap: 40px;
     }
 }
+@media (max-width: 768px) {
+    .new-format_body-card{
+        margin-bottom: 68px;
+        position: relative;
+        clip-path: polygon(18px 0%, 100% 0%, 100% calc(100% + 68px), 0% calc(100% + 68px), 0% 18px);
+    }
+    .new-format_body-card_under-section{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        left: 0;
+        bottom: -68px;
+    }
+}
