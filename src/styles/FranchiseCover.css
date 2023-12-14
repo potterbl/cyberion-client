@@ -84,3 +84,9 @@
         translate: 75% -50%;
     }
 }
+@media (max-width: 650px) {
+    .franchise-cover_left-footer{
+        display: grid;
+        row-gap: 20px;
+    }
+}

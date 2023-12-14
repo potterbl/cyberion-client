@@ -50,3 +50,8 @@
         margin: 0;
     }
 }
+@media (max-width: 550px) {
+    .our-advantages_body{
+        margin: 0 54px;
+    }
+}

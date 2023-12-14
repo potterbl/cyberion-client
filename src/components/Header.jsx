@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import '../styles/Header.css'
 
@@ -7,6 +7,9 @@ import {useSelector} from "react-redux";
 import {motion} from "framer-motion";
 
 const Header = () => {
+
+    const [isVisible, setIsVisible] = useState(false)
+
     const {isInView} = useSelector(state => state.header)
 
     const headerAnimation = {
@@ -24,6 +27,16 @@ const Header = () => {
         })
     }
 
+    const burgerAnimation = {
+        visible: (custom) => ({
+            height: custom || window.innerWidth > 768 ? 'calc(100vh - 84px)' : 0,
+            opacity: custom || window.innerWidth > 768 ? 1 : 0,
+            transition: {
+                type: 'spring'
+            }
+        })
+    }
+
     return (
         <motion.div
             className="header"
@@ -36,15 +49,29 @@ const Header = () => {
                 <img src={logo} alt="logo" className="header-logo"/>
             </div>
             <div className="header-right">
-                <ul className="header-list">
+                {
+                    window.innerWidth <= 768 &&
+                    <div
+                        className="burger-menu"
+                        onClick={() => setIsVisible(!isVisible)}
+                    >
+                        <span className={`${isVisible ? 'span-active' : ''}`}></span>
+                    </div>
+                }
+                <motion.ul
+                    className="header-list"
+                    variants={burgerAnimation}
+                    custom={isVisible}
+                    animate="visible"
+                >
                     <li className="header-list_item body-text uppercase">новини</li>
                     <li className="header-list_item body-text uppercase">faq</li>
                     <li className="header-list_item body-text uppercase">правила</li>
                     <li className="header-list_item body-text uppercase">франшиза</li>
-                </ul>
-                <button className="header-btn body-text uppercase black-font">
-                    клуби
-                </button>
+                    <button className="header-btn body-text uppercase black-font">
+                        клуби
+                    </button>
+                </motion.ul>
             </div>
         </motion.div>
     );

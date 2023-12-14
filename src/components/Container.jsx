@@ -8,7 +8,9 @@ const Container = ({children}) => {
 
     useEffect(() => {
         const updateSectionLeft = () => {
-            if (window && window.innerWidth <= 768) {
+            if (window && window.innerWidth <= 550) {
+                dispatch(actions.setOffsetLeft(20))
+            } else if (window && window.innerWidth <= 768) {
                 dispatch(actions.setOffsetLeft(80))
             } else if (window && window.innerWidth <= 1024) {
                 dispatch(actions.setOffsetLeft(20))
