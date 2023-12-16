@@ -3,8 +3,8 @@
     height: max-content;
     display: block;
     max-width: 1300px;
-    clip-path: polygon(0% 0%, 120% 0%, 120% 100%, 0% 100%, 0% 0%);
     position: relative;
+    clip-path: polygon(0% 0%, 100vw 0%, 100vw 100%, 0% 100%);
 }
 .franchise-hero_gradient{
     position: absolute;
