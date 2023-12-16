@@ -31,9 +31,9 @@ button{
     cursor: pointer;
 }
 .App{
-    width: 100%;
-    overflow-x: clip;
-    clip-path: inset(0);
+    width: 100vw;
+    /*overflow-x: clip;*/
+    clip: rect(auto, auto, auto, auto);
 }
 .title{
     font-size: 80px;

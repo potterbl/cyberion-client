@@ -76,7 +76,6 @@
         min-height: 100vh;
         height: auto;
         padding: 164px 14px;
-
     }
     .why-us{
         display: flex;
@@ -91,7 +90,7 @@
         aspect-ratio: 1/2;
         background: black;
         z-index: 1;
-        overflow: unset;
+        overflow: visible;
     }
     .why-us::before{
         position: absolute;

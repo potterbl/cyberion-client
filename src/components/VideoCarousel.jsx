@@ -23,11 +23,11 @@ const VideoCarousel = () => {
             .then((data) => {
                 const videos = data.items;
 
-                const embedLinks = videos.map((video) => {
+                const embedLinks = videos?.map((video) => {
                     return {link: `https://www.youtube.com/embed/${video.id.videoId}`, title: video.snippet.title}
                 });
 
-                setVideos(embedLinks.slice(1))
+                setVideos(embedLinks?.slice(1))
             });
     }, [])
 
