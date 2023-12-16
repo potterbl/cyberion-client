@@ -7,7 +7,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: flex-start;
-    /*overflow: clip;*/
+    overflow: clip;
 }
 .rebrending-main{
     width: 50vw;

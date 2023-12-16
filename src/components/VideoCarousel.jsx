@@ -57,7 +57,7 @@ const VideoCarousel = () => {
                     loop={true}
                 >
                     {
-                        videos.map(v => (
+                        videos && videos.length && videos.map(v => (
                             <SwiperSlide>
                                 <div className="video-carousel_slide">
                                     <iframe className="video-carousel_video" src={v.link} title="YouTube video player"
