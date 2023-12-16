@@ -6,10 +6,10 @@ import Btn from "./Btn";
 
 const GetProposition = () => {
 
-    const {offsetLeft} = useSelector(state => state.container)
+    let {offsetLeft} = useSelector(state => state.container)
 
     return (
-        <div className="get-proposition" style={{translate: `-${offsetLeft}px 0px`}}>
+        <div className="get-proposition" style={{translate: `${window.innerWidth > 768 ? -offsetLeft + 'px 0px' : '0'}`}}>
             {
                 window.innerWidth > 768 &&
                 <div className="get-proposition_left">

@@ -165,6 +165,7 @@
 }
 @media (max-width: 750px) {
     .proposition{
+        padding: 0;
         grid-template-columns: unset;
     }
 }

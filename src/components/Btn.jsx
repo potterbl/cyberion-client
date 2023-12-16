@@ -83,7 +83,9 @@ const Btn = (props) => {
                 `btn ${type === 'primary' ? 'btn-primary' : type === 'second' ? 'btn-second' : ''}`
             }
         >
-            {children}
+            <p className={`body-text ${type === 'primary' ? 'black-font' : ''}`}>
+                {children}
+            </p>
         </motion.button>
     );
 };

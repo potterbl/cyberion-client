@@ -90,3 +90,14 @@
         row-gap: 20px;
     }
 }
+@media (max-width: 400px) {
+    .franchise-cover_left-footer{
+        row-gap: 10px;
+    }
+    .franchise-cover_right-image{
+        translate: 90% -50%;
+    }
+    .franchise-cover_right-image-background{
+        translate: 90% -50%;
+    }
+}

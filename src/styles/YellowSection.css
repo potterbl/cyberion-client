@@ -25,3 +25,8 @@
         row-gap: 45px;
     }
 }
+@media (max-width: 440px) {
+    .yellow-section{
+        padding: 40px 0;
+    }
+}

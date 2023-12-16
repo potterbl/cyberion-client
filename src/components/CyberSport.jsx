@@ -11,7 +11,7 @@ const CyberSport = React.forwardRef((props, ref) => {
                 <div className="cybersport-right">
                     <img src={cybersportImg} alt="" className="cybersport-right_image"/>
                 </div>
-                <div className="cybersport-left">
+                <div className="cybersport-left break-word">
                     <h3 className="heading-smaller">
                     <span className="span-yellow">
                     В 2020 РОЦІ<br/>

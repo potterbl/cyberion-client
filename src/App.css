@@ -136,6 +136,23 @@ button{
         font-size: 14px;
     }
 }
+@media (max-width: 400px) {
+    .title{
+        font-size: 42px;
+    }
+    .heading{
+        font-size: 32px;
+    }
+    .heading-smaller{
+        font-size: 24px;
+    }
+    .body-text-bigger{
+        font-size: 14px;
+    }
+    .body-text{
+        font-size: 12px;
+    }
+}
 /*@media (max-width: 1200px) {*/
 /*    .title{*/
 /*        font-size: 60px;*/

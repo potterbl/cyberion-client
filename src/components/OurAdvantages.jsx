@@ -432,7 +432,7 @@ const OurAdvantages = () => {
                     <motion.div
                         className="our-advantages_body_progress"
                         style={{
-                            height: `${progress}px`
+                            height: `${window.innerWidth <= 336 ? progress - 20 + 'px' : progress + 'px'}`
                         }}
                     >
 

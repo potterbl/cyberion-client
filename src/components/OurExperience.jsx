@@ -13,7 +13,7 @@ const OurExperience = () => {
     return (
         <div className="our-experience">
             <div className="our-experience_head">
-                <h3 className="heading-smaller">
+                <h3 className="heading-smaller break-word">
                     НАША КОМАНДА МАЄ
                     {
                         window.innerWidth <= 1000 &&
@@ -132,7 +132,7 @@ const OurExperience = () => {
                             </div>
                             <div className="our-experience_body-text">
                                 <div className="our-experience_body-text_container">
-                                    <p className="body-text gray-text">
+                                    <p className="body-text break-word">
                                         Збудували найбільшу мережу
                                         кібер клубів України власноруч, 5
                                         закладів відкриті та продовжують
@@ -141,7 +141,7 @@ const OurExperience = () => {
                                     </p>
                                 </div>
                                 <div className="our-experience_body-text_container">
-                                    <p className="body-text gray-text">
+                                    <p className="body-text break-word">
                                         Опрацювання всього досвіду
                                         ведення мережі та допущених
                                         помилок, прийняття рішення про
@@ -167,14 +167,14 @@ const OurExperience = () => {
                             </div>
                             <div className="our-experience_body-text">
                                 <div className="our-experience_body-text_container">
-                                    <p className="body-text gray-text">
+                                    <p className="body-text break-word">
                                         Відкриття трьох нових
                                         кіберспортивних клубів
                                         під брендом CYBERION!
                                     </p>
                                 </div>
                                 <div className="our-experience_body-text_container">
-                                    <p className="body-text gray-text">
+                                    <p className="body-text break-word">
                                         Відкриття нового клубу
                                         під брендом CYBERION
                                         в Києві на КПІ та

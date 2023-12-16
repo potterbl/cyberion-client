@@ -29,3 +29,13 @@
         padding: 20px 40px;
     }
 }
+@media (max-width: 602px) {
+    .btn{
+        padding: 15px 30px;
+    }
+}
+@media (max-width: 540px) {
+    .btn{
+        padding: 10px 20px;
+    }
+}

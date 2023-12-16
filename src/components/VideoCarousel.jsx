@@ -41,11 +41,13 @@ const VideoCarousel = () => {
                 <Swiper
                     modules={[A11y, Navigation]}
                     slidesPerView={
-                    window.innerWidth < 670 ?
+                    window.innerWidth < 400 ?
+                        1.2
+                        : window.innerWidth < 670 ?
                         1.5
-                        : window.innerWidth > 768 ?
-                        3.5
-                        : 2.5
+                            : window.innerWidth > 768 ?
+                            3.5
+                                : 2.5
                     }
                     spaceBetween="10"
                     navigation={{

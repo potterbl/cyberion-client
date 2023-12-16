@@ -84,12 +84,29 @@
         flex-direction: column;
         row-gap: 20px;
         position: absolute;
-        top: 84px;
+        top: 82px;
         left: 0;
         width: 100%;
         height: calc(100vh - 84px);
         overflow: hidden;
         background-color: #171717;
         padding: 20px 14px;
+    }
+}
+@media (max-width: 380px) {
+    .header-logo{
+        width: 250px;
+    }
+    .header-list{
+        top: 69px;
+    }
+}
+@media (max-width: 320px) {
+    .header-logo{
+        width: 200px;
+    }
+
+    .header-list{
+        top: 60px;
     }
 }

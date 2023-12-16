@@ -4,18 +4,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.get-proposition_left{
-    display: grid;
-    row-gap: 25px;
-    height: max-content;
-    background-image: url('../img/ukarine.svg');
-    background-size: calc(100% - 115px) auto;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-}
-.get-proposition_left-body-ul{
-    list-style-type: none;
-}
 .get-proposition_right{
     display: grid;
     row-gap: 30px;
@@ -36,5 +24,10 @@
 @media (max-width: 768px) {
     .get-proposition{
         grid-template-columns: unset;
+        padding: 208px 0;
+        width: 100%;
+    }
+    .get-proposition_right{
+        width: 100%;
     }
 }

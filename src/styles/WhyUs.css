@@ -141,5 +141,18 @@
         z-index: 2;
     }
 }
-@media (max-width: 1000px){
+@media (max-width: 470px){
+    .why-us{
+        padding: 32px;
+    }
+}
+@media (max-width: 380px) {
+    .why-us_right{
+        margin-bottom: 70px;
+    }
+}
+@media (max-width: 355px) {
+    .why-us_right{
+        margin-bottom: 30px;
+    }
 }
