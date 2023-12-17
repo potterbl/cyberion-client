@@ -8,7 +8,7 @@ const YellowSection = () => {
 
     return (
         <div className="yellow-section">
-            <div className="yellow-section_outer" style={{left: `-${sectionLeft}px`}}>
+            <div className="yellow-section_outer" style={{left: `-${Math.ceil(sectionLeft)}px`}}>
             </div>
             <div className="yellow-section_container">
                 <p className="body-text-bigger black-font bold">

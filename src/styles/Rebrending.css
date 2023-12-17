@@ -7,8 +7,6 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: flex-start;
-    overflow-x: hidden;
-    /*clip-path: polygon(0% 0%, 100vw 0%, 100vw 100%, 0% 100%);*/
 }
 .rebrending-main{
     width: 50vw;
