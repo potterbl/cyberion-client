@@ -194,7 +194,7 @@ const FranchisePage = () => {
                 <YellowSection/>
                 <OurExperience/>
                 <OurAdvantages/>
-                <Rebrending/>
+                {/*<Rebrending/>*/}
                 <GetProposition/>
                 <Footer/>
             </Container>

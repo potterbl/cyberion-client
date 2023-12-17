@@ -14,10 +14,12 @@
     outline: none;
     text-decoration: none;
 }
+html, body{
+    overflow-x: hidden;
+}
 body{
     background-color: #000000;
     width: 100%;
-    overflow-x: hidden;
     height: 100%;
 }
 body::-webkit-scrollbar {
