@@ -87,7 +87,7 @@
         top: 82px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 84px);
+        height: 100vh;
         overflow: hidden;
         background-color: #171717;
         padding: 20px 14px;

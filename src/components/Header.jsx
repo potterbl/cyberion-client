@@ -29,7 +29,7 @@ const Header = () => {
 
     const burgerAnimation = {
         visible: (custom) => ({
-            maxHeight: custom ? window.innerWidth > 380 ? 'calc(100vh - 82px)' : window.innerWidth > 320 ? 'calc(100vh - 69px)' : window.innerWidth > 0 ? 'calc(100vh - 60px)' : 0 : 0,
+            maxHeight: custom ? window.innerWidth > 380 ? 'calc(100vh - 82px)' : window.innerWidth > 320 ? 'calc(100vh - 70px)' : 'calc(100vh - 60px)' : 0,
             opacity: custom || window.innerWidth > 768 ? 1 : 0,
             transition: {
                 type: 'spring',
