@@ -23,6 +23,7 @@ import Footer from "../components/Footer";
 import Rebrending from "../components/Rebrending";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
+import Modal from "../components/Modal";
 
 const FranchisePage = () => {
 
@@ -182,6 +183,7 @@ const FranchisePage = () => {
                 <Loader/>
             }
             <Header/>
+            <Modal/>
             <Container>
                 <FranchiseCover/>
                 <VideoCarousel/>

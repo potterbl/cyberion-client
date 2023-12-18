@@ -5,8 +5,7 @@ import '../styles/Btn.css'
 import {motion} from "framer-motion";
 
 const Btn = (props) => {
-
-    const { type, children, isDisabled } = props
+    const { type, children, isDisabled, link, title } = props
 
     const primaryAnimations = {
         initial: {
@@ -82,6 +81,11 @@ const Btn = (props) => {
             className={
                 `btn ${type === 'primary' ? 'btn-primary' : type === 'second' ? 'btn-second' : ''}`
             }
+            onClick={() => {
+                if(type === 'second'){
+                    window.location.href = link
+                }
+            }}
         >
             <p className={`body-text ${type === 'primary' ? 'black-font' : ''}`}>
                 {children}

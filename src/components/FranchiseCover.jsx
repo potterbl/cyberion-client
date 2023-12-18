@@ -72,7 +72,7 @@ const FranchiseCover = () => {
                         <Btn type={'primary'}>
                             Відкрити власний клуб
                         </Btn>
-                        <Btn type={'second'}>
+                        <Btn type={'second'} link={'https://t.me/Artem_Natanzon'}>
                             Задати питання у телеграм
                         </Btn>
                     </div>
