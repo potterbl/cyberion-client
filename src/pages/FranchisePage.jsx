@@ -183,7 +183,7 @@ const FranchisePage = () => {
                 <Loader/>
             }
             <Header/>
-            <Modal/>
+            {/*<Modal/>*/}
             <Container>
                 <FranchiseCover/>
                 <VideoCarousel/>

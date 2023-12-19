@@ -6,35 +6,68 @@ const Input = ({ children, type }) => {
     const [inputValue, setInputValue] = useState('');
 
     const timeInput = (value) => {
-        const cleanedValue = value.replace(/\D/g, '');
-
-
+        let cleanedValue = value.replace(/\D/g, '');
 
         let formattedValue = '';
         for (let i = 0; i < 4; i++) {
             if (cleanedValue[i] !== undefined) {
-                formattedValue += cleanedValue[i];
+                if(i === 0 && cleanedValue[0] > 2){
+                    formattedValue += 2
+                } else if(i === 1 && cleanedValue[1] > 3){
+                    formattedValue += 3
+                }  else if (i === 2 && cleanedValue[2] > 5) {
+                    formattedValue += 5
+                } else {
+                    formattedValue += cleanedValue[i];
+                }
             } else {
                 formattedValue += '_';
             }
             if (i === 1) {
                 formattedValue += ':';
             }
+
         }
 
         setInputValue(cleanedValue !== '' ? formattedValue : '');
         setIsActive(cleanedValue !== '');
     };
 
+    const numberInput = (value) => {
+        const cleanedValue = value.replace(/\D/g, '');
+
+        let formattedValue = '+';
+        for (let i = 0; i < cleanedValue.length; i++) {
+            formattedValue += cleanedValue[i];
+
+            if (i === 2) {
+                formattedValue += ' (';
+            } else if (i === 4) {
+                formattedValue += ') ';
+            } else if (i === 7 || i === 9) {
+                formattedValue += '-';
+            }
+        }
+
+        setInputValue(cleanedValue !== '' ? formattedValue : '');
+        setIsActive(cleanedValue !== '');
+    }
+
+
     const handleInputChange = (value) => {
         if (type === 'time') {
             timeInput(value);
+        } else if (type === 'number'){
+            numberInput(value)
         }
     };
 
     const handleInputDelete = (value) => {
         if (type === 'time') {
-            const cleanedValue = value.replace(/\D/g, '');
+            const cleanedValue = inputValue.replace(/\D/g, '');
+            handleInputChange(cleanedValue.slice(0, -1));
+        } else if (type === 'number') {
+            const cleanedValue = inputValue.replace(/\D/g, '');
             handleInputChange(cleanedValue.slice(0, -1));
         }
     };
@@ -43,10 +76,15 @@ const Input = ({ children, type }) => {
         const inputType = e.nativeEvent.inputType;
         const value = e.target.value;
 
-        if (inputType === 'deleteContentBackward') {
-            handleInputDelete(value);
+        if(type === 'number' || type === 'time') {
+            if (inputType === 'deleteContentBackward') {
+                handleInputDelete(value);
+            } else {
+                handleInputChange(value);
+            }
         } else {
-            handleInputChange(value);
+            setInputValue(value)
+            setIsActive(value !== '')
         }
     };
 

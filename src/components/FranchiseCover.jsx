@@ -10,8 +10,11 @@ import TypewriterComponent from "typewriter-effect";
 import {useInView} from "react-intersection-observer";
 import {useDispatch} from "react-redux";
 import {actions} from "../store/slices/header.slice";
+import Modal from "./Modal";
 
 const FranchiseCover = () => {
+    const [isModal, setIsModal] = useState(false)
+
     const dispatch = useDispatch()
 
     const coverRef = useRef(null);
@@ -36,20 +39,23 @@ const FranchiseCover = () => {
     }, [coverRef])
 
     return (
-        <div className="franchise-hero" ref={ref}>
-            <div className="franchise-hero_gradient"></div>
-            <motion.div className={'franchise-cover'} ref={coverRef} style={{y: yHero}}>
-                <div className="franchise-cover_left">
-                    <div className="franchise-cover_left-head">
-                        <motion.h1
-                            className="title uppercase"
-                            style={{
-                                opacity: coverRef.current ? opacity : 0
-                            }}
-                        >
-                            Франшиза<br/>
-                            кіберклубів<br/>
-                            <span className={"span-yellow"}>
+        <>
+            <Modal title="Залишити заявку" isActive={isModal} setIsActive={setIsModal}/>
+
+            <div className="franchise-hero" ref={ref}>
+                <div className="franchise-hero_gradient"></div>
+                <motion.div className={'franchise-cover'} ref={coverRef} style={{y: yHero}}>
+                    <div className="franchise-cover_left">
+                        <div className="franchise-cover_left-head">
+                            <motion.h1
+                                className="title uppercase"
+                                style={{
+                                    opacity: coverRef.current ? opacity : 0
+                                }}
+                            >
+                                Франшиза<br/>
+                                кіберклубів<br/>
+                                <span className={"span-yellow"}>
                                 <TypewriterComponent
                                     options={{
                                         strings: ['CYBERION'],
@@ -60,41 +66,49 @@ const FranchiseCover = () => {
                                     }}
                                 />
                             </span><br/>
-                        </motion.h1>
-                        <p className={"body-text"}>
-                            Перетворюємо поняття комп'ютерних клубів з 90-х<br/>
-                            у сучасний та перспективний бізнес у сфері кіберспорт.<br/>
-                            Будуємо найбільшу мережу кіберспортивних клубів<br/>
-                            України для найвибагливіших геймерів та кіберспортсменів!<br/>
-                        </p>
+                            </motion.h1>
+                            <p className={"body-text"}>
+                                Перетворюємо поняття комп'ютерних клубів з 90-х<br/>
+                                у сучасний та перспективний бізнес у сфері кіберспорт.<br/>
+                                Будуємо найбільшу мережу кіберспортивних клубів<br/>
+                                України для найвибагливіших геймерів та кіберспортсменів!<br/>
+                            </p>
+                        </div>
+                        <div className="franchise-cover_left-footer">
+                            <div
+                                onClick={() => setIsModal(!isModal)}
+                            >
+                                <Btn
+                                    type={'primary'}
+                                >
+                                    Відкрити власний клуб
+                                </Btn>
+                            </div>
+                            <Btn type={'second'} link={'https://t.me/Artem_Natanzon'}>
+                                Задати питання у телеграм
+                            </Btn>
+                        </div>
                     </div>
-                    <div className="franchise-cover_left-footer">
-                        <Btn type={'primary'}>
-                            Відкрити власний клуб
-                        </Btn>
-                        <Btn type={'second'} link={'https://t.me/Artem_Natanzon'}>
-                            Задати питання у телеграм
-                        </Btn>
+                    <div className="franchise-cover_right">
+                        <motion.img
+                            src={cover}
+                            alt="cover"
+                            className={'franchise-cover_right-image'}
+                            style={{
+                                y: coverRef.current ? y : 0
+                            }}
+                        />
+                        <motion.div
+                            style={{
+                                y: coverRef.current ? y2 : 0
+                            }}
+                            className={'franchise-cover_right-image-background'}
+                        />
                     </div>
-                </div>
-                <div className="franchise-cover_right">
-                    <motion.img
-                        src={cover}
-                        alt="cover"
-                        className={'franchise-cover_right-image'}
-                        style={{
-                            y: coverRef.current ? y : 0
-                        }}
-                    />
-                    <motion.div
-                        style={{
-                            y: coverRef.current ? y2 : 0
-                        }}
-                        className={'franchise-cover_right-image-background'}
-                    />
-                </div>
-            </motion.div>
-        </div>
+                </motion.div>
+            </div>
+        </>
+
     );
 };
 

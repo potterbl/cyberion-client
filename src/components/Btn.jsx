@@ -5,7 +5,7 @@ import '../styles/Btn.css'
 import {motion} from "framer-motion";
 
 const Btn = (props) => {
-    const { type, children, isDisabled, link, title } = props
+    const { type, children, isDisabled, link } = props
 
     const primaryAnimations = {
         initial: {
