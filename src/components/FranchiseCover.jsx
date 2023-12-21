@@ -8,7 +8,7 @@ import {motion, useScroll, useTransform} from "framer-motion";
 import Btn from "./Btn";
 import TypewriterComponent from "typewriter-effect";
 import {useInView} from "react-intersection-observer";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../store/slices/header.slice";
 import Modal from "./Modal";
 
@@ -16,6 +16,8 @@ const FranchiseCover = () => {
     const [isModal, setIsModal] = useState(false)
 
     const dispatch = useDispatch()
+
+    const {offsetLeft} = useSelector(state => state.container)
 
     const coverRef = useRef(null);
     const { scrollY } = useScroll();
@@ -38,12 +40,18 @@ const FranchiseCover = () => {
         setSectionHeight(coverRef.current.offsetHeight)
     }, [coverRef])
 
+    console.log(offsetLeft)
+
     return (
         <>
             <Modal title="Залишити заявку" isActive={isModal} setIsActive={setIsModal}/>
 
             <div className="franchise-hero" ref={ref}>
-                <div className="franchise-hero_gradient"></div>
+                <div
+                    className="franchise-hero_gradient"
+                    style={{left: `-${offsetLeft}px`}}
+                >
+                </div>
                 <motion.div className={'franchise-cover'} ref={coverRef} style={{y: yHero}}>
                     <div className="franchise-cover_left">
                         <div className="franchise-cover_left-head">

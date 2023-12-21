@@ -142,7 +142,7 @@ const WhyUs = React.forwardRef((props, ref) => {
     return (
         <div className="why-us_container" ref={ref}>
             <motion.div
-                className={`why-us ${isInView && window.innerWidth > 770 ? 'why-us_top' : ''}`}
+                className={`why-us`}
                 initial="initial"
                 whileInView="visible"
                 variants={containerAnimation}

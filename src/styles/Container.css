@@ -3,22 +3,35 @@
     margin: 0 auto;
     position: relative;
 }
+.container-suctom-bg{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -20;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container-suctom-bg_opacity{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
 @media(max-width: 1200px){
     .container{
         width: calc(100% - 144px);
-        margin: 0 auto;
     }
 }
 @media(max-width: 1024px){
     .container{
         width: calc(100% - 40px);
-        margin: 0 auto;
     }
 }
 @media (max-width: 768px) {
     .container{
         width: calc(100% - 160px);
-        margin: 0 auto;
     }
 }
 @media (max-width: 550px) {

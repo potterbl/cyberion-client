@@ -25,6 +25,10 @@ import Header from "../components/Header";
 import Loader from "../components/Loader";
 import Modal from "../components/Modal";
 
+import tournament from '../img/tournament.jpg'
+import grid from '../img/grid.svg'
+import Callback from "../components/Callback";
+
 const FranchisePage = () => {
 
     const [isLoaded, setIsLoaded] = useState()
@@ -183,16 +187,22 @@ const FranchisePage = () => {
                 <Loader/>
             }
             <Header/>
-            {/*<Modal/>*/}
-            <Container>
+            <Callback/>
+            <Container custom={{backgroundImage: tournament, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"end"}>
                 <FranchiseCover/>
+            </Container>
+            <Container>
                 <VideoCarousel/>
                 <Philosophy/>
+            </Container>
+            <Container custom={{backgroundImage: grid, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"center"}>
                 <WhyUs ref={sections[0]}/>
                 <Proposition ref={sections[1]}/>
                 <CyberSport ref={sections[2]}/>
                 <Infrastructure ref={sections[3]}/>
                 <NewFormat ref={sections[4]}/>
+            </Container>
+            <Container>
                 <YellowSection/>
                 <OurExperience/>
                 <OurAdvantages/>
