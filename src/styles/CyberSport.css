@@ -4,6 +4,7 @@
     place-items: center;
 }
 .cybersport{
+    width: 100%;
     display: grid;
     grid-template-columns: auto max-content;
     column-gap: 24px;
@@ -12,7 +13,7 @@
 .cybersport-left{
     text-align: right;
     width: max-content;
-    padding: 58px 117px 133px 0;
+    align-self: center;
 }
 .cybersport-right_image{
     width: 100%;
@@ -32,7 +33,6 @@
         column-gap: 20px;
     }
     .cybersport-left{
-        align-self: center;
         padding: 0;
     }
 }

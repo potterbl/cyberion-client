@@ -40,8 +40,6 @@ const FranchiseCover = () => {
         setSectionHeight(coverRef.current.offsetHeight)
     }, [coverRef])
 
-    console.log(offsetLeft)
-
     return (
         <>
             <Modal title="Залишити заявку" isActive={isModal} setIsActive={setIsModal}/>
