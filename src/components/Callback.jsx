@@ -1,12 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../styles/Callback.css';
+import { motion } from 'framer-motion';
 
-import '../styles/Callback.css'
+import phone from '../img/popup_phone.svg'
 
 const Callback = () => {
-    return (
-        <button className="callback">
+    const [isOpen, setIsOpen] = useState(false);
 
-        </button>
+    const pulseAnimation = {
+        initial: {
+            opacity: 1,
+            scale: 1,
+        },
+        pulse: (custom) => ({
+            opacity: !custom ? 0 : 1,
+            scale: !custom ? 1.5 : 1,
+            transition: {
+                repeat: !custom ? Infinity : 0,
+                repeatType: 'reverse',
+                duration: 1,
+            },
+        }),
+    };
+
+    const optionAnimation = {
+        option: (custom) => ({
+            y: custom.isOpen ? 0 : `${custom.position * 64}px`,
+            opacity: custom.isOpen ? 1 : 0,
+            transition: {
+                duration: 0.4
+            }
+        }),
+    };
+
+    return (
+        <div className="callback-wrapper">
+            <motion.div
+                className="callback-pulse"
+                animate="pulse"
+                initial="initial"
+                custom={isOpen} // Передаем isOpen в custom
+                variants={pulseAnimation}
+            ></motion.div>
+            <motion.button
+                onClick={() => setIsOpen(!isOpen)}
+                className={`callback ${isOpen ? 'callback_enabled' : ''}`}
+            ></motion.button>
+            <div className="callback-options">
+                <motion.button
+                    className="callback-option"
+                    variants={optionAnimation}
+                    animate="option"
+                    custom={{isOpen, position: 1}}
+                    style={{backgroundImage: `url(${phone})`}}
+                ></motion.button>
+            </div>
+        </div>
     );
 };
 

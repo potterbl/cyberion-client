@@ -1,10 +1,54 @@
-.callback{
+.callback-wrapper{
+    z-index: 20;
     position: fixed;
     bottom: 24px;
     right: 24px;
+}
+.callback-pulse{
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    top: 0;
+    left: 0;
+    border: 8px solid #ffed00;
+    filter: blur(1px);
+}
+.callback{
+    border: 1px solid #0E0E0E;
     width: 70px;
     border-radius: 50%;
     aspect-ratio: 1;
     background-color: #ffed00;
-    z-index: 20;
+    background-image: url('../img/popup_call.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    transition: all .6s ease-in-out;
+}
+
+.callback_enabled{
+    background-image: url('../img/cancel.svg');
+    background-color: #fff;
+}
+.callback-options{
+    width: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
+.callback-option{
+    position: absolute;
+    top: -64px;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
 }
