@@ -95,22 +95,26 @@ const FranchiseCover = () => {
                             </Btn>
                         </div>
                     </div>
-                    <div className="franchise-cover_right">
-                        <motion.img
-                            src={cover}
-                            alt="cover"
-                            className={'franchise-cover_right-image'}
-                            style={{
-                                y: coverRef.current ? y : 0
-                            }}
-                        />
-                        <motion.div
-                            style={{
-                                y: coverRef.current ? y2 : 0
-                            }}
-                            className={'franchise-cover_right-image-background'}
-                        />
-                    </div>
+                    {
+                        window.innerWidth > 700 &&
+                        <div className="franchise-cover_right">
+                            <motion.img
+                                src={cover}
+                                alt="cover"
+                                className={'franchise-cover_right-image'}
+                                style={{
+                                    y: coverRef.current ? y : 0
+                                }}
+                            />
+                            <motion.div
+                                style={{
+                                    y: coverRef.current ? y2 : 0
+                                }}
+                                className={'franchise-cover_right-image-background'}
+                            />
+                        </div>
+                    }
+
                 </motion.div>
             </div>
         </>

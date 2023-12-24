@@ -41,7 +41,7 @@ const Container = ({children, custom, type}) => {
 
     const opacity1 = useTransform(
         scrollY,
-        [offsetTop, offsetTop + (window.innerHeight / 2)],
+        [offsetTop - (window.innerHeight / 2), offsetTop + window.innerHeight],
         ['0%', '100%'],
     );
 
@@ -81,7 +81,9 @@ const Container = ({children, custom, type}) => {
                         opacity: type === "center" ?
                             opacity1.current === "100%" ? opacity2 : opacity1
                             : type === "end" ? opacity2
-                                : 0
+                                : type === "start" ?
+                                    opacity1
+                                    : 0
                         ,
                         backgroundImage: `url(${custom.backgroundImage})`
                     }}

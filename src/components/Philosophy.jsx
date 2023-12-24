@@ -112,9 +112,6 @@ const Philosophy = () => {
                         swiper.params.navigation.prevEl = "#prevSlidePhilosophy"
                         swiper.params.navigation.nextEl = "#nextSlidePhilosophy"
                     }}
-                    style={{width: '100%', height: '100%'}}
-                    spaceBetween={0}
-                    className={'swiper'}
                 >
 
                     <SwiperSlide>

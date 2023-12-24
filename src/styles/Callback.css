@@ -15,22 +15,54 @@
     border: 8px solid #ffed00;
     filter: blur(1px);
 }
-.callback{
+.callback {
+    position: relative;
     border: 1px solid #0E0E0E;
     width: 70px;
+    height: 70px;
     border-radius: 50%;
-    aspect-ratio: 1;
+    overflow: hidden;
     background-color: #ffed00;
-    background-image: url('../img/popup_call.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60% auto;
-    transition: all .6s ease-in-out;
 }
 
+.callback::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    transition: opacity 0.6s ease-in-out;
+    animation: callbackBg 2s ease-in-out infinite alternate;
+}
+
+@keyframes callbackBg {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    0%{
+        background-image: url('../img/popup_call.svg');
+    }
+    100%{
+        background-image: url('../img/popup_phone.svg');
+    }
+}
+.callback_enabled::before{
+    display: none;
+}
 .callback_enabled{
     background-image: url('../img/cancel.svg');
     background-color: #fff;
+    animation: none;
 }
 .callback-options{
     width: 100%;

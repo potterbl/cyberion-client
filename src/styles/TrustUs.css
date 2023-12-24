@@ -1,0 +1,16 @@
+.trust-us{
+    padding: 140px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+.trust-us_head{
+    text-align: center;
+    width: 100%;
+}
+.trust-us_slide{
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: #fff;
+}

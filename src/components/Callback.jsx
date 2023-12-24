@@ -3,9 +3,19 @@ import '../styles/Callback.css';
 import { motion } from 'framer-motion';
 
 import phone from '../img/popup_phone.svg'
+import {useSelector} from "react-redux";
 
 const Callback = () => {
+    const {isInView} = useSelector(state => state.header)
+
     const [isOpen, setIsOpen] = useState(false);
+
+    const buttonAnimation = {
+        visible: (custom) => ({
+            x: !custom ? 0 : '100%',
+            opacity: !custom ? 1 : 0
+        })
+    }
 
     const pulseAnimation = {
         initial: {
@@ -34,7 +44,12 @@ const Callback = () => {
     };
 
     return (
-        <div className="callback-wrapper">
+        <motion.div
+            className="callback-wrapper"
+            variants={buttonAnimation}
+            animate="visible"
+            custom={isInView}
+        >
             <motion.div
                 className="callback-pulse"
                 animate="pulse"
@@ -55,7 +70,7 @@ const Callback = () => {
                     style={{backgroundImage: `url(${phone})`}}
                 ></motion.button>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

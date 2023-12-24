@@ -20,14 +20,17 @@ import {actions} from "../store/slices/blocks.slice";
 import OurAdvantages from "../components/OurAdvantages";
 import GetProposition from "../components/GetProposition";
 import Footer from "../components/Footer";
-import Rebrending from "../components/Rebrending";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
-import Modal from "../components/Modal";
 
 import tournament from '../img/tournament.jpg'
 import grid from '../img/grid.svg'
+import ourExperience from '../img/OurExpirience.jpg'
+
 import Callback from "../components/Callback";
+import TrustUs from "../components/TrustUs";
+import Reviews from "../components/Reviews";
+import Rebrending from "../components/Rebrending";
 
 const FranchisePage = () => {
 
@@ -204,9 +207,15 @@ const FranchisePage = () => {
             </Container>
             <Container>
                 <YellowSection/>
+            </Container>
+            <Container custom={{backgroundImage: ourExperience, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
                 <OurExperience/>
+            </Container>
+            <Container>
                 <OurAdvantages/>
-                {/*<Rebrending/>*/}
+                <TrustUs/>
+                <Rebrending/>
+                <Reviews/>
                 <GetProposition/>
                 <Footer/>
             </Container>
