@@ -11,6 +11,10 @@ import clubs from '../img/clubs.svg'
 import tournament from '../img/tournament.svg'
 import news from '../img/news.svg'
 
+import instagram from '../img/instagram.svg'
+import youtube from '../img/youtube.svg'
+import telegram from '../img/telegram.svg'
+
 const Header = () => {
 
     const {isInView} = useSelector(state => state.header)
@@ -60,9 +64,15 @@ const Header = () => {
                         <ul
                             className="header-list"
                         >
-                            <li className="header-list_item body-text uppercase">Інстаграм</li>
-                            <li className="header-list_item body-text uppercase">ютуб</li>
-                            <li className="header-list_item body-text uppercase">телеграм</li>
+                            <li className="header-list_item body-text uppercase">
+                                <img src={instagram} alt=""/>
+                            </li>
+                            <li className="header-list_item body-text uppercase">
+                                <img src={youtube} alt=""/>
+                            </li>
+                            <li className="header-list_item body-text uppercase">
+                                <img src={telegram} alt=""/>
+                            </li>
                         </ul>
                     }
                 </div>

@@ -45,6 +45,9 @@
 .header-list_item{
     color: #BFBFBF;
 }
+.header-list_item img{
+    height: 40%;
+}
 .header-btn{
     background-color: #ffed00;
     padding: 7px 23px;
