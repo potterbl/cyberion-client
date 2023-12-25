@@ -9,6 +9,19 @@
     text-align: center;
     width: 100%;
 }
+.trust-us_body{
+    position: relative;
+}
+.trust-us_body::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #0E0E0E 0%, transparent 20% 80%, #0E0E0E 100%);
+    z-index: 1;
+}
 .trust-us_slide{
     width: 100%;
     aspect-ratio: 3/2;

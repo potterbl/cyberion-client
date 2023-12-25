@@ -1,13 +1,19 @@
 import React from 'react';
 
 import '../styles/Footer.css'
+import {useSelector} from "react-redux";
 
 const Footer = () => {
+    const {offsetLeft} = useSelector(state => state.container)
+
     return (
         <div className="footer">
+            <div className="footer-wrapper" style={{left: -offsetLeft + 'px'}}>
+
+            </div>
             <div className="footer-col">
                 <p className="body-text footer-header">
-                    Наші соц. мережі
+                Наші соц. мережі
                 </p>
                 <p className="body-text">
                     Instagram
