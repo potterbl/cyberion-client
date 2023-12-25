@@ -41,7 +41,7 @@ const Container = ({children, custom, type}) => {
 
     const opacity1 = useTransform(
         scrollY,
-        [offsetTop - (window.innerHeight / 2), offsetTop + window.innerHeight],
+        [offsetTop - (window.innerHeight / 2), offsetTop + (window.innerHeight / 2)],
         ['0%', '100%'],
     );
 

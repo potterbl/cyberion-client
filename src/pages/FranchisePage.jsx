@@ -26,6 +26,7 @@ import Loader from "../components/Loader";
 import tournament from '../img/tournament.jpg'
 import grid from '../img/grid.svg'
 import ourExperience from '../img/OurExpirience.jpg'
+import getProposition from '../img/getProposition.jpg'
 
 import Callback from "../components/Callback";
 import TrustUs from "../components/TrustUs";
@@ -216,7 +217,11 @@ const FranchisePage = () => {
                 <TrustUs/>
                 <Rebrending/>
                 <Reviews/>
+            </Container>
+            <Container custom={{backgroundImage: getProposition, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
                 <GetProposition/>
+            </Container>
+            <Container>
                 <Footer/>
             </Container>
         </div>
