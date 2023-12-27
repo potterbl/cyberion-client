@@ -23,7 +23,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
 
-import tournament from '../img/tournament.jpg'
+import tournament from '../img/R.jpeg'
 import grid from '../img/grid.svg'
 import ourExperience from '../img/OurExpirience.jpg'
 import getProposition from '../img/getProposition.jpg'

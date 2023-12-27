@@ -12,9 +12,11 @@
     column-gap: 24px;
 }
 .infrastructure-left{
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     row-gap: 31px;
-    height: max-content;
+    height: 100%;
 }
 .infrastructure-right {
     aspect-ratio: 1;
@@ -66,11 +68,6 @@
 @media (max-width: 1200px){
     .infrastructure-right_box-content_x{
         height: 28px;
-    }
-}
-@media(max-width: 1024px){
-    .infrastructure-left{
-        align-self: center;
     }
 }
 @media (max-width: 850px) {

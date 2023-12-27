@@ -64,14 +64,14 @@ const Header = () => {
                         <ul
                             className="header-list"
                         >
-                            <li className="header-list_item body-text uppercase">
-                                <img src={instagram} alt=""/>
+                            <li className="body-text uppercase">
+                                <img src={instagram} alt="" className="header-icon"/>
                             </li>
-                            <li className="header-list_item body-text uppercase">
-                                <img src={youtube} alt=""/>
+                            <li className="body-text uppercase">
+                                <img src={youtube} alt="" className="header-icon"/>
                             </li>
-                            <li className="header-list_item body-text uppercase">
-                                <img src={telegram} alt=""/>
+                            <li className="body-text uppercase">
+                                <img src={telegram} alt="" className="header-icon"/>
                             </li>
                         </ul>
                     }
@@ -85,10 +85,10 @@ const Header = () => {
                         <ul
                             className="header-list"
                         >
-                            <li className="header-list_item body-text uppercase">новини</li>
-                            <li className="header-list_item body-text uppercase">faq</li>
-                            <li className="header-list_item body-text uppercase">правила</li>
-                            <li className="header-list_item body-text uppercase">клуби</li>
+                            <li className="body-text uppercase">новини</li>
+                            <li className="body-text uppercase">faq</li>
+                            <li className="body-text uppercase">правила</li>
+                            <li className="body-text uppercase">клуби</li>
                             <button className="header-btn body-text uppercase black-font">
                                 франшиза
                             </button>

@@ -42,6 +42,9 @@
     column-gap: 24px;
     list-style-type: none;
 }
+.header-icon{
+    height: 40px;
+}
 .header-list_item{
     color: #BFBFBF;
 }

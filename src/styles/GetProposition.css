@@ -6,10 +6,9 @@
 }
 .get-proposition_left{
     display: grid;
-    row-gap: 20px;
-    height: 100%;
-    background-image: url('../img/ukarine.svg');
-    background-size: auto 100%;
+    row-gap: 80px;
+    background-image: url('../img/ukraine.svg');
+    background-size: contain;
     background-position: 100% 100%;
     background-repeat: no-repeat;
 }

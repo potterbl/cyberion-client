@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import '../styles/FranchiseCover.css'
 
-import cover from '../img/FranchiseCover.png'
+import robot from '../img/robot.png'
 
 import {motion, useScroll, useTransform} from "framer-motion";
 import Btn from "./Btn";
@@ -99,7 +99,7 @@ const FranchiseCover = () => {
                         window.innerWidth > 700 &&
                         <div className="franchise-cover_right">
                             <motion.img
-                                src={cover}
+                                src={robot}
                                 alt="cover"
                                 className={'franchise-cover_right-image'}
                                 style={{

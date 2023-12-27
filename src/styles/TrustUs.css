@@ -25,5 +25,7 @@
 .trust-us_slide{
     width: 100%;
     aspect-ratio: 3/2;
-    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

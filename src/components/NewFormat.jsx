@@ -6,9 +6,9 @@ import pc20 from '../img/cyber-72.jpg'
 import pc30 from '../img/cyber-70.jpg'
 import pc40 from '../img/cyber-116.jpg'
 
-import model30 from '../img/model30.svg'
-import model40 from '../img/Group 35745.svg'
-import model60 from '../img/Group 35747.svg'
+import model30 from '../img/pc20.svg'
+import model40 from '../img/pc30.svg'
+import model60 from '../img/pc40.svg'
 
 import {motion} from "framer-motion";
 import Btn from "./Btn";

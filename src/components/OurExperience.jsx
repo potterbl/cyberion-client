@@ -16,18 +16,21 @@ const OurExperience = () => {
                 <h3 className="heading-smaller break-word">
                     НАША КОМАНДА МАЄ
                     {
-                        window.innerWidth <= 1000 &&
+                        window.innerWidth <= 1000 ?
                         <br/>
+                            : ' '
                     }
                     ВЕЛИКИЙ
                     {
-                        window.innerWidth > 1000 &&
+                        window.innerWidth > 1000 ?
                         <br/>
+                            : ' '
                     }
                     ДОСВІД
                     {
-                        window.innerWidth <= 1000 &&
+                        window.innerWidth <= 1000 ?
                         <br/>
+                            : ' '
                     }
                     ВІДКРИТТЯ КІБЕР КЛУБІВ
                 </h3>
