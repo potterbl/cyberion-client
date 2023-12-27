@@ -1,10 +1,49 @@
-import React from 'react';
+/* eslint-disable */
+import React, {useState} from 'react';
 
 import '../styles/Modal.css'
 import Input from "./Input";
 import Btn from "./Btn";
 
+import Cookies from 'js-cookie'
+import axios from "axios";
+
 const Modal = ({title, isActive, setIsActive}) => {
+    const [name, setName] = useState('')
+    const [number, setNumber ] = useState('')
+    const [email, setEmail ] = useState('')
+    const [time, setTime ] = useState('')
+
+    const cookies = Cookies.get('_aaa_utmz')
+    let splitedCookies;
+
+    if(cookies !== undefined){
+        splitedCookies = cookies.split('|')
+    }
+
+    const handleSend = async () => {
+        if(name === "" || number === ''  || email === '' || time === ''){
+            return
+        }
+
+        await axios
+            .post('https://1cd5-34-172-33-18.ngrok-free.app/mail', {
+                name: name,
+                phone: number,
+                email: email,
+                link: window.location.href,
+                form: title,
+                subject: title
+            })
+            .then(res => {
+                console.log(res)
+                setIsActive(false)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     return (
         <>
             {
@@ -35,25 +74,29 @@ const Modal = ({title, isActive, setIsActive}) => {
                                 </button>
                             </div>
                             <div className="modal-inner_body">
-                                <Input>
+                                <Input setParental={setName}>
                                     Ім'я
                                 </Input>
-                                <Input type="number">
+                                <Input type="number" setParental={setNumber}>
                                     Номер телефону
                                 </Input>
-                                <Input>
+                                <Input setParental={setEmail}>
                                     Email
                                 </Input>
-                                <Input type="time">
+                                <Input type="time" setParental={setTime}>
                                     Час для дзвінку
                                 </Input>
                             </div>
                             <div className="modal-inner_footer">
-                                <Btn
-                                    type="primary"
+                                <div
+                                    onClick={handleSend}
                                 >
-                                    Надіслати
-                                </Btn>
+                                    <Btn
+                                        type="primary"
+                                    >
+                                        Надіслати
+                                    </Btn>
+                                </div>
                             </div>
                         </div>
                     </div>

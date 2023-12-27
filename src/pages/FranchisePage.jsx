@@ -32,6 +32,7 @@ import Callback from "../components/Callback";
 import TrustUs from "../components/TrustUs";
 import Reviews from "../components/Reviews";
 import Rebrending from "../components/Rebrending";
+import ReadUTM from "../components/ReadUTM";
 
 const FranchisePage = () => {
 
@@ -224,6 +225,7 @@ const FranchisePage = () => {
             <Container>
                 <Footer/>
             </Container>
+            <ReadUTM/>
         </div>
     );
 };

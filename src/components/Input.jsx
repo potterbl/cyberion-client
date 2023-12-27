@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Input.css';
 
-const Input = ({ children, type }) => {
+const Input = ({ children, type, setParental }) => {
     const [isActive, setIsActive] = useState(false);
     const [inputValue, setInputValue] = useState('');
 
@@ -30,6 +30,7 @@ const Input = ({ children, type }) => {
         }
 
         setInputValue(cleanedValue !== '' ? formattedValue : '');
+        setParental(cleanedValue !== '' ? formattedValue : '')
         setIsActive(cleanedValue !== '');
     };
 
@@ -50,6 +51,7 @@ const Input = ({ children, type }) => {
         }
 
         setInputValue(cleanedValue !== '' ? formattedValue : '');
+        setParental(cleanedValue !== '' ? formattedValue : '')
         setIsActive(cleanedValue !== '');
     }
 
@@ -85,6 +87,7 @@ const Input = ({ children, type }) => {
         } else {
             setInputValue(value)
             setIsActive(value !== '')
+            setParental(value)
         }
     };
 
