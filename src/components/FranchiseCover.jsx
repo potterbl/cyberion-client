@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import '../styles/FranchiseCover.css'
 
-import robot from '../img/robot.svg'
+import robot from '../img/robot.png'
 
 import {motion, useScroll, useTransform} from "framer-motion";
 import Btn from "./Btn";
