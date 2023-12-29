@@ -15,7 +15,7 @@ import Infrastructure from "../components/Infrastructure";
 import NewFormat from "../components/NewFormat";
 import YellowSection from "../components/YellowSection";
 import OurExperience from "../components/OurExperience";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../store/slices/blocks.slice";
 import OurAdvantages from "../components/OurAdvantages";
 import GetProposition from "../components/GetProposition";
@@ -33,8 +33,10 @@ import TrustUs from "../components/TrustUs";
 import Reviews from "../components/Reviews";
 import Rebrending from "../components/Rebrending";
 import ReadUTM from "../components/ReadUTM";
+import ArrowToTop from "../components/ArrowToTop";
 
 const FranchisePage = () => {
+    const {scroll} = useSelector(state => state.arrow)
 
     const [isLoaded, setIsLoaded] = useState()
 
@@ -118,10 +120,10 @@ const FranchisePage = () => {
         if (currentSection !== currentVisibleSection && sections[currentVisibleSection]) {
             const targetSection = sections[currentVisibleSection].current;
 
-            if (targetSection) {
+            if (targetSection && scroll) {
                 const start = window.scrollY;
                 const end = Math.round(targetSection.getBoundingClientRect().top + start);
-                const duration = 300;
+                const duration = 400;
 
                 let startTime;
 
@@ -192,6 +194,7 @@ const FranchisePage = () => {
                 <Loader/>
             }
             <Header/>
+            <ArrowToTop/>
             <Callback/>
             <Container custom={{backgroundImage: tournament, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"end"}>
                 <FranchiseCover/>

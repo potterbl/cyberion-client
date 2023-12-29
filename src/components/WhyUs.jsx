@@ -9,7 +9,6 @@ import {useSelector} from "react-redux";
 
 const WhyUs = React.forwardRef((props, ref) => {
     const {offsetTop, offsetBottom, isInView: opacity} = useSelector(state => state.blocks)
-    console.log(opacity)
     const childrenRef = useRef(null)
 
     const {scrollY} = useScroll()

@@ -36,7 +36,6 @@ const Modal = ({title, isActive, setIsActive}) => {
                 subject: title
             })
             .then(res => {
-                console.log(res)
                 setIsActive(false)
             })
             .catch(err => {

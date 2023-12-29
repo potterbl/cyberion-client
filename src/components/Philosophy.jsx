@@ -66,22 +66,22 @@ const Philosophy = () => {
                                 staggerChildren: 0.3
                             }}
                         >
-                            <motion.li customDelay={1} variants={listVariants} className={"body-text gray-text"}>Широкі ігрові
+                            <motion.li variants={listVariants} className={"body-text gray-text"}>Широкі ігрові
                                 мережі
                             </motion.li>
-                            <motion.li customDelay={2} variants={listVariants} className={"body-text gray-text"}>Потужні Ігрові
+                            <motion.li variants={listVariants} className={"body-text gray-text"}>Потужні Ігрові
                                 ПК
                             </motion.li>
-                            <motion.li customDelay={3} variants={listVariants} className={"body-text gray-text"}>Комфортні
+                            <motion.li variants={listVariants} className={"body-text gray-text"}>Комфортні
                                 крісла
                             </motion.li>
-                            <motion.li customDelay={4} variants={listVariants} className={"body-text gray-text"}>Найкраще
+                            <motion.li variants={listVariants} className={"body-text gray-text"}>Найкраще
                                 обладнання від топових постачальників
                             </motion.li>
-                            <motion.li customDelay={5} variants={listVariants} className={"body-text gray-text"}>Буткемпи для
+                            <motion.li variants={listVariants} className={"body-text gray-text"}>Буткемпи для
                                 тренувань
                             </motion.li>
-                            <motion.li customDelay={6} variants={listVariants} className={"body-text gray-text"}>Комфортні TV зони
+                            <motion.li variants={listVariants} className={"body-text gray-text"}>Комфортні TV зони
                                 з PS5
                             </motion.li>
                         </motion.ul>
