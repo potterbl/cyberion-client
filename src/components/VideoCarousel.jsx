@@ -50,13 +50,12 @@ const VideoCarousel = () => {
                                 : 2.5
                     }
                     spaceBetween="10"
-                    navigation={{
-                        nextEl: "#nextSlideVideos",
-                        prevEl: "#prevSlideVideos"
+                    onSwiper={(swiper) => {
+                        swiper.params.navigation.prevEl = "#prevSlideVideos";
+                        swiper.params.navigation.nextEl = "#nextSlideVideos";
                     }}
-                    onBeforeInit={(swiper) => {
-                        swiper.params.navigation.prevEl = "#prevSlideVideos"
-                        swiper.params.navigation.nextEl = "#nextSlideVideos"
+                    onInit={(swiper) => {
+                        swiper.navigation.update();
                     }}
                     loop={true}
                 >
