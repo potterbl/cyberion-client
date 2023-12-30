@@ -59,9 +59,14 @@ const Footer = () => {
                         Франшиза
                     </p>
                 </div>
-                <div className="footer-col_cols">
-                    <input type="text" className="footer-input" placeholder="Мій EMAIL"/>
-                    <button className="footer-button"></button>
+                <div className="footer-col">
+                    <p className="body-text footer-header">
+                        Залишай заявку
+                    </p>
+                    <div className="footer-col_cols">
+                        <input type="text" className="footer-input" placeholder="Мій EMAIL"/>
+                        <button className="footer-button"></button>
+                    </div>
                 </div>
             </div>
             <div className="footer-footer">

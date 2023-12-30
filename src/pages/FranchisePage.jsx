@@ -38,7 +38,8 @@ import ArrowToTop from "../components/ArrowToTop";
 const FranchisePage = () => {
     const {scroll} = useSelector(state => state.arrow)
 
-    const [isLoaded, setIsLoaded] = useState()
+    const [isLoaded, setIsLoaded] = useState(false)
+    const [isReady, setIsReady] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -178,14 +179,21 @@ const FranchisePage = () => {
 
     useEffect(() => {
         const body = document.querySelector('body')
+        const html = document.querySelector('html')
+
+        setTimeout(() => {
+            setIsReady(true)
+        }, 3000)
 
         body.style = 'overflow: hidden;';
+        html.style = 'overflow: hidden;';
 
-        if (document.readyState) {
+        if (document.readyState && isReady) {
             body.style = ''
+            html.style = ''
             setIsLoaded(true)
         }
-    }, []);
+    }, [isReady]);
 
     return (
         <div className="franchise">
