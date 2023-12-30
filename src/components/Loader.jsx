@@ -40,6 +40,7 @@ const Loader = () => {
 
         return () => {
             circleAnimation.pause()
+            wrapperAnimation.pause()
             nAnimation.pause()
         }
     }, [])
