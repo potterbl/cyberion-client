@@ -15,7 +15,7 @@ const VideoCarousel = () => {
 
     const channelId = "UC5CzPPsxGrh9jdI5HuTA_-A";
 
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=10&key=${API_KEY}`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=8&key=${API_KEY}`;
 
     useEffect(() => {
         fetch(url)
