@@ -38,42 +38,46 @@ const VideoCarousel = () => {
                 <ButtonSlide type={'next'} id="nextSlideVideos"/>
                 <ButtonSlide type={'prev'} id="prevSlideVideos"/>
                 <div className="video-carousel_gradient"></div>
-                <Swiper
-                    modules={[A11y, Navigation]}
-                    slidesPerView={
-                    window.innerWidth < 400 ?
-                        1.2
-                        : window.innerWidth < 670 ?
-                        1.5
-                            : window.innerWidth > 768 ?
-                            3.5
-                                : 2.5
-                    }
-                    spaceBetween="10"
-                    onSwiper={(swiper) => {
-                        swiper.params.navigation.prevEl = "#prevSlideVideos";
-                        swiper.params.navigation.nextEl = "#nextSlideVideos";
-                    }}
-                    onInit={(swiper) => {
-                        swiper.navigation.update();
-                    }}
-                    loop={true}
-                >
-                    {
-                        videos && videos.length && videos.map(v => (
-                            <SwiperSlide>
-                                <div className="video-carousel_slide">
-                                    <iframe className="video-carousel_video" src={v.link} title="YouTube video player"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowFullScreen></iframe>
-                                    <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>
-                                </div>
-                            </SwiperSlide>
-                        ))
-                    }
-
-                </Swiper>
+                {
+                    videos && videos.length &&
+                    <Swiper
+                        modules={[A11y, Navigation]}
+                        slidesPerView={
+                            window.innerWidth < 400 ?
+                                1.2
+                                : window.innerWidth < 670 ?
+                                    1.5
+                                    : window.innerWidth > 768 ?
+                                        3.5
+                                        : 2.5
+                        }
+                        spaceBetween="10"
+                        navigation={{
+                            nextEl: "#nextSlideVideos",
+                            prevEl: "#prevSlideVideos"
+                        }}
+                        onInit={(swiper) => {
+                            swiper.params.navigation.prevEl = "#prevSlideVideos"
+                            swiper.params.navigation.nextEl = "#nextSlideVideos"
+                        }}
+                        loop={true}
+                    >
+                        {
+                            videos.map(v => (
+                                <SwiperSlide>
+                                    <div className="video-carousel_slide">
+                                        <iframe className="video-carousel_video" src={v.link}
+                                                title="YouTube video player"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowFullScreen></iframe>
+                                        <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>
+                                    </div>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                }
             </div>
         </div>
     );
