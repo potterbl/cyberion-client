@@ -54,6 +54,10 @@ const VideoCarousel = () => {
                         nextEl: "#nextSlideVideos",
                         prevEl: "#prevSlideVideos"
                     }}
+                    onBeforeInit={(swiper) => {
+                        swiper.params.navigation.prevEl = "#prevSlideVideos"
+                        swiper.params.navigation.nextEl = "#nextSlideVideos"
+                    }}
                     loop={true}
                 >
                     {
