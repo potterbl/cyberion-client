@@ -14,8 +14,11 @@ import img8 from '../img/photo.svg fill (5).svg'
 import img9 from '../img/photo.svg fill (6).svg'
 import img10 from '../img/kolo.svg fill.svg'
 import Btn from "./Btn";
+import {useInView} from "react-intersection-observer";
 
 const OurAdvantages = () => {
+    const [contentRef, isInView] = useInView()
+
     const bodyRef = useRef(null)
 
     const sections = [
@@ -160,7 +163,7 @@ const OurAdvantages = () => {
     }
 
     return (
-        <div className="our-advantages">
+        <div className="our-advantages" ref={contentRef}>
             <div className="our-advantages_head">
                 <h1 className="title uppercase">
                     які переваги роботи по франшизі?
@@ -206,7 +209,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[1]}
                         style={{
                             backgroundImage: `url("${img2}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -232,7 +235,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[2]}
                         style={{
                             backgroundImage: `url("${img3}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -258,7 +261,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[3]}
                         style={{
                             backgroundImage: `url("${img4}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -284,7 +287,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[4]}
                         style={{
                             backgroundImage: `url("${img5}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -310,7 +313,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[5]}
                         style={{
                             backgroundImage: `url("${img6}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -322,7 +325,8 @@ const OurAdvantages = () => {
                         custom={visibleSections[5]}
                     >
                         <h4 className="body-text-bigger uppercase">СТАНДАРТИ ТА РЕГЛАМЕНТИ</h4>
-                        <p className="body-text">Усі необхідні правила та регламенти по роботі клубу є ключевим елементом
+                        <p className="body-text">Усі необхідні правила та регламенти по роботі клубу є ключевим
+                            елементом
                             успішної операційної діяльності і всі вони вже сформовані для Вас</p>
                     </motion.div>
                 </div>
@@ -336,7 +340,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[6]}
                         style={{
                             backgroundImage: `url("${img7}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -361,7 +365,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[7]}
                         style={{
                             backgroundImage: `url("${img8}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -386,7 +390,7 @@ const OurAdvantages = () => {
                         custom={visibleSections[8]}
                         style={{
                             backgroundImage: `url("${img9}")`
-                            }}
+                        }}
                     >
 
                     </motion.div>
@@ -429,14 +433,18 @@ const OurAdvantages = () => {
                     </motion.div>
                 </div>
                 <div className="our-advantages_body_progress-wrapper">
-                    <motion.div
-                        className="our-advantages_body_progress"
-                        style={{
-                            height: `${window.innerWidth <= 336 ? progress - 20 + 'px' : progress + 'px'}`
-                        }}
-                    >
+                    {
+                        isInView &&
+                        <motion.div
+                            className="our-advantages_body_progress"
+                            style={{
+                                height: `${window.innerWidth <= 336 ? progress - 20 + 'px' : progress + 'px'}`
+                            }}
+                        >
 
-                    </motion.div>
+                        </motion.div>
+                    }
+
                 </div>
             </div>
             <div className="our-advantages_footer">

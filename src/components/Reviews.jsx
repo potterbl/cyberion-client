@@ -6,6 +6,10 @@ import {A11y, Navigation} from "swiper/modules";
 import ButtonSlide from "./ButtonSlide";
 import {motion} from "framer-motion";
 
+import observatorna from '../img/observatorna_avatar.png'
+import darnitsya from '../img/darnitsya_avatar.png'
+import politech from '../img/politech_avatar.png'
+
 const Reviews = () => {
 
     const reviewAnimation = {
@@ -47,10 +51,14 @@ const Reviews = () => {
                         prevEl: "#prevSlideReviews",
                         nextEl: "#nextSlideReviews",
                     }}
+                    onBeforeInit={(swiper) => {
+                        swiper.params.navigation.prevEl = "#prevSlideReviews"
+                        swiper.params.navigation.nextEl = "#nextSlideReviews"
+                    }}
                     slidesPerView={3.5}
                     loop={true}
                     spaceBetween={20}
-                    speed={1500}
+                    speed={1000}
                 >
                     <SwiperSlide>
                         <motion.div
@@ -59,21 +67,34 @@ const Reviews = () => {
                         >
                             <div className="reviews_slide-inner">
                                 <div className="reviews_slide-head">
-                                    <div className="reviews_slide-head_avatar">
+                                    <div className="reviews_slide-head_avatar"
+                                         style={{backgroundImage: `url('${observatorna}')`}}>
 
                                     </div>
-                                    <div className="reviews_slide-head_name">
-                                        <p className="body-text">FirstName LastName</p>
+                                    <div className="reviews_slide-head-name">
+                                        <p className="body-text break-word">
+                                            Артем
+                                        </p>
+                                        <p className="break-word reviews_slide-head_desc">
+                                            Власник клубу на вул. Обсерваторна.
+                                        </p>
                                     </div>
                                 </div>
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-body">
                                     <p className="body-text-bigger">
-                                        Title of description
                                     </p>
                                     <p className="body-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque pretium mi at maximus. Phasellus sed ex eu nunc rutrum porttitor dictum et orci. Ut sit amet blandit neque. Curabitur sollicitudin iaculis ligula, vel varius ligula bibendum in. Proin semper leo id tempus iaculis. Donec eget fermentum purus. Pellentesque vitae sapien quis ante ullamcorper accumsan. Maecenas at est dolor. Vivamus eu dapibus ex.
+                                        <span className="span-yellow bold body-text-bigger">"</span>Спорт - це актуальна
+                                        сьогодні тема. Ми
+                                        поєднали дві сторони практичну і емоційну. Тому обрали кіберсопртивний бізнес і
+                                        франшизу Cyberion.<span className="span-yellow bold body-text-bigger">"</span>
                                     </p>
+                                </div>
+                                <hr className="reviews_slide-hr"/>
+                                <div className="reviews_slide-footer">
+                                    <a href="https://youtu.be/4Uw_X6dLmfQ?si=HLNskRKUg2948lJ8"
+                                       className="body-text underline">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -85,21 +106,34 @@ const Reviews = () => {
                         >
                             <div className="reviews_slide-inner">
                                 <div className="reviews_slide-head">
-                                    <div className="reviews_slide-head_avatar">
+                                    <div className="reviews_slide-head_avatar"
+                                         style={{backgroundImage: `url('${darnitsya}')`}}>
 
                                     </div>
-                                    <div className="reviews_slide-head_name">
-                                        <p className="body-text">FirstName LastName</p>
+                                    <div className="reviews_slide-head-name">
+                                        <p className="body-text break-word">
+                                            Віктор
+                                        </p>
+                                        <p className="break-word reviews_slide-head_desc">
+                                            Власник клубу на вул. Малишко.
+                                        </p>
                                     </div>
                                 </div>
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-body">
                                     <p className="body-text-bigger">
-                                        Title of description
                                     </p>
                                     <p className="body-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque pretium mi at maximus. Phasellus sed ex eu nunc rutrum porttitor dictum et orci.
+                                        <span className="span-yellow bold body-text-bigger">"</span>Давно звернув увагу
+                                        на кіберспорт як на перспективний бізнес. Дивлячись на змагання які мають
+                                        призові фонди в 30-40 млн $ я розумію, що за цим велике майбутнє.<span
+                                        className="span-yellow bold body-text-bigger">"</span>
                                     </p>
+                                </div>
+                                <hr className="reviews_slide-hr"/>
+                                <div className="reviews_slide-footer">
+                                    <a href="https://youtu.be/xeTR58KmmQY?si=oqARvfnSYucGWlFx"
+                                       className="body-text underline">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -111,26 +145,35 @@ const Reviews = () => {
                         >
                             <div className="reviews_slide-inner">
                                 <div className="reviews_slide-head">
-                                    <div className="reviews_slide-head_avatar">
+                                    <div className="reviews_slide-head_avatar"
+                                         style={{backgroundImage: `url('${politech}')`}}>
 
                                     </div>
-                                    <div className="reviews_slide-head_name">
-                                        <p className="body-text">FirstName LastName</p>
+                                    <div className="reviews_slide-head-name">
+                                        <p className="body-text break-word">
+                                            Віталій
+                                        </p>
+                                        <p className="break-word reviews_slide-head_desc">
+                                            Власник клубу на пр. Перемоги.
+                                        </p>
                                     </div>
                                 </div>
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-body">
                                     <p className="body-text-bigger">
-                                        Title of description
                                     </p>
                                     <p className="body-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque
-                                        pretium mi at maximus. Phasellus sed ex eu nunc rutrum porttitor dictum et orci.
-                                        Ut sit amet blandit neque. Curabitur sollicitudin iaculis ligula, vel varius
-                                        ligula bibendum in. Proin semper leo id tempus iaculis. Donec eget fermentum
-                                        purus. Pellentesque vitae sapien quis ante ullamcorper accumsan. Maecenas at est
-                                        dolor. Vivamus eu dapibus ex.
+                                        <span className="span-yellow bold body-text-bigger">"</span>Кіберспорт наразі є
+                                        дуже перспективним напрямком де поки відсутня конкуренція на ринку. А також
+                                        зустрів вас в яких вже є мережа кіберклубів, а значить ви продаєте досвід, а не
+                                        повітря.<span
+                                        className="span-yellow bold body-text-bigger">"</span>
                                     </p>
+                                </div>
+                                <hr className="reviews_slide-hr"/>
+                                <div className="reviews_slide-footer">
+                                    <a href="https://youtu.be/cNtZtW_HhoI?si=oZfNiDcuB9pURkht"
+                                       className="body-text underline">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -142,80 +185,34 @@ const Reviews = () => {
                         >
                             <div className="reviews_slide-inner">
                                 <div className="reviews_slide-head">
-                                    <div className="reviews_slide-head_avatar">
+                                    <div className="reviews_slide-head_avatar"
+                                         style={{backgroundImage: `url('${darnitsya}')`}}>
 
                                     </div>
-                                    <div className="reviews_slide-head_name">
-                                        <p className="body-text">FirstName LastName</p>
+                                    <div className="reviews_slide-head-name">
+                                        <p className="body-text break-word">
+                                            Віктор
+                                        </p>
+                                        <p className="break-word reviews_slide-head_desc">
+                                            Власник клубу на вул. Малишко.
+                                        </p>
                                     </div>
                                 </div>
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-body">
                                     <p className="body-text-bigger">
-                                        Title of description
                                     </p>
                                     <p className="body-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque
-                                        pretium mi at maximus. Phasellus sed ex eu nunc rutrum porttitor dictum et orci.
+                                        <span className="span-yellow bold body-text-bigger">"</span>Давно звернув увагу
+                                        на кіберспорт як на перспективний бізнес. Дивлячись на змагання які мають
+                                        призові фонди в 30-40 млн $ я розумію, що за цим велике майбутнє.<span
+                                        className="span-yellow bold body-text-bigger">"</span>
                                     </p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <motion.div
-                            className="reviews_slide"
-                            variants={reviewAnimation}
-                        >
-                            <div className="reviews_slide-inner">
-                                <div className="reviews_slide-head">
-                                    <div className="reviews_slide-head_avatar">
-
-                                    </div>
-                                    <div className="reviews_slide-head_name">
-                                        <p className="body-text">FirstName LastName</p>
-                                    </div>
                                 </div>
                                 <hr className="reviews_slide-hr"/>
-                                <div className="reviews_slide-body">
-                                    <p className="body-text-bigger">
-                                        Title of description
-                                    </p>
-                                    <p className="body-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque
-                                        pretium mi at maximus. Phasellus sed ex eu nunc rutrum porttitor dictum et orci.
-                                        Ut sit amet blandit neque. Curabitur sollicitudin iaculis ligula, vel varius
-                                        ligula bibendum in. Proin semper leo id tempus iaculis. Donec eget fermentum
-                                        purus. Pellentesque vitae sapien quis ante ullamcorper accumsan. Maecenas at est
-                                        dolor. Vivamus eu dapibus ex.
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <motion.div
-                            className="reviews_slide"
-                            variants={reviewAnimation}
-                        >
-                            <div className="reviews_slide-inner">
-                                <div className="reviews_slide-head">
-                                    <div className="reviews_slide-head_avatar">
-
-                                    </div>
-                                    <div className="reviews_slide-head_name">
-                                        <p className="body-text">FirstName LastName</p>
-                                    </div>
-                                </div>
-                                <hr className="reviews_slide-hr"/>
-                                <div className="reviews_slide-body">
-                                    <p className="body-text-bigger">
-                                        Title of description
-                                    </p>
-                                    <p className="body-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque
-                                        pretium mi at maximus. Phasellus sed ex eu nunc rutrum porttitor dictum et orci.
-                                    </p>
+                                <div className="reviews_slide-footer">
+                                    <a href="https://youtu.be/xeTR58KmmQY?si=oqARvfnSYucGWlFx"
+                                       className="body-text underline">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>

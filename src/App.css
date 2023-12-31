@@ -63,6 +63,9 @@ button{
 /*.gray-text{*/
 /*    color: #AFAFAF;*/
 /*}*/
+.underline {
+    text-decoration: underline;
+}
 .bold{
     font-weight: bold;
 }

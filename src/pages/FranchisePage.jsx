@@ -123,7 +123,7 @@ const FranchisePage = () => {
 
             if (targetSection && scroll) {
                 const start = window.scrollY;
-                const end = Math.round(targetSection.getBoundingClientRect().top + start);
+                const end = targetSection.getBoundingClientRect().top + start;
                 const duration = 400;
 
                 let startTime;
@@ -178,12 +178,18 @@ const FranchisePage = () => {
     }, [sections[4], sections[0]])
 
     useEffect(() => {
+
+        window.scrollTo({
+            top: 0,
+        })
+
         const body = document.querySelector('body')
         const html = document.querySelector('html')
 
         setTimeout(() => {
             setIsReady(true)
         }, 3000)
+
 
         body.style = 'overflow: hidden;';
         html.style = 'overflow: hidden;';
@@ -205,7 +211,7 @@ const FranchisePage = () => {
             <ArrowToTop/>
             <Callback/>
             <Container custom={{backgroundImage: tournament, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"end"}>
-                <FranchiseCover/>
+                <FranchiseCover isLoaded={isReady}/>
             </Container>
             <Container>
                 <VideoCarousel/>

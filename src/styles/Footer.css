@@ -9,7 +9,7 @@
     grid-template-columns: repeat(4, 1fr);
 }
 .footer-footer{
-    height: 60px;
+    height: 40px;
 }
 .footer-logo{
     height: 100%;
@@ -47,9 +47,9 @@
     border-radius: 4px;
     background-color: #FFED00;
     width: 48px;
-    height: 68px;
+    height: 58px;
     background-image: url('../img/footer-arrow.svg');
     background-size: 24px;
-    background-position: center 12px;
+    background-position: center 10px;
     background-repeat: no-repeat;
 }

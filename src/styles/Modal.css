@@ -39,5 +39,31 @@
 }
 .modal-inner_footer{
     display: grid;
+    row-gap: 12px;
     place-items: center;
+}
+.modal-inner_footer-error{
+    color: red;
+}
+.swal-modal{
+    background-color: #333333;
+}
+.swal-title{
+    color: white;
+}
+.swal-button--confirm{
+    background-color: #ffed00;
+    color: black;
+}
+.swal-icon--success{
+    background-color: #333333;
+}
+.swal-icon--success::before{
+    background-color: #333333;
+}
+.swal-icon--success::after{
+    background-color: #333333;
+}
+.swal-icon--success__hide-corners{
+    background-color: #333333;
 }

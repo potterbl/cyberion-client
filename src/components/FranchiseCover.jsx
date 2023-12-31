@@ -12,7 +12,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../store/slices/header.slice";
 import Modal from "./Modal";
 
-const FranchiseCover = () => {
+const FranchiseCover = (props) => {
     const [isModal, setIsModal] = useState(false)
 
     const dispatch = useDispatch()
@@ -62,15 +62,19 @@ const FranchiseCover = () => {
                                 Франшиза<br/>
                                 кіберклубів<br/>
                                 <span className={"span-yellow"}>
-                                <TypewriterComponent
-                                    options={{
-                                        strings: ['CYBERION'],
-                                        autoStart: true,
-                                        loop: false,
-                                        wrapperClassName: 'span-yellow',
-                                        deleteSpeed: Infinity
-                                    }}
-                                />
+                                    {
+                                        props.isLoaded &&
+                                        <TypewriterComponent
+                                            options={{
+                                                strings: ['CYBERION'],
+                                                autoStart: true,
+                                                loop: false,
+                                                wrapperClassName: 'span-yellow',
+                                                deleteSpeed: Infinity
+                                            }}
+                                        />
+                                    }
+
                             </span><br/>
                             </motion.h1>
                             <p className={"body-text"}>

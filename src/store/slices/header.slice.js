@@ -1,7 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-    isInView: false
+    isInView: true
 }
 
 export const headerSlice = createSlice({

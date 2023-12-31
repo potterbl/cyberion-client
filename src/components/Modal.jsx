@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import '../styles/Modal.css'
 import Input from "./Input";
@@ -8,7 +8,11 @@ import Btn from "./Btn";
 import Cookies from 'js-cookie'
 import axios from "axios";
 
+import swal from 'sweetalert'
+
 const Modal = ({title, isActive, setIsActive}) => {
+    const [problemMessage, setProblemMessage] = useState('')
+
     const [name, setName] = useState('')
     const [number, setNumber ] = useState('')
     const [email, setEmail ] = useState('')
@@ -23,7 +27,7 @@ const Modal = ({title, isActive, setIsActive}) => {
 
     const handleSend = async () => {
         if(name === "" || number === ''  || email === '' || time === ''){
-            return
+            return setProblemMessage('Усі поля мають бути заповнені!')
         }
 
         await axios
@@ -37,11 +41,26 @@ const Modal = ({title, isActive, setIsActive}) => {
             })
             .then(res => {
                 setIsActive(false)
+                swal({
+                    icon: "success",
+                    title: "Ваша заявка була успішно надіслана!"
+                })
             })
             .catch(err => {
+                setIsActive(false)
+                swal({
+                    icon: "error",
+                    title: "Сталася помилка, спробуйте ще раз або пізніше!"
+                })
                 console.log(err)
             })
     }
+
+    useEffect(() => {
+        if(!isActive){
+            setProblemMessage('')
+        }
+    }, [isActive])
 
     return (
         <>
@@ -87,6 +106,10 @@ const Modal = ({title, isActive, setIsActive}) => {
                                 </Input>
                             </div>
                             <div className="modal-inner_footer">
+                                {
+                                    problemMessage !== '' &&
+                                    <p className="body-text modal-inner_footer-error">{problemMessage}</p>
+                                }
                                 <div
                                     onClick={handleSend}
                                 >
