@@ -6,14 +6,17 @@
 }
 .get-proposition_left{
     display: grid;
-    row-gap: 80px;
-    background-image: url('../img/ukraine.svg');
-    background-size: contain;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
+}
+.get-proposition_left-body{
+    display: flex;
+}
+.get-proposition_left-body-map{
+    width: 100%;
 }
 .get-proposition_left-body-ul{
     list-style-type: none;
+    width: fit-content;
+    align-self: center;
 }
 .get-proposition_right{
     display: grid;
