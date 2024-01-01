@@ -47,9 +47,9 @@
     border-radius: 4px;
     background-color: #FFED00;
     width: 48px;
-    height: 58px;
+    height: 100%;
     background-image: url('../img/footer-arrow.svg');
     background-size: 24px;
-    background-position: center 10px;
+    background-position: center;
     background-repeat: no-repeat;
 }

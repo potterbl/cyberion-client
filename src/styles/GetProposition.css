@@ -9,6 +9,10 @@
 }
 .get-proposition_left-body{
     display: flex;
+    justify-content: space-between;
+}
+.get-proposition_left-body-map{
+    max-width: 652px;
 }
 .get-proposition_left-body-map{
     width: 100%;
