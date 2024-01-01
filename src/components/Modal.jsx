@@ -31,7 +31,7 @@ const Modal = ({title, isActive, setIsActive}) => {
         }
 
         await axios
-            .post('https://1cd5-34-172-33-18.ngrok-free.app/mail', {
+            .post('https://8df6-195-189-226-219.ngrok-free.app/mail', {
                 name: name,
                 phone: number,
                 email: email,
