@@ -4,7 +4,7 @@ import '../styles/Proposition.css'
 
 import { motion } from "framer-motion";
 
-const Proposition = React.forwardRef((props, ref) => {
+const Proposition = (props) => {
 
     const circleAnimation = {
         hidden: {
@@ -25,7 +25,7 @@ const Proposition = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div className="proposition-container" ref={ref}>
+        <div className="proposition-container">
             <div className="proposition">
                 <div className="proposition_left">
                     <div className="proposition_left-head">
@@ -98,6 +98,6 @@ const Proposition = React.forwardRef((props, ref) => {
 
         </div>
     );
-});
+}
 
 export default Proposition;

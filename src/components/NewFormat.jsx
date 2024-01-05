@@ -13,7 +13,7 @@ import model60 from '../img/pc40.svg'
 import {motion} from "framer-motion";
 import Btn from "./Btn";
 
-const NewFormat = React.forwardRef((props, ref) => {
+const NewFormat = (props) => {
 
     const modelAnimation = {
         initial: {
@@ -41,7 +41,7 @@ const NewFormat = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div className="new-format-container" ref={ref}>
+        <div className="new-format-container">
             <div className="new-format">
                 <div className="new-format_head">
                     <h3 className="heading-smaller">
@@ -160,37 +160,10 @@ const NewFormat = React.forwardRef((props, ref) => {
                             </div>
                         }
                     </div>
-                    {/*<div className="new-format_body-container">*/}
-                    {/*    <h4 className="body-text-bigger bold span-yellow">*/}
-                    {/*        20 PC + 2 консолі*/}
-                    {/*    </h4>*/}
-                    {/*    <img src={pc20} alt="20pc" className="new-format_body-img"/>*/}
-                    {/*    <Btn type={'primary'}>*/}
-                    {/*        Отримати фін. модель ➝*/}
-                    {/*    </Btn>*/}
-                    {/*</div>*/}
-                    {/*<div className="new-format_body-container">*/}
-                    {/*    <h4 className="body-text-bigger bold span-yellow">*/}
-                    {/*        30 PC + 3 консолі*/}
-                    {/*    </h4>*/}
-                    {/*    <img src={pc30} alt="30pc" className="new-format_body-img"/>*/}
-                    {/*    <Btn type={'primary'}>*/}
-                    {/*        Отримати фін. модель ➝*/}
-                    {/*    </Btn>*/}
-                    {/*</div>*/}
-                    {/*<div className="new-format_body-container">*/}
-                    {/*    <h4 className="body-text-bigger bold span-yellow">*/}
-                    {/*        40 PC + 4 консолі*/}
-                    {/*    </h4>*/}
-                    {/*    <img src={pc40} alt="40pc" className="new-format_body-img"/>*/}
-                    {/*    <Btn type={'primary'}>*/}
-                    {/*        Отримати фін. модель ➝*/}
-                    {/*    </Btn>*/}
-                    {/*</div>*/}
                 </div>
             </div>
         </div>
     );
-});
+}
 
 export default NewFormat;

@@ -7,44 +7,8 @@ import whyImage from '../img/whyUsPeople.png'
 import {motion, useScroll, useTransform} from "framer-motion";
 import {useSelector} from "react-redux";
 
-const WhyUs = React.forwardRef((props, ref) => {
-    const {offsetTop, offsetBottom, isInView: opacity} = useSelector(state => state.blocks)
+const WhyUs = (props) => {
     const childrenRef = useRef(null)
-
-    const {scrollY} = useScroll()
-
-    const [blockHeight, setBlockHeight] = useState(0)
-    const [isInView, setIsInView] = useState(false)
-
-    let scale = window.innerWidth > 770 ?
-        useTransform(scrollY, [offsetTop, offsetTop + (blockHeight * 0.7)], [1, 0.2])
-        : 1
-
-    useEffect(() => {
-        if(ref.current){
-            setBlockHeight(ref.current.getBoundingClientRect().height)
-        }
-    }, [ref])
-
-    useEffect(() => {
-        if(ref.current && childrenRef.current){
-            const handleScroll = () => {
-                const scrollPosition = window.scrollY
-                if (scrollPosition < ref.current.getBoundingClientRect().top + (childrenRef.current.getBoundingClientRect().height / 2) + window.scrollY || scrollPosition > offsetBottom) {
-                    setIsInView(false);
-                } else {
-                    setIsInView(true)
-                }
-            };
-
-            window.addEventListener('scroll', handleScroll);
-
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            }
-        }
-    }, [offsetBottom]);
-
 
     const containerAnimation= {
         initial: {
@@ -108,20 +72,6 @@ const WhyUs = React.forwardRef((props, ref) => {
         }
     }
 
-    const textBackAnimation = {
-        initial: {
-            opacity: 1,
-            x: "0"
-        },
-        visible: {
-            opacity: 0,
-            x: "-100%",
-            transition: {
-                delay: 0.9
-            }
-        }
-    }
-
     const imageAnimation = {
         initial: {
             y: "100%",
@@ -139,26 +89,17 @@ const WhyUs = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div className="why-us_container" ref={ref}>
+        <div className="why-us_container">
             <motion.div
                 className={`why-us`}
                 initial="initial"
                 whileInView="visible"
                 variants={containerAnimation}
-                style={{
-                    scale: scale,
-                }}
-                ref={childrenRef}
             >
-                <motion.div
+                <div
                     className="why-us_left"
-                    style={{
-                        opacity: opacity ? 0 : 1
-                    }}
                 >
-
                     <motion.div
-
                         className="why-us_left-inner"
                         variants={textAnimation}
                     >
@@ -187,7 +128,7 @@ const WhyUs = React.forwardRef((props, ref) => {
                             Telegram→
                         </a>
                     </motion.div>
-                </motion.div>
+                </div>
                 <div className="why-us_right">
                     <motion.div
                         className="why-us_right-circle"
@@ -203,6 +144,6 @@ const WhyUs = React.forwardRef((props, ref) => {
             </motion.div>
         </div>
     );
-});
+}
 
 export default WhyUs;

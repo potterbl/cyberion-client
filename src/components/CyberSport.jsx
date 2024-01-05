@@ -4,9 +4,9 @@ import '../styles/CyberSport.css'
 
 import cybersportImg from '../img/cybersport.png'
 
-const CyberSport = React.forwardRef((props, ref) => {
+const CyberSport = (props) => {
     return (
-        <div className="cybersport-container" ref={ref}>
+        <div className="cybersport-container">
             <div className="cybersport">
                 <div className="cybersport-right">
                     <img src={cybersportImg} alt="" className="cybersport-right_image"/>
@@ -36,6 +36,6 @@ const CyberSport = React.forwardRef((props, ref) => {
             </div>
         </div>
     );
-});
+}
 
 export default CyberSport;

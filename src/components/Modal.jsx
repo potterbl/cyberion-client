@@ -69,11 +69,11 @@ const Modal = ({title, isActive, setIsActive}) => {
                 &&
                 <div className="modal">
                     <div className="modal-wrapper">
-                        <div className="modal-inner">
+                        <form className="modal-inner">
                             <div className="modal-inner_header">
-                                <p className="body-text-bigger">
+                                <h4 className="body-text-bigger">
                                     {title}
-                                </p>
+                                </h4>
                                 <button
                                     onClick={() => setIsActive(!isActive)}
                                 >
@@ -120,7 +120,7 @@ const Modal = ({title, isActive, setIsActive}) => {
                                     </Btn>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             }

@@ -1,5 +1,5 @@
 .new-format-container{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     place-items: center;
 }
@@ -75,11 +75,6 @@
         grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         row-gap: 40px;
         justify-content: center;
-    }
-    .new-format-container{
-        height: max-content;
-        padding: 82px 0;
-        min-height: 100vh;
     }
 }
 @media (max-width: 858px) {

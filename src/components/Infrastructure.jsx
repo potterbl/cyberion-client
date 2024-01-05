@@ -10,7 +10,7 @@ import x from '../img/x.svg'
 
 import {motion} from "framer-motion";
 
-const Infrastructure = React.forwardRef((props, ref) => {
+const Infrastructure = (props) => {
     const textAnimation = {
         initial: {
             x: '-150%'
@@ -35,7 +35,7 @@ const Infrastructure = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div className="infrastructure-container" ref={ref}>
+        <div className="infrastructure-container">
             <div className="infrastructure">
                 <div className="infrastructure-left">
                     <h2 className={`${window.innerWidth > 1024 ? 'heading' : 'heading-smaller'} uppercase`}>
@@ -155,6 +155,6 @@ const Infrastructure = React.forwardRef((props, ref) => {
             </div>
         </div>
     );
-});
+}
 
 export default Infrastructure;

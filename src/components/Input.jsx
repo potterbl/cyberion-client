@@ -92,7 +92,7 @@ const Input = ({ children, type, setParental }) => {
     };
 
     return (
-        <div className="input-wrapper">
+        <label className="input-wrapper">
             <p className={`input-label ${isActive ? 'input-label_active' : ''}`}>
                 {children}
             </p>
@@ -102,7 +102,7 @@ const Input = ({ children, type, setParental }) => {
                 onChange={(e) => handleInput(e)}
                 value={inputValue}
             />
-        </div>
+        </label>
     );
 };
 

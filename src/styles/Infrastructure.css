@@ -1,9 +1,7 @@
 .infrastructure-container{
     display: grid;
     place-items: center;
-    height: auto;
     min-height: 100vh;
-    padding: 82px 0;
 }
 .infrastructure{
     display: grid;

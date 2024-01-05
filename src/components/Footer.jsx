@@ -7,7 +7,7 @@ const Footer = () => {
     const {offsetLeft} = useSelector(state => state.container)
 
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className="footer-wrapper" style={{left: -offsetLeft + 'px'}}>
 
             </div>
@@ -110,7 +110,7 @@ const Footer = () => {
                 </svg>
 
             </div>
-        </div>
+        </footer>
     );
 };
 

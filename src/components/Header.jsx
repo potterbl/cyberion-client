@@ -51,7 +51,7 @@ const Header = () => {
 
     return (
         <>
-            <motion.div
+            <motion.header
                 className="header"
                 animate="visible"
                 initial="initial"
@@ -95,7 +95,7 @@ const Header = () => {
                         </ul>
                     }
                 </div>
-            </motion.div>
+            </motion.header>
             {
                 window.innerWidth <= 1000 &&
                 <motion.div

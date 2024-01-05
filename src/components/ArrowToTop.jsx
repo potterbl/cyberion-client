@@ -1,13 +1,10 @@
 import React from 'react';
 
 import '../styles/ArrowToTop.css'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {motion} from "framer-motion";
-import {actions} from "../store/slices/arrow.slice";
 
 const ArrowToTop = () => {
-    const dispatch = useDispatch()
-
     const {isInView} = useSelector(state => state.header)
 
     const buttonAnimation = {
@@ -18,14 +15,10 @@ const ArrowToTop = () => {
     }
 
     const handleClick = () => {
-        dispatch(actions.setScroll(false))
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
-        setTimeout(() => {
-            dispatch(actions.setScroll(true))
-        }, 1000)
     }
 
     return (
