@@ -54,7 +54,7 @@ const Callback = () => {
                 className="callback-pulse"
                 animate="pulse"
                 initial="initial"
-                custom={isOpen} // Передаем isOpen в custom
+                custom={isOpen}
                 variants={pulseAnimation}
             ></motion.div>
             <motion.button
@@ -62,13 +62,16 @@ const Callback = () => {
                 className={`callback ${isOpen ? 'callback_enabled' : ''}`}
             ></motion.button>
             <div className="callback-options">
+                <a href="tel:+380975551800">
                 <motion.button
                     className="callback-option"
                     variants={optionAnimation}
                     animate="option"
                     custom={{isOpen, position: 1}}
                     style={{backgroundImage: `url(${phone})`}}
-                ></motion.button>
+                >
+                </motion.button>
+                </a>
             </div>
         </motion.div>
     );

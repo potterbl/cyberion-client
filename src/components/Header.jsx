@@ -65,19 +65,27 @@ const Header = () => {
                             className="header-list"
                         >
                             <li className="body-text uppercase">
-                                <img src={instagram} alt="" className="header-icon"/>
+                                <a href="https://www.instagram.com/cyberion_ua/">
+                                    <img src={instagram} alt="" className="header-icon"/>
+                                </a>
                             </li>
                             <li className="body-text uppercase">
-                                <img src={youtube} alt="" className="header-icon"/>
+                                <a href="https://www.youtube.com/@cyberion_ukraine">
+                                    <img src={youtube} alt="" className="header-icon"/>
+                                </a>
                             </li>
                             <li className="body-text uppercase">
-                                <img src={telegram} alt="" className="header-icon"/>
+                                <a href="https://t.me/cyberion_ukraine">
+                                    <img src={telegram} alt="" className="header-icon"/>
+                                </a>
                             </li>
                         </ul>
                     }
                 </div>
                 <div className="header-center">
-                    <img src={logo} alt="logo" className="header-logo"/>
+                    <a href="https://cyberion.com.ua">
+                        <img src={logo} alt="logo" className="header-logo"/>
+                    </a>
                 </div>
                 <div className="header-right">
                     {
@@ -85,10 +93,18 @@ const Header = () => {
                         <ul
                             className="header-list"
                         >
-                            <li className="body-text uppercase">новини</li>
+                            <li className="body-text uppercase">
+                                <a href="https://cyberion.com.ua/news">
+                                    новини
+                                </a>
+                            </li>
                             <li className="body-text uppercase">faq</li>
                             <li className="body-text uppercase">правила</li>
-                            <li className="body-text uppercase">клуби</li>
+                            <li className="body-text uppercase">
+                                <a href="https://cyberion.com.ua/contacts">
+                                    клуби
+                                </a>
+                            </li>
                             <button className="header-btn body-text uppercase black-font">
                                 франшиза
                             </button>
