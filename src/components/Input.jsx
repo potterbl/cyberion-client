@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Input.css';
+import {PhoneInput} from "react-international-phone";
+import 'react-international-phone/style.css';
 
 const Input = ({ children, type, setParental }) => {
     const [isActive, setIsActive] = useState(false);
@@ -92,17 +94,49 @@ const Input = ({ children, type, setParental }) => {
     };
 
     return (
-        <label className="input-wrapper">
-            <p className={`input-label ${isActive ? 'input-label_active' : ''}`}>
-                {children}
-            </p>
-            <input
-                type="text"
-                className="input"
-                onChange={(e) => handleInput(e)}
-                value={inputValue}
-            />
-        </label>
+        <>
+
+            {
+                type === "number" ?
+                    <PhoneInput
+                        defaultCountry="ua"
+                        value={inputValue}
+                        onChange={(inputValue) => {
+                            setInputValue(inputValue)
+                            setParental(inputValue)
+                            setIsActive(inputValue !== '')
+                        }}
+                        inputClassName="input"
+                        className="input-wrapper"
+                        countrySelectorStyleProps={
+                        {
+                            style: {background: "transparent"},
+                            buttonStyle: {
+                                background: "transparent",
+                                border: "1px solid #333333",
+                                height: "100%"
+                            },
+
+                        }
+                        }
+                    />
+
+                    :
+
+                    <label className={`input-wrapper ${type === 'time' ? 'input-wrapper_time' : ''}`}>
+                        <p className={`input-label ${isActive ? 'input-label_active' : ''}`}>
+                            {children}
+                        </p>
+                        <input
+                            type="text"
+                            className="input"
+                            onChange={(e) => handleInput(e)}
+                            value={inputValue}
+                        />
+                    </label>
+            }
+        </>
+
     );
 };
 

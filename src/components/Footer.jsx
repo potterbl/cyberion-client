@@ -1,10 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import '../styles/Footer.css'
 import {useSelector} from "react-redux";
+import axios from "axios";
+import swal from "sweetalert";
 
 const Footer = () => {
     const {offsetLeft} = useSelector(state => state.container)
+
+    const [email, setEmail] = useState('')
+
+    const handleSend = async () => {
+        if(email === ''){
+            return
+        }
+
+        await axios
+            .post('https://8df6-195-189-226-219.ngrok-free.app/mail', {
+                name: "",
+                phone: "",
+                email: email,
+                link: window.location.href,
+                form: "Footer залишити заявку",
+                subject: "Footer залишити заявку"
+            })
+            .then( () => {
+                setEmail('')
+                swal({
+                    icon: "success",
+                    title: "Ваша заявка була успішно надіслана!"
+                })
+            })
+            .catch(err => {
+                swal({
+                    icon: "error",
+                    title: "Сталася помилка, спробуйте ще раз або пізніше!"
+                })
+                console.log(err)
+            })
+    }
 
     return (
         <footer className="footer">
@@ -74,8 +108,17 @@ const Footer = () => {
                         Залишай заявку
                     </p>
                     <div className="footer-col_cols">
-                        <input type="text" className="footer-input" placeholder="Мій EMAIL"/>
-                        <button className="footer-button"></button>
+                        <input
+                            type="text"
+                            className="footer-input"
+                            placeholder="Мій EMAIL"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <button
+                            className="footer-button"
+                            onClick={handleSend}
+                        />
                     </div>
                 </div>
             </div>

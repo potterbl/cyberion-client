@@ -64,48 +64,45 @@ const FranchisePage = () => {
     return (
         <div className="franchise">
             {
-                !isLoaded ?
+                !isLoaded &&
                 <Loader/>
-                    :
-                    <>
-                        <Header/>
-                        <ArrowToTop/>
-                        <Callback/>
-                        <Container custom={{backgroundImage: tournament, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"end"}>
-                            <FranchiseCover isLoaded={isReady}/>
-                        </Container>
-                        <Container>
-                            <VideoCarousel/>
-                            <Philosophy/>
-                        </Container>
-                        <Container custom={{backgroundImage: grid, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"center"}>
-                            <WhyUs/>
-                            <Proposition/>
-                            <CyberSport/>
-                            <Infrastructure/>
-                            <NewFormat/>
-                        </Container>
-                        <Container>
-                            <YellowSection/>
-                        </Container>
-                        <Container custom={{backgroundImage: ourExperience, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
-                            <OurExperience/>
-                        </Container>
-                        <Container>
-                            <OurAdvantages/>
-                            <TrustUs/>
-                            <Rebrending/>
-                            <Reviews/>
-                        </Container>
-                        <Container custom={{backgroundImage: getProposition, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
-                            <GetProposition/>
-                        </Container>
-                        <Container>
-                            <Footer/>
-                        </Container>
-                        <ReadUTM/>
-                    </>
             }
+            <Header/>
+            <ArrowToTop/>
+            <Callback/>
+            <Container custom={{backgroundImage: tournament, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"end"}>
+                <FranchiseCover isLoaded={isReady}/>
+            </Container>
+            <Container>
+                <VideoCarousel/>
+                <Philosophy/>
+            </Container>
+            <Container custom={{backgroundImage: grid, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"center"}>
+                <WhyUs/>
+                <Proposition/>
+                <CyberSport/>
+                <Infrastructure/>
+                <NewFormat/>
+            </Container>
+            <Container>
+                <YellowSection/>
+            </Container>
+            <Container custom={{backgroundImage: ourExperience, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
+                <OurExperience/>
+            </Container>
+            <Container>
+                <OurAdvantages/>
+                <TrustUs/>
+                <Rebrending/>
+                <Reviews/>
+            </Container>
+            <Container custom={{backgroundImage: getProposition, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
+                <GetProposition/>
+            </Container>
+            <Container>
+                <Footer/>
+            </Container>
+            <ReadUTM/>
         </div>
     );
 };

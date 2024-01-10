@@ -57,8 +57,13 @@ const Modal = ({title, isActive, setIsActive}) => {
     }
 
     useEffect(() => {
+        const body = document.querySelector('body')
+
         if(!isActive){
             setProblemMessage('')
+            body.style = ''
+        } else {
+            body.style = 'height: 100vh; overflow: hidden;'
         }
     }, [isActive])
 
@@ -69,11 +74,11 @@ const Modal = ({title, isActive, setIsActive}) => {
                 &&
                 <div className="modal">
                     <div className="modal-wrapper">
-                        <form className="modal-inner">
+                        <div className="modal-inner">
                             <div className="modal-inner_header">
-                                <h4 className="body-text-bigger">
+                                <p className="body-text-bigger">
                                     {title}
-                                </h4>
+                                </p>
                                 <button
                                     onClick={() => setIsActive(!isActive)}
                                 >
@@ -120,7 +125,7 @@ const Modal = ({title, isActive, setIsActive}) => {
                                     </Btn>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             }
