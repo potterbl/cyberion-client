@@ -15,8 +15,11 @@ import img9 from '../img/photo.svg fill (6).svg'
 import img10 from '../img/kolo.svg fill.svg'
 import Btn from "./Btn";
 import {useInView} from "react-intersection-observer";
+import Modal from "./Modal";
 
 const OurAdvantages = () => {
+    const [isModal, setIsModal] = useState(false)
+
     const [contentRef, isInView] = useInView()
 
     const bodyRef = useRef(null)
@@ -163,296 +166,308 @@ const OurAdvantages = () => {
     }
 
     return (
-        <div className="our-advantages" ref={contentRef}>
-            <div className="our-advantages_head">
-                <h1 className="title uppercase">
-                    які переваги роботи по франшизі?
-                </h1>
-            </div>
-            <div
-                className="our-advantages_body"
-                ref={bodyRef}
-            >
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className={`our-advantages_body-card_circle`}
-                        ref={sections[0]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[0]}
-                        style={{
-                            backgroundImage: `url("${img1}")`
-                        }}
-                    >
+        <>
+            <Modal title="Отримати консультацію" isActive={isModal} setIsActive={setIsModal}/>
 
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[0]}
-                    >
-                        <h4 className="body-text-bigger uppercase">підбір локації</h4>
-                        <p className="body-text">Допоможемо з підбором та аналізом приміщення у Вашому місті, надамо
-                            технічні рекомендації та чек-лист пошуку приміщення</p>
-                    </motion.div>
+            <div className="our-advantages" ref={contentRef}>
+                <div className="our-advantages_head">
+                    <h1 className="title uppercase">
+                        які переваги роботи по франшизі?
+                    </h1>
                 </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[1]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[1]}
-                        style={{
-                            backgroundImage: `url("${img2}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[1]}
-                    >
-                        <h4 className="body-text-bigger uppercase">фірмовий стиль</h4>
-                        <p className="body-text">Надамо доступ до нашого брендбуку та створимо унікальний дизайн проект
-                            вашого приміщення</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[2]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[2]}
-                        style={{
-                            backgroundImage: `url("${img3}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[2]}
-                    >
-                        <h4 className="body-text-bigger uppercase">ПЕРЕВІРЕНІ ПІДРЯДНИКИ ТА ПОСТАЧАЛЬНИКИ</h4>
-                        <p className="body-text">Надамо базу підрядників та постачальників, які підійдуть саме для вас.
-                            Сформуємо специфікацію для вашого клубу</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[3]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[3]}
-                        style={{
-                            backgroundImage: `url("${img4}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[3]}
-                    >
-                        <h4 className="body-text-bigger uppercase">ПЕРСОНАЛЬНИЙ МЕНЕДЖЕР</h4>
-                        <p className="body-text">Персональний менеджер та проектна команда для кожного партнера на
-                            кожному етапі будівництва</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[4]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[4]}
-                        style={{
-                            backgroundImage: `url("${img5}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[4]}
-                    >
-                        <h4 className="body-text-bigger uppercase">БАЗА ЗНАНЬ</h4>
-                        <p className="body-text">Передамо Вам наш досвід та знання, позбавимо вас від необхідності
-                            повторювати наш шлях від новачків до досвідчених власників кіберклубів</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[5]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[5]}
-                        style={{
-                            backgroundImage: `url("${img6}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[5]}
-                    >
-                        <h4 className="body-text-bigger uppercase">СТАНДАРТИ ТА РЕГЛАМЕНТИ</h4>
-                        <p className="body-text">Усі необхідні правила та регламенти по роботі клубу є ключевим
-                            елементом
-                            успішної операційної діяльності і всі вони вже сформовані для Вас</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[6]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[6]}
-                        style={{
-                            backgroundImage: `url("${img7}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[6]}
-                    >
-                        <h4 className="body-text-bigger uppercase">ПІДТРИМКА 24/7</h4>
-                        <p className="body-text">Відділ IT, що займається технічною підтримкою 24/7</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[7]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[7]}
-                        style={{
-                            backgroundImage: `url("${img8}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[7]}
-                    >
-                        <h4 className="body-text-bigger uppercase">ПІДГОТОВКА</h4>
-                        <p className="body-text">Школа франчайзі, навчання та атестація персоналу</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[8]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[8]}
-                        style={{
-                            backgroundImage: `url("${img9}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[8]}
-                    >
-                        <h4 className="body-text-bigger uppercase">КОНТРОЛЬ ЯКОСТІ</h4>
-                        <p className="body-text">Система контролю якості та постійне оцінювання успішності клубу</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body-card">
-                    <motion.div
-                        className="our-advantages_body-card_circle"
-                        ref={sections[9]}
-                        variants={circleAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[9]}
-                        style={{
-                            backgroundImage: `url("${img10}")`
-                        }}
-                    >
-
-                    </motion.div>
-                    <motion.div
-                        className="our-advantages_body-card_content break-word"
-                        variants={textAnimation}
-                        initial="initial"
-                        animate="visible"
-                        custom={visibleSections[9]}
-                    >
-                        <h4 className="body-text-bigger uppercase">КЛУБНА ЛІГА</h4>
-                        <p className="body-text">Власна ліга, яка доступна тільки клубам-партнерам CYBERION. Актуальні
-                            дисципліни та формати, великі призові - потужний інструмент для залучення
-                            гравців</p>
-                    </motion.div>
-                </div>
-                <div className="our-advantages_body_progress-wrapper">
-                    {
-                        isInView &&
+                <div
+                    className="our-advantages_body"
+                    ref={bodyRef}
+                >
+                    <div className="our-advantages_body-card">
                         <motion.div
-                            className="our-advantages_body_progress"
+                            className={`our-advantages_body-card_circle`}
+                            ref={sections[0]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[0]}
                             style={{
-                                height: `${window.innerWidth <= 336 ? progress - 20 + 'px' : progress + 'px'}`
+                                backgroundImage: `url("${img1}")`
                             }}
                         >
 
                         </motion.div>
-                    }
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[0]}
+                        >
+                            <h4 className="body-text-bigger uppercase">підбір локації</h4>
+                            <p className="body-text">Допоможемо з підбором та аналізом приміщення у Вашому місті, надамо
+                                технічні рекомендації та чек-лист пошуку приміщення</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[1]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[1]}
+                            style={{
+                                backgroundImage: `url("${img2}")`
+                            }}
+                        >
 
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[1]}
+                        >
+                            <h4 className="body-text-bigger uppercase">фірмовий стиль</h4>
+                            <p className="body-text">Надамо доступ до нашого брендбуку та створимо унікальний дизайн
+                                проект
+                                вашого приміщення</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[2]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[2]}
+                            style={{
+                                backgroundImage: `url("${img3}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[2]}
+                        >
+                            <h4 className="body-text-bigger uppercase">ПЕРЕВІРЕНІ ПІДРЯДНИКИ ТА ПОСТАЧАЛЬНИКИ</h4>
+                            <p className="body-text">Надамо базу підрядників та постачальників, які підійдуть саме для
+                                вас.
+                                Сформуємо специфікацію для вашого клубу</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[3]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[3]}
+                            style={{
+                                backgroundImage: `url("${img4}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[3]}
+                        >
+                            <h4 className="body-text-bigger uppercase">ПЕРСОНАЛЬНИЙ МЕНЕДЖЕР</h4>
+                            <p className="body-text">Персональний менеджер та проектна команда для кожного партнера на
+                                кожному етапі будівництва</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[4]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[4]}
+                            style={{
+                                backgroundImage: `url("${img5}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[4]}
+                        >
+                            <h4 className="body-text-bigger uppercase">БАЗА ЗНАНЬ</h4>
+                            <p className="body-text">Передамо Вам наш досвід та знання, позбавимо вас від необхідності
+                                повторювати наш шлях від новачків до досвідчених власників кіберклубів</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[5]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[5]}
+                            style={{
+                                backgroundImage: `url("${img6}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[5]}
+                        >
+                            <h4 className="body-text-bigger uppercase">СТАНДАРТИ ТА РЕГЛАМЕНТИ</h4>
+                            <p className="body-text">Усі необхідні правила та регламенти по роботі клубу є ключевим
+                                елементом
+                                успішної операційної діяльності і всі вони вже сформовані для Вас</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[6]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[6]}
+                            style={{
+                                backgroundImage: `url("${img7}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[6]}
+                        >
+                            <h4 className="body-text-bigger uppercase">ПІДТРИМКА 24/7</h4>
+                            <p className="body-text">Відділ IT, що займається технічною підтримкою 24/7</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[7]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[7]}
+                            style={{
+                                backgroundImage: `url("${img8}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[7]}
+                        >
+                            <h4 className="body-text-bigger uppercase">ПІДГОТОВКА</h4>
+                            <p className="body-text">Школа франчайзі, навчання та атестація персоналу</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[8]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[8]}
+                            style={{
+                                backgroundImage: `url("${img9}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[8]}
+                        >
+                            <h4 className="body-text-bigger uppercase">КОНТРОЛЬ ЯКОСТІ</h4>
+                            <p className="body-text">Система контролю якості та постійне оцінювання успішності клубу</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body-card">
+                        <motion.div
+                            className="our-advantages_body-card_circle"
+                            ref={sections[9]}
+                            variants={circleAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[9]}
+                            style={{
+                                backgroundImage: `url("${img10}")`
+                            }}
+                        >
+
+                        </motion.div>
+                        <motion.div
+                            className="our-advantages_body-card_content break-word"
+                            variants={textAnimation}
+                            initial="initial"
+                            animate="visible"
+                            custom={visibleSections[9]}
+                        >
+                            <h4 className="body-text-bigger uppercase">КЛУБНА ЛІГА</h4>
+                            <p className="body-text">Власна ліга, яка доступна тільки клубам-партнерам CYBERION.
+                                Актуальні
+                                дисципліни та формати, великі призові - потужний інструмент для залучення
+                                гравців</p>
+                        </motion.div>
+                    </div>
+                    <div className="our-advantages_body_progress-wrapper">
+                        {
+                            isInView &&
+                            <motion.div
+                                className="our-advantages_body_progress"
+                                style={{
+                                    height: `${window.innerWidth <= 336 ? progress - 20 + 'px' : progress + 'px'}`
+                                }}
+                            >
+
+                            </motion.div>
+                        }
+
+                    </div>
+                </div>
+                <div className="our-advantages_footer">
+                    <div
+                        onClick={() => setIsModal(!isModal)}
+                    >
+                        <Btn type="primary">
+                            Замовити безкоштовну консультацію
+                        </Btn>
+                    </div>
                 </div>
             </div>
-            <div className="our-advantages_footer">
-                <Btn type="primary">
-                    Замовити безкоштовну консультацію
-                </Btn>
-            </div>
-        </div>
+        </>
+
     );
 };
 

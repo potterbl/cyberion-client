@@ -56,17 +56,6 @@ const Modal = ({title, isActive, setIsActive}) => {
             })
     }
 
-    useEffect(() => {
-        const body = document.querySelector('body')
-
-        if(!isActive){
-            setProblemMessage('')
-            body.style = ''
-        } else {
-            body.style = 'height: 100vh; overflow: hidden;'
-        }
-    }, [isActive])
-
     return (
         <>
             {
@@ -76,7 +65,7 @@ const Modal = ({title, isActive, setIsActive}) => {
                     <div className="modal-wrapper">
                         <div className="modal-inner">
                             <div className="modal-inner_header">
-                                <p className="body-text-bigger">
+                                <p className="body-text-bigger bold">
                                     {title}
                                 </p>
                                 <button

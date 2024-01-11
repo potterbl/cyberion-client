@@ -36,7 +36,7 @@
     background-position: center;
     background-repeat: no-repeat;
     clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 12px) calc(100% - 12px), calc(100% - 36px) calc(100% - 12px), calc(100% - 48px) 100%, 0% 100%, 0% 12px);
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
 }
 .new-format_body-card_content-bottom{
