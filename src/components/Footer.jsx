@@ -4,11 +4,25 @@ import '../styles/Footer.css'
 import {useSelector} from "react-redux";
 import axios from "axios";
 import swal from "sweetalert";
+import Cookies from "js-cookie";
 
 const Footer = () => {
     const {offsetLeft} = useSelector(state => state.container)
 
     const [email, setEmail] = useState('')
+
+    const cookies = Cookies.get('_aaa_utmz')
+    let splitedCookies;
+
+    if(cookies !== undefined){
+        splitedCookies = cookies.split('|')
+    } else {
+        splitedCookies = []
+        splitedCookies[0] = ""
+        splitedCookies[1] = ""
+        splitedCookies[2] = ""
+        splitedCookies[3] = ""
+    }
 
     const handleSend = async () => {
         if(email === ''){
@@ -16,13 +30,18 @@ const Footer = () => {
         }
 
         await axios
-            .post('https://8df6-195-189-226-219.ngrok-free.app/mail', {
+            .post('https://897d-195-189-226-219.ngrok-free.app/mail', {
                 name: "",
                 phone: "",
                 email: email,
                 link: window.location.href,
                 form: "Footer залишити заявку",
-                subject: "Footer залишити заявку"
+                subject: "Footer залишити заявку",
+                time: "",
+                campaign: splitedCookies[1],
+                term: splitedCookies[3],
+                source: splitedCookies[0],
+                content: splitedCookies[2],
             })
             .then( () => {
                 setEmail('')

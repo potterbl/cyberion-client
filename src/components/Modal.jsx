@@ -23,6 +23,12 @@ const Modal = ({title, isActive, setIsActive}) => {
 
     if(cookies !== undefined){
         splitedCookies = cookies.split('|')
+    } else {
+        splitedCookies = []
+        splitedCookies[0] = ""
+        splitedCookies[1] = ""
+        splitedCookies[2] = ""
+        splitedCookies[3] = ""
     }
 
     const handleSend = async () => {
@@ -31,11 +37,16 @@ const Modal = ({title, isActive, setIsActive}) => {
         }
 
         await axios
-            .post('https://8df6-195-189-226-219.ngrok-free.app/mail', {
+            .post('https://897d-195-189-226-219.ngrok-free.app/common/send', {
                 name: name,
                 phone: number,
                 email: email,
+                time: time,
                 link: window.location.href,
+                campaign: splitedCookies[1],
+                term: splitedCookies[3],
+                source: splitedCookies[0],
+                content: splitedCookies[2],
                 form: title,
                 subject: title
             })
