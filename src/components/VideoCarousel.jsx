@@ -5,30 +5,23 @@ import '../styles/VideoCarousel.css'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {A11y, Navigation} from "swiper/modules";
 import ButtonSlide from "./ButtonSlide";
+import axios from "axios";
 
 const VideoCarousel = () => {
 
     const [videos, setVideos] = useState([
     ])
-
-    const API_KEY = "AIzaSyBfoNRR1D8PHglhZSBhVEDc3pL02OFdzE8";
-
-    const channelId = "UC5CzPPsxGrh9jdI5HuTA_-A";
-
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=8&key=${API_KEY}`;
-
     useEffect(() => {
-        fetch(url)
-            .then((response) => response.json())
-            .then((data) => {
-                const videos = data.items;
+        async function getVideos() {
+            await axios
+                .get("https://ea2d-195-189-226-219.ngrok-free.app/youtube")
+                .then(res => {
+                    setVideos(res.data)
+                })
+                .catch(err => console.log(err))
+        }
 
-                const embedLinks = videos?.map((video) => {
-                    return {link: `https://www.youtube.com/embed/${video.id.videoId}`, title: video.snippet.title}
-                });
-
-                setVideos(embedLinks?.slice(1))
-            });
+        getVideos()
     }, [])
 
 

@@ -37,7 +37,7 @@ const Modal = ({title, isActive, setIsActive}) => {
         }
 
         await axios
-            .post('https://897d-195-189-226-219.ngrok-free.app/common/send', {
+            .post('https://ea2d-195-189-226-219.ngrok-free.app/common/send', {
                 name: name,
                 phone: number,
                 email: email,

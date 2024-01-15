@@ -30,7 +30,7 @@ const Footer = () => {
         }
 
         await axios
-            .post('https://897d-195-189-226-219.ngrok-free.app/mail', {
+            .post('https://ea2d-195-189-226-219.ngrok-free.app/mail', {
                 name: "",
                 phone: "",
                 email: email,
