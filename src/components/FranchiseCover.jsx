@@ -100,19 +100,21 @@ const FranchiseCover = (props) => {
                         </div>
                     </div>
                     {
-                        window.innerWidth > 700 &&
+                        window.innerWidth > 770 &&
                         <div className="franchise-cover_right">
                             <motion.img
                                 src={robot}
                                 alt="cover"
                                 className={'franchise-cover_right-image'}
                                 style={{
-                                    y: coverRef.current ? y : 0
+                                    y: coverRef.current ? y : 0,
+                                    x: window.innerWidth < 900 ? '20%' : 0
                                 }}
                             />
                             <motion.div
                                 style={{
-                                    y: coverRef.current ? y2 : 0
+                                    y: coverRef.current ? y2 : 0,
+                                    x: window.innerWidth < 900 ? '20%' : 0
                                 }}
                                 className={'franchise-cover_right-image-background'}
                             />
