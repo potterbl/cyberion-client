@@ -52,7 +52,7 @@ const Philosophy = () => {
                     </h2>
                 </div>
                 <div className="philosophy-left_body">
-                    <p className={"body-text gray-text"}>
+                    <p className={"body-text"}>
                         Ми використали весь наш досвід та існуючі тенденції, для
                         того, щоб створити ідеальне місце для тренувань з
                         кіберспорту та просто відпочинку:
@@ -89,62 +89,64 @@ const Philosophy = () => {
                 </div>
             </div>
             <div className="philosophy-right">
-                <div className="swiper-custom-pagination">
+                <div className="philosophy-right__wrapper">
+                    <div className="swiper-custom-pagination">
 
+                    </div>
+                    <Swiper
+                        slidesPerView={1}
+                        modules={[A11y, Scrollbar, Navigation, Pagination]}
+                        draggable={false}
+                        loop={true}
+                        pagination={{
+                            el: '.swiper-custom-pagination',
+                            bulletClass: 'swiper-custom-bullet',
+                            bulletActiveClass: 'swiper-custom-bullet-active',
+                            clickable: true,
+                            type: "bullets"
+                        }}
+                        navigation={{
+                            nextEl: '#nextSlidePhilosophy',
+                            prevEl: '#prevSlidePhilosophy'
+                        }}
+                        onBeforeInit={(swiper) => {
+                            swiper.params.navigation.prevEl = "#prevSlidePhilosophy"
+                            swiper.params.navigation.nextEl = "#nextSlidePhilosophy"
+                        }}
+                    >
+
+                        <SwiperSlide>
+                            <div
+                                className="slide-custom"
+                                style={{
+                                    backgroundImage: `url("${img1}")`
+                                }}
+                            >
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div
+                                className="slide-custom"
+                                style={{
+                                    backgroundImage: `url("${img2}")`
+                                }}
+                            >
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div
+                                className="slide-custom"
+                                style={{
+                                    backgroundImage: `url("${img3}")`
+                                }}
+                            >
+                            </div>
+                        </SwiperSlide>
+                        <ButtonSlide type={'prev'} id={'prevSlidePhilosophy'}/>
+                        <ButtonSlide type={'next'} id={'nextSlidePhilosophy'}/>
+
+                    </Swiper>
                 </div>
-                <Swiper
-                    slidesPerView={1}
-                    modules={[A11y, Scrollbar, Navigation, Pagination]}
-                    draggable={false}
-                    loop={true}
-                    pagination={{
-                        el: '.swiper-custom-pagination',
-                        bulletClass: 'swiper-custom-bullet',
-                        bulletActiveClass: 'swiper-custom-bullet-active',
-                        clickable: true,
-                        type: "bullets"
-                    }}
-                    navigation={{
-                        nextEl: '#nextSlidePhilosophy',
-                        prevEl: '#prevSlidePhilosophy'
-                    }}
-                    onBeforeInit={(swiper) => {
-                        swiper.params.navigation.prevEl = "#prevSlidePhilosophy"
-                        swiper.params.navigation.nextEl = "#nextSlidePhilosophy"
-                    }}
-                >
-
-                    <SwiperSlide>
-                        <div
-                            className="slide-custom"
-                            style={{
-                                backgroundImage: `url("${img1}")`
-                            }}
-                        >
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div
-                            className="slide-custom"
-                            style={{
-                                backgroundImage: `url("${img2}")`
-                            }}
-                        >
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div
-                            className="slide-custom"
-                            style={{
-                                backgroundImage: `url("${img3}")`
-                            }}
-                        >
-                        </div>
-                    </SwiperSlide>
-                    <ButtonSlide type={'prev'} id={'prevSlidePhilosophy'}/>
-                    <ButtonSlide type={'next'} id={'nextSlidePhilosophy'}/>
-
-                </Swiper>
             </div>
         </div>
     );

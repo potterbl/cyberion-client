@@ -70,30 +70,58 @@
 .new-format_body-img{
     width: 100%;
 }
-@media (max-width: 1024px) {
-    .new-format_body{
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        row-gap: 40px;
-        justify-content: center;
+@media (max-width: 1200px) {
+    .new-format_body-card_content-bottom_info-wrapper{
+        padding: 0;
     }
 }
-@media (max-width: 858px) {
-    .new-format_body{
-        row-gap: 40px;
-    }
-}
-@media (max-width: 768px) {
-    .new-format_body-card{
-        margin-bottom: 68px;
-        position: relative;
-        clip-path: polygon(18px 0%, 100% 0%, 100% calc(100% + 68px), 0% calc(100% + 68px), 0% 18px);
-    }
-    .new-format_body-card_under-section{
-        width: 100%;
+@media (max-width: 865px) {
+    .new-format{
         display: grid;
         place-items: center;
-        position: absolute;
-        left: 0;
-        bottom: -68px;
+        grid-template-columns: 100%;
+    }
+    .new-format-container{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 100%;
+    }
+    .new-format_body{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: fit-content;
+    }
+    .new-format_slide{
+        width: 100%;
+        aspect-ratio: 1/1.2;
+        background-image: linear-gradient(180deg, #ffed00 calc(80% - 4px), #171717 calc(80% - 4px));
+        padding: 8px;
+        display: grid;
+        row-gap: 8px;
+        grid-template-rows: 4fr 1fr;
+        clip-path: polygon(18px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 18px);
+    }
+    .new-format_slide-content {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 12px) calc(100% - 12px), calc(100% - 36px) calc(100% - 12px), calc(100% - 48px) 100%, 0% 100%, 0% 12px);
+        position: relative;
+    }
+    .new-format_slide-content_inner{
+        width: 100%;
+        height: 100%;
+        background-size: 50% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .new-format_slide-bottom{
+        display: grid;
+        place-items: center;
+        height: 100%;
+        width: 100%;
     }
 }

@@ -27,9 +27,17 @@
 }
 .philosophy-right{
     width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.philosophy-right__wrapper{
+    width: 100%;
+    height: fit-content;
     padding-bottom: 36px;
     position: relative;
-    overflow-x: hidden;
 }
 .slide-custom{
     width: 100%;
@@ -68,6 +76,9 @@
         row-gap: 70px;
     }
     .philosophy-right{
+        aspect-ratio: unset;
+    }
+    .slide-custom{
         aspect-ratio: 4/2;
     }
 }
