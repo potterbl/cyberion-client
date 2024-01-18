@@ -30,7 +30,7 @@ const Footer = () => {
         }
 
         await axios
-            .post('https://ea2d-195-189-226-219.ngrok-free.app/mail', {
+            .post('https://great-wasp-engaged.ngrok-free.app/mail', {
                 name: "",
                 phone: "",
                 email: email,

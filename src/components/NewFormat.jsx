@@ -66,104 +66,104 @@ const NewFormat = (props) => {
                     <div className="new-format_body">
                         {
                             window.innerWidth > 865 ?
-                            <>
-                                <div className="new-format_body-card">
-                                    <motion.div
-                                        className="new-format_body-card_content"
-                                        style={{backgroundImage: `url("${pc20}")`}}
-                                        initial="initial"
-                                        whileHover="visible"
-                                    >
+                                <>
+                                    <div className="new-format_body-card">
                                         <motion.div
-                                            className="new-format_body-card_content-bottom"
-                                            variants={modelAnimation}
-                                            style={{
-                                                backgroundImage: `url("${model30}")`
-                                            }}
+                                            className="new-format_body-card_content"
+                                            style={{backgroundImage: `url("${pc20}")`}}
+                                            initial="initial"
+                                            whileHover="visible"
                                         >
-                                        </motion.div>
-                                        {
-                                            window.innerWidth > 768 &&
                                             <motion.div
-                                                className="new-format_body-card_content-bottom_info-wrapper"
-                                                variants={bgAnimation}
+                                                className="new-format_body-card_content-bottom"
+                                                variants={modelAnimation}
+                                                style={{
+                                                    backgroundImage: `url("${model30}")`
+                                                }}
                                             >
-                                                <div
-                                                    onClick={() => setIsModal20(!isModal20)}
-                                                >
-                                                    <Btn type={"primary"}>
-                                                        Отримати модель
-                                                    </Btn>
-                                                </div>
                                             </motion.div>
-                                        }
-                                    </motion.div>
-                                </div>
-                                <div className="new-format_body-card">
-                                    <motion.div
-                                        className="new-format_body-card_content"
-                                        style={{backgroundImage: `url("${pc30}")`}}
-                                        initial="initial"
-                                        whileHover="visible"
-                                    >
+                                            {
+                                                window.innerWidth > 768 &&
+                                                <motion.div
+                                                    className="new-format_body-card_content-bottom_info-wrapper"
+                                                    variants={bgAnimation}
+                                                >
+                                                    <div
+                                                        onClick={() => setIsModal20(!isModal20)}
+                                                    >
+                                                        <Btn type={"primary"}>
+                                                            Отримати модель
+                                                        </Btn>
+                                                    </div>
+                                                </motion.div>
+                                            }
+                                        </motion.div>
+                                    </div>
+                                    <div className="new-format_body-card">
                                         <motion.div
-                                            className="new-format_body-card_content-bottom"
-                                            variants={modelAnimation}
-                                            style={{
-                                                backgroundImage: `url("${model40}")`
-                                            }}
+                                            className="new-format_body-card_content"
+                                            style={{backgroundImage: `url("${pc30}")`}}
+                                            initial="initial"
+                                            whileHover="visible"
                                         >
-                                        </motion.div>
-                                        {
-                                            window.innerWidth > 768 &&
                                             <motion.div
-                                                className="new-format_body-card_content-bottom_info-wrapper"
-                                                variants={bgAnimation}
+                                                className="new-format_body-card_content-bottom"
+                                                variants={modelAnimation}
+                                                style={{
+                                                    backgroundImage: `url("${model40}")`
+                                                }}
                                             >
-                                                <div
-                                                    onClick={() => setIsModal30(!isModal30)}
-                                                >
-                                                    <Btn type={"primary"}>
-                                                        Отримати модель
-                                                    </Btn>
-                                                </div>
                                             </motion.div>
-                                        }
-                                    </motion.div>
-                                </div>
-                                <div className="new-format_body-card">
-                                    <motion.div
-                                        className="new-format_body-card_content"
-                                        style={{backgroundImage: `url("${pc40}")`}}
-                                        initial="initial"
-                                        whileHover="visible"
-                                    >
+                                            {
+                                                window.innerWidth > 768 &&
+                                                <motion.div
+                                                    className="new-format_body-card_content-bottom_info-wrapper"
+                                                    variants={bgAnimation}
+                                                >
+                                                    <div
+                                                        onClick={() => setIsModal30(!isModal30)}
+                                                    >
+                                                        <Btn type={"primary"}>
+                                                            Отримати модель
+                                                        </Btn>
+                                                    </div>
+                                                </motion.div>
+                                            }
+                                        </motion.div>
+                                    </div>
+                                    <div className="new-format_body-card">
                                         <motion.div
-                                            className="new-format_body-card_content-bottom"
-                                            variants={modelAnimation}
-                                            style={{
-                                                backgroundImage: `url("${model60}")`
-                                            }}
+                                            className="new-format_body-card_content"
+                                            style={{backgroundImage: `url("${pc40}")`}}
+                                            initial="initial"
+                                            whileHover="visible"
                                         >
-                                        </motion.div>
-                                        {
-                                            window.innerWidth > 768 &&
                                             <motion.div
-                                                className="new-format_body-card_content-bottom_info-wrapper"
-                                                variants={bgAnimation}
+                                                className="new-format_body-card_content-bottom"
+                                                variants={modelAnimation}
+                                                style={{
+                                                    backgroundImage: `url("${model60}")`
+                                                }}
                                             >
-                                                <div
-                                                    onClick={() => setIsModal40(!isModal40)}
-                                                >
-                                                    <Btn type={"primary"}>
-                                                        Отримати модель
-                                                    </Btn>
-                                                </div>
                                             </motion.div>
-                                        }
-                                    </motion.div>
-                                </div>
-                            </>
+                                            {
+                                                window.innerWidth > 768 &&
+                                                <motion.div
+                                                    className="new-format_body-card_content-bottom_info-wrapper"
+                                                    variants={bgAnimation}
+                                                >
+                                                    <div
+                                                        onClick={() => setIsModal40(!isModal40)}
+                                                    >
+                                                        <Btn type={"primary"}>
+                                                            Отримати модель
+                                                        </Btn>
+                                                    </div>
+                                                </motion.div>
+                                            }
+                                        </motion.div>
+                                    </div>
+                                </>
                                 :
                                 <>
                                     <Swiper
@@ -176,7 +176,22 @@ const NewFormat = (props) => {
                                             swiper.params.navigation.prevEl = "#prevSlideFormat"
                                             swiper.params.navigation.nextEl = "#nextSlideFormat"
                                         }}
-                                        slidesPerView={2.5}
+                                        slidesPerView={
+                                            window.innerWidth < 350 ?
+                                                1.25
+                                                :
+                                            window.innerWidth < 400 ?
+                                                1.45
+                                                :
+                                            window.innerWidth < 450 ?
+                                                1.75
+                                                :
+                                            window.innerWidth < 670 ?
+                                                2.15
+                                                :window.innerWidth < 780 ?
+                                                2.25
+                                                : 2.5
+                                        }
                                         spaceBetween="20"
                                     >
                                         <SwiperSlide>
@@ -188,7 +203,7 @@ const NewFormat = (props) => {
                                                     <div
                                                         className="new-format_slide-content_inner"
                                                         style={{
-                                                            backgroundImage: `url("${model60}")`
+                                                            backgroundImage: `url("${model30}")`
                                                         }}
                                                     >
 
@@ -210,9 +225,26 @@ const NewFormat = (props) => {
                                             <div className="new-format_slide">
                                                 <div
                                                     className="new-format_slide-content"
-                                                    style={{backgroundImage: `url("${pc30}")`}}
+                                                    style={{backgroundImage: `url("${pc40}")`}}
                                                 >
 
+                                                    <div
+                                                        className="new-format_slide-content_inner"
+                                                        style={{
+                                                            backgroundImage: `url("${model40}")`
+                                                        }}
+                                                    >
+
+                                                    </div>
+                                                </div>
+                                                <div className="new-format_slide-bottom">
+                                                    <div
+                                                        onClick={() => setIsModal30(!isModal30)}
+                                                    >
+                                                        <Btn type={"primary"}>
+                                                            Отримати модель
+                                                        </Btn>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </SwiperSlide>
@@ -223,6 +255,23 @@ const NewFormat = (props) => {
                                                     style={{backgroundImage: `url("${pc40}")`}}
                                                 >
 
+                                                    <div
+                                                        className="new-format_slide-content_inner"
+                                                        style={{
+                                                            backgroundImage: `url("${model60}")`
+                                                        }}
+                                                    >
+
+                                                    </div>
+                                                </div>
+                                                <div className="new-format_slide-bottom">
+                                                    <div
+                                                        onClick={() => setIsModal40(!isModal40)}
+                                                    >
+                                                        <Btn type={"primary"}>
+                                                            Отримати модель
+                                                        </Btn>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </SwiperSlide>

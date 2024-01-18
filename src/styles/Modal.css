@@ -10,7 +10,7 @@
     place-items: center;
 }
 .modal-wrapper{
-    width: 700px;
+    width: min(100%, 700px);
     background-color: #ffed00;
     padding: 6px;
     clip-path: polygon(14px 0%, 100% 0%, 100% 50%, calc(100% - 14px) calc(50% + 14px), calc(100% - 14px) 100%, 0% 100%, 0% 50%, 14px calc(50% - 14px));

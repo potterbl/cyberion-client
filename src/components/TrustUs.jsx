@@ -23,7 +23,17 @@ const TrustUs = () => {
             <div className="trust-us_body">
                 <Swiper
                     modules={[A11y, Autoplay]}
-                    slidesPerView={4.5}
+                    slidesPerView={
+                        window.innerWidth < 500 ?
+                            2.25
+                            : window.innerWidth < 600 ?
+                                2.8
+                                : window.innerWidth < 650 ?
+                                    3.25
+                                    : window.innerWidth < 800 ?
+                                        3.8
+                                        :4.5
+                    }
                     autoplay={{
                         delay: 0,
                     }}

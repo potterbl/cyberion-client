@@ -79,6 +79,7 @@
     .new-format{
         display: grid;
         place-items: center;
+        row-gap: 50px;
         grid-template-columns: 100%;
     }
     .new-format-container{
@@ -95,7 +96,8 @@
     .new-format_slide{
         width: 100%;
         aspect-ratio: 1/1.2;
-        background-image: linear-gradient(180deg, #ffed00 calc(80% - 4px), #171717 calc(80% - 4px));
+        /*background-image: linear-gradient(180deg, #ffed00 calc(80% - 4px), #171717 calc(80% - 4px));*/
+        background: #333333;
         padding: 8px;
         display: grid;
         row-gap: 8px;
@@ -109,6 +111,7 @@
         background-position: center;
         background-repeat: no-repeat;
         clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 12px) calc(100% - 12px), calc(100% - 36px) calc(100% - 12px), calc(100% - 48px) 100%, 0% 100%, 0% 12px);
+        overflow: hidden;
         position: relative;
     }
     .new-format_slide-content_inner{

@@ -57,8 +57,16 @@
     }
 }
 @media (max-width: 550px) {
+    .our-advantages{
+        row-gap: 55px;
+    }
     .our-advantages_body{
         margin: 0 54px;
+    }
+}
+@media (max-width: 425px) {
+    .our-advantages_body_progress-wrapper{
+        padding: 35px 0;
     }
 }
 @media (max-width: 380px) {

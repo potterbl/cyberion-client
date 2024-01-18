@@ -14,7 +14,7 @@ const VideoCarousel = () => {
     useEffect(() => {
         async function getVideos() {
             await axios
-                .get("https://ea2d-195-189-226-219.ngrok-free.app/youtube")
+                .get("https://great-wasp-engaged.ngrok-free.app/youtube")
                 .then(res => {
                     setVideos(res.data)
                 })

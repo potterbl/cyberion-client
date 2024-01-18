@@ -10,3 +10,19 @@
     left: 20px;
     z-index: 10;
 }
+@media (max-width: 1000px){
+    .arrow-top{
+        bottom: 128px;
+    }
+}
+@media (max-width: 790px){
+    .arrow-top{
+        bottom: 117px;
+    }
+}
+@media (max-width: 650px){
+    .arrow-top{
+        width: 40px;
+        height: 40px;
+    }
+}

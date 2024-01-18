@@ -109,7 +109,7 @@ const WhyUs = (props) => {
                             ЦЮ НІШУ?<br/>
                         </h2>
                         {
-                            window.innerWidth > 854 || window.innerWidth <= 768 ?
+                            window.innerWidth > 854 ?
                                 <p className="body-text">
                                     Давайте разом проаналізуємо, як<br/>
                                     ми прийшли до рішення<br/>

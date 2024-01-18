@@ -37,7 +37,7 @@ const Modal = ({title, isActive, setIsActive}) => {
         }
 
         await axios
-            .post('https://ea2d-195-189-226-219.ngrok-free.app/common/send', {
+            .post('https://great-wasp-engaged.ngrok-free.app/common/send', {
                 name: name,
                 phone: number,
                 email: email,
@@ -72,8 +72,14 @@ const Modal = ({title, isActive, setIsActive}) => {
             {
                 isActive
                 &&
-                <div className="modal">
-                    <div className="modal-wrapper">
+                <div
+                    className="modal"
+                    onClick={() => setIsActive(!isActive)}
+                >
+                    <div
+                        className="modal-wrapper"
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         <div className="modal-inner">
                             <div className="modal-inner_header">
                                 <p className="body-text-bigger bold">
