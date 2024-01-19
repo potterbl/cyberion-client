@@ -54,11 +54,11 @@ const FranchisePage = () => {
         body.style = 'overflow: hidden;';
         html.style = 'overflow: hidden;';
 
-        if (document.readyState && isReady) {
-            body.style = ''
-            html.style = ''
-            setIsLoaded(true)
-        }
+        // if (document.readyState && isReady) {
+        //     body.style = ''
+        //     html.style = ''
+        //     setIsLoaded(true)
+        // }
     }, [isReady]);
 
     return (
