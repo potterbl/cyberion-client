@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 import '../styles/Rebrending.css'
 import {useSelector} from "react-redux";
-import Btn from "./Btn";
 
 import rebrending1 from '../img/rebrending_1.png'
 import rebrending2 from '../img/rebrending_2.png'
@@ -72,13 +71,13 @@ const Rebrending = () => {
                             }
                             мережі клубів та зростати разом
                         </p>
-                        <div
+                        <button
                             onClick={() => setIsModal(!isModal)}
+                            className="body-text-bigger bold black-font"
+                            style={{width: "max-content"}}
                         >
-                            <Btn type="primary">
                                 Дізнатись умови ➜
-                            </Btn>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div className="rebrending-right">

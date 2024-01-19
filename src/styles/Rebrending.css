@@ -43,3 +43,32 @@
     bottom: 0;
     right: 0;
 }
+@media (max-width: 768px) {
+    .rebrending{
+        grid-template-columns: unset;
+        row-gap: 90px;
+    }
+    .rebrending-right{
+        width: min(100%, 560px);
+    }
+}
+@media (max-width: 500px) {
+    .rebrending{
+        padding: 60px 0 35px 0;
+    }
+    .rebrending-right {
+        height: 480px;
+    }
+}
+@media (max-width: 420px) {
+    .rebrending{
+        row-gap: 45px;
+    }
+    .rebrending-right{
+        height: auto;
+    }
+    .rebrending-right img{
+        width: 100%;
+        position: unset;
+    }
+}

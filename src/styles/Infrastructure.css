@@ -99,3 +99,16 @@
         height: 38px;
     }
 }
+@media (max-width: 475px) {
+    .infrastructure-right_box-content_x{
+        height: 33px;
+    }
+    .infrastructure-right_box-content{
+        column-gap: 4px;
+        align-items: flex-end;
+    }
+    .body-text-card{
+        height: max-content;
+        font-size: 14px;
+    }
+}

@@ -53,3 +53,18 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+@media (max-width: 768px) {
+    .footer-body{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+    .footer{
+        padding-bottom: 120px;
+    }
+}
+@media (max-width: 400px) {
+    .footer-body{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+}

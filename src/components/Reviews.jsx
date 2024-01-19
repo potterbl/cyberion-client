@@ -55,7 +55,27 @@ const Reviews = () => {
                         swiper.params.navigation.prevEl = "#prevSlideReviews"
                         swiper.params.navigation.nextEl = "#nextSlideReviews"
                     }}
-                    slidesPerView={3.5}
+                    slidesPerView={
+                        window.innerWidth <= 330 ?
+                            1.15
+                            : window.innerWidth < 380 ?
+                                1.25
+                                : window.innerWidth <= 460 ?
+                                    1.5
+                                    : window.innerWidth <= 550 ?
+                                        1.75
+                                        : window.innerWidth < 575 ?
+                                            1.25
+                                            : window.innerWidth < 650 ?
+                                                1.75
+                                                : window.innerWidth < 730 ?
+                                                    2.15
+                                                    : window.innerWidth < 850 ?
+                                                        2.5
+                                                        : window.innerWidth < 920 ?
+                                                            3.25
+                                                            : 3.5
+                    }
                     loop={true}
                     spaceBetween={20}
                     speed={1000}

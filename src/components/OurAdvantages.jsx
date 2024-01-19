@@ -37,36 +37,36 @@ const OurAdvantages = () => {
         useRef(null),
     ]
 
-    const [visibleSections, setVisibleSections] = useState([
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-    ]);
+    const [visibleSections, setVisibleSections] = useState({
+        0: false,
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+        5: false,
+        6: false,
+        7: false,
+        8: false,
+        9: false,
+});
 
     const [progress, setProgress] = useState(0);
 
     const callbackFunctions = (section) => (entries) => {
         const [entry] = entries;
-        if(entry.isIntersecting){
-            setVisibleSections((prevVisibleSections) => {
-                const newVisibleSections = [...prevVisibleSections];
-                newVisibleSections[section] = true;
-                return newVisibleSections;
-            });
-        } else {
-            setVisibleSections((prevVisibleSections) => {
-                const newVisibleSections = [...prevVisibleSections];
-                newVisibleSections[section] = false;
-                return newVisibleSections;
-            });
-        }
+        setVisibleSections((prevVisibleSections) => {
+            const newVisibleSections = { ...prevVisibleSections };
+            newVisibleSections[section] = entry.isIntersecting;
+
+            const keys = Object.keys(newVisibleSections);
+            if (keys.length > 10) {
+                const firstKeys = keys.slice(0, 9);
+                const limitedVisibleSections = Object.fromEntries(firstKeys.map(key => [key, newVisibleSections[key]]));
+                return limitedVisibleSections;
+            }
+
+            return newVisibleSections;
+        });
     };
 
     const observerOptions = {
@@ -118,10 +118,11 @@ const OurAdvantages = () => {
             sections[8].current &&
             sections[9].current
         ) {
-            const lastIndex = visibleSections.lastIndexOf(true);
+            let lastVisibleSection = Object.keys(visibleSections).findLast((key) => visibleSections[key]);
 
-            if (lastIndex !== -1 && sections[lastIndex] &&sections[lastIndex].current) {
-                const section = sections[lastIndex].current;
+
+            if (lastVisibleSection && sections[lastVisibleSection] && sections[lastVisibleSection].current) {
+                const section = sections[lastVisibleSection].current;
                 const body = bodyRef.current;
                 const sectionTop = section.getBoundingClientRect().top + window.scrollY;
                 const bodyTop = body.getBoundingClientRect().top + window.scrollY;

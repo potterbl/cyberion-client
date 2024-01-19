@@ -12,17 +12,28 @@
     background-color: #ffed00;
     color: black;
     font-weight: bold;
+    transition: .3s ease-in;
 }
 .btn-primary:disabled{
     background-color: #171717;
     color: #333;
 }
-.primary-active{
-    background-color: transparent;
-}
 .btn-second{
     border: 1px solid #ffed00;
     color: #ffed00;
+    transition: .3s ease-in;
+}
+@media (hover: hover) {
+    .btn-primary:hover{
+        background-color: #FFFAB5;
+    }
+}
+.btn-primary:active{
+    background-color: #171717;
+    color: #FFED00;
+}
+.btn-second:active{
+    background-color: #FFED00;
 }
 @media (max-width: 1075px) {
     .btn{

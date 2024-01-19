@@ -6,6 +6,8 @@
 }
 .get-proposition_left{
     display: grid;
+    height: max-content;
+    row-gap: 40px;
 }
 .get-proposition_left-body{
     display: flex;
