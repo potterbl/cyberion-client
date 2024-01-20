@@ -3,7 +3,7 @@ import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import FranchisePage from "./pages/FranchisePage";
 import {Provider} from "react-redux";
 import {store} from "./store/store";
-import SitemapPage from "./pages/SitemapPage";
+import SitemapPage from "./sitemap.xml";
 
 function App() {
 
