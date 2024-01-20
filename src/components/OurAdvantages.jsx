@@ -172,9 +172,9 @@ const OurAdvantages = () => {
 
             <div className="our-advantages" ref={contentRef}>
                 <div className="our-advantages_head">
-                    <h1 className="title uppercase">
+                    <h2 className="title uppercase">
                         які переваги роботи по франшизі?
-                    </h1>
+                    </h2>
                 </div>
                 <div
                     className="our-advantages_body"
