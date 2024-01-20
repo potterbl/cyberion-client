@@ -14,7 +14,7 @@ function App() {
                     <Routes>
                         <Route path={'/franchise'} element={<FranchisePage/>}/>
                         <Route path={'*'} element={<Navigate to={'/franchise'}/>}/>
-                        <Route path={'/sitemap'} element={<SitemapPage/>}/>
+                        <Route path={'/sitemap/main'} element={<SitemapPage/>}/>
                     </Routes>
                 </BrowserRouter>
             </div>
