@@ -3,6 +3,7 @@ import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import FranchisePage from "./pages/FranchisePage";
 import {Provider} from "react-redux";
 import {store} from "./store/store";
+import SitemapPage from "./pages/SitemapPage";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
                     <Routes>
                         <Route path={'/franchise'} element={<FranchisePage/>}/>
                         <Route path={'*'} element={<Navigate to={'/franchise'}/>}/>
+                        <Route path={'/sitemap'} element={<SitemapPage/>}/>
                     </Routes>
                 </BrowserRouter>
             </div>
