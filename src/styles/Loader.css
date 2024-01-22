@@ -15,6 +15,61 @@
     align-items: center;
     column-gap: 12px;
 }
+@supports (-webkit-touch-callout: none) {
+    @keyframes circleAnimation {
+        0% {
+            transform: translateX(0);
+        }
+        20% {
+            transform: translateX(0);
+        }
+        60% {
+            transform: translateX(50%);
+        }
+        100% {
+            transform: translateX(50%);
+        }
+    }
+
+    @keyframes nAnimation {
+        0% {
+            opacity: 0;
+        }
+        20%{
+            opacity: 1;
+        }
+        60%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
+    @keyframes wrapperAnimation {
+        0%{
+            rotate: 0deg;
+        }
+        60%{
+            rotate: 0deg;
+        }
+        100%{
+            rotate: 180deg;
+        }
+    }
+
+    #circle {
+        animation: circleAnimation 2.5s ease-in-out infinite;
+    }
+
+    #n {
+        animation: nAnimation 2.5s ease-in-out infinite;
+    }
+
+    #wrapper {
+        animation: wrapperAnimation 2.5s ease-in-out infinite;
+    }
+}
 @media (max-width: 526px) {
     .loader-content{
         grid-template-columns: 295fr 182fr;

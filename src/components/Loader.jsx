@@ -6,42 +6,43 @@ import anime from "animejs";
 const Loader = () => {
 
     useEffect(() => {
+        if (!navigator.userAgent.match(/(iPad|iPhone|iPod)/gi)) {
+            const circleAnimation = anime({
+                targets: '#circle',
+                keyframes: [
+                    {translateX: '50%', duration: 1000, delay: 500},
+                    {translateX: '50%', duration: 1000},
+                ],
+                easing: 'easeInQuad',
+                loop: true
+            })
 
-        const circleAnimation = anime({
-            targets: '#circle',
-            keyframes: [
-                {translateX: '50%', duration: 1000, delay: 500},
-                {translateX: '50%', duration: 1000},
-            ],
-            easing: 'easeInQuad',
-            loop: true
-        })
+            const nAnimation = anime({
+                targets: '#n',
+                keyframes: [
+                    {opacity: 0, duration: 0},
+                    {opacity: 1, duration: 500},
+                    {opacity: 0, duration: 1000},
+                    {opacity: 0, duration: 1000}
+                ],
+                easing: 'easeInQuad',
+                loop: true
+            })
 
-        const nAnimation = anime({
-            targets: '#n',
-            keyframes: [
-                {opacity: 0, duration: 0},
-                {opacity: 1, duration: 500},
-                {opacity: 0, duration: 1000},
-                {opacity: 0, duration: 1000}
-            ],
-            easing: 'easeInQuad',
-            loop: true
-        })
+            const wrapperAnimation = anime({
+                targets: '#wrapper',
+                keyframes: [
+                    {rotate: '180deg', duration: 1000, delay: 1500}
+                ],
+                easing: 'easeInQuad',
+                loop: true
+            })
 
-        const wrapperAnimation = anime({
-            targets: '#wrapper',
-            keyframes: [
-                {rotate: '180deg', duration: 1000, delay: 1500}
-            ],
-            easing: 'easeInQuad',
-            loop: true
-        })
-
-        return () => {
-            circleAnimation.pause()
-            wrapperAnimation.pause()
-            nAnimation.pause()
+            return () => {
+                circleAnimation.pause()
+                wrapperAnimation.pause()
+                nAnimation.pause()
+            }
         }
     }, [])
 
