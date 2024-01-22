@@ -39,6 +39,11 @@
         width: calc(100% - 40px);
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .container-suctom-bg{
+        background-attachment: scroll;
+    }
+}
 /*@media(max-width: 1647px){*/
 /*    .container{*/
 /*        padding: 0 250px;*/
