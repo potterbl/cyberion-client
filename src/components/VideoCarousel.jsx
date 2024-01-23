@@ -65,12 +65,7 @@ const VideoCarousel = () => {
                             videos.map(v => (
                                 <SwiperSlide>
                                     <div className="video-carousel_slide">
-                                        <LiteYouTubeEmbed title={v.title} id={v.link.substring("https://www.youtube.com/embed/".length)} iframeClass="video-carousel_iframe" wrapperClass="video-carousel_video"/>
-                                        {/*<iframe className="video-carousel_video" src={v.link}*/}
-                                        {/*        title="YouTube video player"*/}
-                                        {/*        frameBorder="0"*/}
-                                        {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/}
-                                        {/*        allowFullScreen></iframe>*/}
+                                        <LiteYouTubeEmbed title={v.title} params="controls=1" id={v.link.substring("https://www.youtube.com/embed/".length)} iframeClass="video-carousel_iframe" wrapperClass="video-carousel_video"/>
                                         <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>
                                     </div>
                                 </SwiperSlide>
