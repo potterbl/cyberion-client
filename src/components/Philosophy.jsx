@@ -67,7 +67,7 @@ const Philosophy = () => {
                             }}
                         >
                             <motion.li variants={listVariants} className={"body-text gray-text"}>Широкі ігрові
-                                мережі
+                                столи
                             </motion.li>
                             <motion.li variants={listVariants} className={"body-text gray-text"}>Потужні Ігрові
                                 ПК

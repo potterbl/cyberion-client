@@ -18,7 +18,7 @@ const YellowSection = () => {
                         <br/>
                             : ' '
                     }
-                    70 000 $
+                    80 000 $
                 </p>
             </div>
             <div className="yellow-section_container">
@@ -29,7 +29,7 @@ const YellowSection = () => {
                         <br/>
                             : ' '
                     }
-                    5 000 $
+                    4 000 $
                 </p>
             </div>
             <div className="yellow-section_container">
@@ -40,7 +40,7 @@ const YellowSection = () => {
                         <br/>
                             : ' '
                     }
-                    14 місяців
+                    16 місяців
                 </p>
             </div>
         </div>

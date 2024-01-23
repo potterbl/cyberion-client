@@ -1,18 +1,16 @@
 /* eslint-disable */
-import React, {useEffect, useState} from 'react';
+import React, {lazy, Suspense, useEffect, useState} from 'react';
 
 import Container from "../components/Container";
 
 import '../styles/FranchisePage.css'
 
 import FranchiseCover from "../components/FranchiseCover";
-import VideoCarousel from "../components/VideoCarousel";
 import Philosophy from "../components/Philosophy";
 import WhyUs from "../components/WhyUs";
 import Proposition from "../components/Proposition";
 import CyberSport from "../components/CyberSport";
 import Infrastructure from "../components/Infrastructure";
-import NewFormat from "../components/NewFormat";
 import YellowSection from "../components/YellowSection";
 import OurExperience from "../components/OurExperience";
 import OurAdvantages from "../components/OurAdvantages";
@@ -32,6 +30,9 @@ import Reviews from "../components/Reviews";
 import Rebrending from "../components/Rebrending";
 import ReadUTM from "../components/ReadUTM";
 import ArrowToTop from "../components/ArrowToTop";
+const VideoCarousel = lazy(() => import("../components/VideoCarousel"))
+const NewFormat = lazy(() => import("../components/NewFormat"))
+
 
 const FranchisePage = () => {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -61,6 +62,7 @@ const FranchisePage = () => {
         }
     }, [isReady]);
 
+
     return (
         <div className="franchise">
             {
@@ -74,7 +76,9 @@ const FranchisePage = () => {
                 <FranchiseCover isLoaded={isReady}/>
             </Container>
             <Container>
-                <VideoCarousel/>
+                <Suspense>
+                    <VideoCarousel/>
+                </Suspense>
                 <Philosophy/>
             </Container>
             <Container custom={{backgroundImage: grid, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"center"}>
@@ -82,7 +86,9 @@ const FranchisePage = () => {
                 <Proposition/>
                 <CyberSport/>
                 <Infrastructure/>
-                <NewFormat/>
+                <Suspense>
+                    <NewFormat/>
+                </Suspense>
             </Container>
             <Container>
                 <YellowSection/>
