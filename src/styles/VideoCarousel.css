@@ -27,6 +27,7 @@
 .video-carousel_video{
     width: 100%;
     aspect-ratio: 16/9;
+    cursor: pointer;
     overflow: hidden;
     background-size: cover;
     background-position: center;
