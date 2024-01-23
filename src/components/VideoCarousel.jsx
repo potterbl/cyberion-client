@@ -5,6 +5,8 @@ import '../styles/VideoCarousel.css'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {A11y, Navigation} from "swiper/modules";
 import ButtonSlide from "./ButtonSlide";
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import axios from "axios";
 
 const VideoCarousel = () => {
@@ -63,11 +65,12 @@ const VideoCarousel = () => {
                             videos.map(v => (
                                 <SwiperSlide>
                                     <div className="video-carousel_slide">
-                                        <iframe className="video-carousel_video" src={v.link}
-                                                title="YouTube video player"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowFullScreen></iframe>
+                                        <LiteYouTubeEmbed title={v.title} id={v.link.substring("https://www.youtube.com/embed/".length)} iframeClass="video-carousel_iframe" wrapperClass="video-carousel_video"/>
+                                        {/*<iframe className="video-carousel_video" src={v.link}*/}
+                                        {/*        title="YouTube video player"*/}
+                                        {/*        frameBorder="0"*/}
+                                        {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/}
+                                        {/*        allowFullScreen></iframe>*/}
                                         <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>
                                     </div>
                                 </SwiperSlide>
