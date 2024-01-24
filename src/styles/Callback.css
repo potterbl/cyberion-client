@@ -25,7 +25,7 @@
     background-color: #ffed00;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 60% auto;
+    background-size: 60% 60%;
 }
 
 .callback::before {
@@ -37,7 +37,7 @@
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 60% auto;
+    background-size: 60% 60%;
     transition: opacity 0.6s ease-in-out;
     animation: callbackBg 2s ease-in-out infinite alternate;
 }
@@ -82,7 +82,7 @@
     left: 10px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 60% auto;
+    background-size: 60% 60%;
 }
 @media (max-width: 1000px){
     .callback-wrapper{
