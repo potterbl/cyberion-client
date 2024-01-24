@@ -43,11 +43,8 @@
 }
 
 @keyframes callbackBg {
-    0%, 100% {
-        opacity: 1;
-    }
     50% {
-        opacity: 0;
+        background-image: unset;
     }
     0%{
         background-image: url('../img/popup_call.svg');
