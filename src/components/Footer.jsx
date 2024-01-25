@@ -89,9 +89,11 @@ const Footer = () => {
                     <p className="body-text footer-header">
                         Співпраця
                     </p>
+                    <a href="https://franchise.cyberion.com.ua/" title="франшиза">
                         <p className="body-text">
-                            Франшиза
+                            франшиза
                         </p>
+                    </a>
                     <a href="https://cyberion.com.ua/partnership" title="партнерство">
                         <p className="body-text">
                             Партнерство
