@@ -91,7 +91,7 @@ const Footer = () => {
                     </p>
                     <a href="https://franchise.cyberion.com.ua/" title="франшиза">
                         <p className="body-text">
-                            франшиза
+                            Франшиза
                         </p>
                     </a>
                     <a href="https://cyberion.com.ua/partnership" title="партнерство">
@@ -106,22 +106,22 @@ const Footer = () => {
                     </p>
                         <a href="https://cyberion.com.ua/kololeague" title="турніри">
                         <p className="body-text">
-                            турніри
+                            Турніри
                         </p>
                     </a>
                     <a href="https://cyberion.com.ua/news" title="новини">
                         <p className="body-text">
-                            новини
+                            Новини
                         </p>
                     </a>
                     <a href="https://cyberion.com.ua/contacts" title="клуби">
                         <p className="body-text">
-                            клуби
+                            Клуби
                         </p>
                     </a>
                     <a href="https://franchise.cyberion.com.ua/" title="франшиза">
                         <p className="body-text">
-                            франшиза
+                            Франшиза
                         </p>
                     </a>
                 </div>
