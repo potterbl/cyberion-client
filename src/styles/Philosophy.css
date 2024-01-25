@@ -2,6 +2,7 @@
     padding: 75px 0 134px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-items: center;
     column-gap: 40px;
 }
 .philosophy-left{
@@ -11,6 +12,7 @@
 }
 .philosophy-left_head{
     width: 100%;
+    height: fit-content;
 }
 .philosophy-left_body-list{
     list-style-type: none;
@@ -21,13 +23,12 @@
     margin-right: 6px;
 }
 .philosophy-left_body{
+    height: fit-content;
     width: 100%;
-    display: grid;
-    row-gap: 20px;
 }
 .philosophy-right{
     width: 100%;
-    height: 100%;
+    height: fit-content;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -35,9 +36,49 @@
 }
 .philosophy-right__wrapper{
     width: 100%;
-    height: fit-content;
-    padding-bottom: 36px;
     position: relative;
+    padding: 12px 0;
+}
+.philosophy-right_buttons-wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+.swiper-custom-pagination{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    background-color: #333333;
+    padding: 7px 12px;
+    border-radius: 32px;
+}
+.swiper-custom-pause{
+    width: 36px;
+    height: 36px;
+    background-color: #595959;
+    border-radius: 50%;
+    transition: background-color .4s ease;
+    background-image: url('../img/pause.svg');
+    background-size: 50% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.swiper-custom-pause_active{
+    background-color: #333333;
+    background-image: url('../img/play.svg');
+}
+@media (hover: hover) {
+    .swiper-custom-pause:hover{
+        background-color: #333333;
+    }
+    .swiper-custom-pause_active:hover{
+        background-color: #595959;
+    }
 }
 .slide-custom{
     width: 100%;
@@ -45,29 +86,37 @@
     background-color: #FFF;
     position: relative;
     display: grid;
-    place-items: center;
+    align-items: start;
+    justify-content: start;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 28px;
+    transition: scale .4s 2s ease-in;
 }
-.swiper-custom-pagination{
+.slide-custom::before{
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    translate: -50% 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+.slide-custom p{
     z-index: 1;
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+}
+.slide-custom_active{
+    scale: 1.02;
 }
 .swiper-custom-bullet{
     width: 8px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: #333333;
+    height: 8px;
+    border-radius: 50px;
+    background-color: #595959;
     cursor: pointer;
+    transition: all .6s ease;
 }
 .swiper-custom-bullet-active{
+    width: 16px;
     background-color: #FFED00;
 }
 @media (max-width: 1024px) {

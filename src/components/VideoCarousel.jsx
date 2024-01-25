@@ -63,7 +63,7 @@ const VideoCarousel = () => {
                     >
                         {
                             videos.map(v => (
-                                <SwiperSlide>
+                                <SwiperSlide key={v.link}>
                                     <div className="video-carousel_slide">
                                         <LiteYouTubeEmbed title={v.title} params="controls=1" id={v.link.substring("https://www.youtube.com/embed/".length)} iframeClass="video-carousel_iframe" wrapperClass="video-carousel_video"/>
                                         <p className="body-text gray-text">{v.title.replace(/&#39;/g, "'")}</p>

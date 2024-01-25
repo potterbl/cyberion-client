@@ -62,6 +62,8 @@ const FranchiseCover = (props) => {
                                 Франшиза<br/>
                                 кіберклубів<br/>
                                 <span className={"span-yellow"}>
+                                    {
+                                        props.isLoaded &&
                                         <TypewriterComponent
                                             options={{
                                                 strings: ['CYBERION'],
@@ -71,6 +73,7 @@ const FranchiseCover = (props) => {
                                                 deleteSpeed: Infinity
                                             }}
                                         />
+                                    }
                             </span><br/>
                             </motion.h1>
                             <p className={"body-text"}>

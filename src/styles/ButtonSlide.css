@@ -13,11 +13,11 @@
     z-index: 3;
     transition: all .4s ease;
 }
-.prev-slide:hover{
-    background-color: #ffed00;
-}
-.next-slide:hover{
-    background-color: #ffed00;
+@media (hover: hover) {
+    .prev-slide:hover
+    ,.next-slide:hover{
+        background-color: #ffed00;
+    }
 }
 .next-slide{
     right: 20px;
@@ -26,4 +26,8 @@
 .prev-slide{
     left: 20px;
     background-image: url('../img/prevSlide.svg');
+}
+.next-slide:active,
+.prev-slide:active{
+    background-color: #595959;
 }

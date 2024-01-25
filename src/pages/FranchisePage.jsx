@@ -30,9 +30,8 @@ import Reviews from "../components/Reviews";
 import Rebrending from "../components/Rebrending";
 import ReadUTM from "../components/ReadUTM";
 import ArrowToTop from "../components/ArrowToTop";
-const VideoCarousel = lazy(() => import("../components/VideoCarousel"))
-const NewFormat = lazy(() => import("../components/NewFormat"))
-
+import VideoCarousel from "../components/VideoCarousel";
+import NewFormat from "../components/NewFormat";
 
 const FranchisePage = () => {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -76,9 +75,7 @@ const FranchisePage = () => {
                 <FranchiseCover isLoaded={isReady}/>
             </Container>
             <Container>
-                <Suspense>
                     <VideoCarousel/>
-                </Suspense>
                 <Philosophy/>
             </Container>
             <Container custom={{backgroundImage: grid, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"center"}>
@@ -86,9 +83,7 @@ const FranchisePage = () => {
                 <Proposition/>
                 <CyberSport/>
                 <Infrastructure/>
-                <Suspense>
                     <NewFormat/>
-                </Suspense>
             </Container>
             <Container>
                 <YellowSection/>
