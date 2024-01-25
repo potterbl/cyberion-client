@@ -141,7 +141,7 @@ const WhyUs = (props) => {
                     className="why-us_image"
                     variants={imageAnimation}
                     loading="lazy"
-                    title="му ми"
+                    title="чому ми"
                 />
             </motion.div>
         </div>
