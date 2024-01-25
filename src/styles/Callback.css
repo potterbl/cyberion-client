@@ -37,24 +37,41 @@
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-background-size: 60% 60%;
     background-size: 60% 60%;
     transition: background-image 0.6s ease-in-out;
+    -webkit-animation: callbackBg 2s ease-in-out infinite alternate;
     animation: callbackBg 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes callbackBg {
+    50% {
+        opacity: 0;
+    }
+    0% {
+        background-image: url('../img/popup_call.svg');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('../img/popup_phone.svg');
+        opacity: 1;
+    }
 }
 
 @keyframes callbackBg {
     50% {
         opacity: 0;
     }
-    0%{
+    0% {
         background-image: url('../img/popup_call.svg');
         opacity: 1;
     }
-    100%{
+    100% {
         background-image: url('../img/popup_phone.svg');
         opacity: 1;
     }
 }
+
 .callback_enabled::before{
     animation: none;
     opacity: 0;
