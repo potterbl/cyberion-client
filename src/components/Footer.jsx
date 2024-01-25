@@ -102,25 +102,26 @@ const Footer = () => {
                     <p className="body-text footer-header">
                         Карта сайту
                     </p>
+                        <a href="https://cyberion.com.ua/kololeague" title="турніри">
+                        <p className="body-text">
+                            турніри
+                        </p>
+                    </a>
                     <a href="https://cyberion.com.ua/news" title="новини">
                         <p className="body-text">
-                            Новини
+                            новини
                         </p>
                     </a>
+                    <a href="https://cyberion.com.ua/contacts" title="клуби">
                         <p className="body-text">
-                            FAQ
-                        </p>
-                        <p className="body-text">
-                            Правила
-                        </p>
-                    <a href="https://cyberion.com.ua/contacts" title="контакти">
-                        <p className="body-text">
-                            Клуби
+                            клуби
                         </p>
                     </a>
-                    <p className="body-text">
-                        Франшиза
-                    </p>
+                    <a href="https://franchise.cyberion.com.ua/" title="франшиза">
+                        <p className="body-text">
+                            франшиза
+                        </p>
+                    </a>
                 </div>
                 <div className="footer-col">
                     <p className="body-text footer-header">

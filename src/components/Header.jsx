@@ -108,9 +108,9 @@ const Header = () => {
                                     клуби
                                 </a>
                             </li>
-                            <button className="header-btn body-text uppercase black-font">
+                            <a className="header-btn body-text uppercase black-font" href="https://franchise.cyberion.com.ua/" title="франшиза">
                                 франшиза
-                            </button>
+                            </a>
                         </ul>
                     }
                 </div>
