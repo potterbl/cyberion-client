@@ -109,6 +109,8 @@ const FranchiseCover = (props) => {
                                     y: coverRef.current ? y : 0,
                                     x: window.innerWidth < 900 ? '20%' : 0
                                 }}
+                                title="cover"
+                                loading="eager"
                             />
                             <motion.div
                                 style={{

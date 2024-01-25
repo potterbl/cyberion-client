@@ -30,9 +30,9 @@ const Reviews = () => {
     return (
         <div className="reviews">
             <div className="reviews_head">
-                <h3 className="heading-smaller">
+                <h2 className="heading-smaller">
                     Відгуки наших <span className="span-yellow uppercase">франчайзі</span>
-                </h3>
+                </h2>
             </div>
             <motion.div
                 className="reviews_body"
@@ -114,7 +114,7 @@ const Reviews = () => {
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-footer">
                                     <a href="https://youtu.be/4Uw_X6dLmfQ?si=HLNskRKUg2948lJ8"
-                                       className="body-text underline">Дивитись відео на YouTube↗</a>
+                                       className="body-text underline" title="youtube">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -153,7 +153,7 @@ const Reviews = () => {
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-footer">
                                     <a href="https://youtu.be/xeTR58KmmQY?si=oqARvfnSYucGWlFx"
-                                       className="body-text underline">Дивитись відео на YouTube↗</a>
+                                       className="body-text underline" title="youtube">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -193,7 +193,7 @@ const Reviews = () => {
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-footer">
                                     <a href="https://youtu.be/cNtZtW_HhoI?si=oZfNiDcuB9pURkht"
-                                       className="body-text underline">Дивитись відео на YouTube↗</a>
+                                       className="body-text underline" title="youtube">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -232,7 +232,7 @@ const Reviews = () => {
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-footer">
                                     <a href="https://youtu.be/4Uw_X6dLmfQ?si=HLNskRKUg2948lJ8"
-                                       className="body-text underline">Дивитись відео на YouTube↗</a>
+                                       className="body-text underline" title="youtube">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -271,7 +271,7 @@ const Reviews = () => {
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-footer">
                                     <a href="https://youtu.be/xeTR58KmmQY?si=oqARvfnSYucGWlFx"
-                                       className="body-text underline">Дивитись відео на YouTube↗</a>
+                                       className="body-text underline" title="youtube">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -311,7 +311,7 @@ const Reviews = () => {
                                 <hr className="reviews_slide-hr"/>
                                 <div className="reviews_slide-footer">
                                     <a href="https://youtu.be/cNtZtW_HhoI?si=oZfNiDcuB9pURkht"
-                                       className="body-text underline">Дивитись відео на YouTube↗</a>
+                                       className="body-text underline" title="youtube">Дивитись відео на YouTube↗</a>
                                 </div>
                             </div>
                         </motion.div>

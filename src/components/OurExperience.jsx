@@ -13,7 +13,7 @@ const OurExperience = () => {
     return (
         <div className="our-experience">
             <div className="our-experience_head">
-                <h3 className="heading-smaller break-word">
+                <h2 className="heading-smaller break-word">
                     НАША КОМАНДА МАЄ
                     {
                         window.innerWidth <= 1000 ?
@@ -33,7 +33,7 @@ const OurExperience = () => {
                             : ' '
                     }
                     ВІДКРИТТЯ КІБЕР КЛУБІВ
-                </h3>
+                </h2>
                 <div className="our-experience_head-container_right">
                     <p className="our-experience_nine span-yellow">
                         9
@@ -192,12 +192,12 @@ const OurExperience = () => {
 
             </div>
             <div className="our-experience_footer">
-                <img src={ourTeam1} alt="our-team" className="our-experience_footer-image"/>
-                <img src={ourTeam2} alt="our-team" className="our-experience_footer-image"/>
-                <img src={ourTeam3} alt="our-team" className="our-experience_footer-image"/>
-                <img src={ourTeam4} alt="our-team" className="our-experience_footer-image"/>
-                <img src={ourTeam5} alt="our-team" className="our-experience_footer-image"/>
-                <img src={ourTeam6} alt="our-team" className="our-experience_footer-image"/>
+                <img src={ourTeam1} alt="our-team" className="our-experience_footer-image" loading="lazy" title="наш досвід"/>
+                <img src={ourTeam2} alt="our-team" className="our-experience_footer-image" loading="lazy" title="наш досвід"/>
+                <img src={ourTeam3} alt="our-team" className="our-experience_footer-image" loading="lazy" title="наш досвід"/>
+                <img src={ourTeam4} alt="our-team" className="our-experience_footer-image" loading="lazy" title="наш досвід"/>
+                <img src={ourTeam5} alt="our-team" className="our-experience_footer-image" loading="lazy" title="наш досвід"/>
+                <img src={ourTeam6} alt="our-team" className="our-experience_footer-image" loading="lazy" title="наш досвід"/>
             </div>
         </div>
     );

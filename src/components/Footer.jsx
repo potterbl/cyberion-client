@@ -69,17 +69,17 @@ const Footer = () => {
                     <p className="body-text footer-header">
                         Наші соц. мережі
                     </p>
-                    <a href="https://www.instagram.com/cyberion_ua/">
+                    <a href="https://www.instagram.com/cyberion_ua/" title="instagram">
                         <p className="body-text">
                             Instagram
                         </p>
                     </a>
-                    <a href="https://www.youtube.com/@cyberion_ukraine">
+                    <a href="https://www.youtube.com/@cyberion_ukraine" title="youtube">
                         <p className="body-text">
                             YouTube
                         </p>
                     </a>
-                    <a href="https://t.me/cyberion_ukraine">
+                    <a href="https://t.me/cyberion_ukraine" title="telegram">
                         <p className="body-text">
                             Telegram
                         </p>
@@ -92,7 +92,7 @@ const Footer = () => {
                         <p className="body-text">
                             Франшиза
                         </p>
-                    <a href="https://cyberion.com.ua/partnership">
+                    <a href="https://cyberion.com.ua/partnership" title="партнерство">
                         <p className="body-text">
                             Партнерство
                         </p>
@@ -102,7 +102,7 @@ const Footer = () => {
                     <p className="body-text footer-header">
                         Карта сайту
                     </p>
-                    <a href="https://cyberion.com.ua/news">
+                    <a href="https://cyberion.com.ua/news" title="новини">
                         <p className="body-text">
                             Новини
                         </p>
@@ -113,7 +113,7 @@ const Footer = () => {
                         <p className="body-text">
                             Правила
                         </p>
-                    <a href="https://cyberion.com.ua/contacts">
+                    <a href="https://cyberion.com.ua/contacts" title="контакти">
                         <p className="body-text">
                             Клуби
                         </p>
@@ -142,7 +142,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-footer">
-                <a href="https://cyberion.com.ua">
+                <a href="https://cyberion.com.ua" title="кіберіон">
                     <svg viewBox="0 0 310 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="footer-logo">
                         <g clip-path="url(#clip0_193_81)">
                             <mask id="mask0_193_81" style={{maskType: "luminance"}} maskUnits="userSpaceOnUse" x="-1" y="0"

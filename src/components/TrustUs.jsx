@@ -16,9 +16,9 @@ const TrustUs = () => {
     return (
         <div className="trust-us">
             <div className="trust-us_head">
-                <h3 className="heading-smaller uppercase">
+                <h2 className="heading-smaller uppercase">
                     Нам довіряють
-                </h3>
+                </h2>
             </div>
             <div className="trust-us_body">
                 <Swiper

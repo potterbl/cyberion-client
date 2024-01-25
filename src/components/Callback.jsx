@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import '../styles/Callback.css';
 import { motion } from 'framer-motion';
 
 import phone from '../img/popup_phone.svg'
+import message from '../img/popup_call.svg'
 import {useSelector} from "react-redux";
 
 const Callback = () => {
@@ -33,6 +34,36 @@ const Callback = () => {
         }),
     };
 
+    const callAnimation = {
+        initial: {
+            opacity: 1,
+        },
+        pulse: {
+            opacity: 0,
+            transition: {
+                repeat: Infinity,
+                repeatType: 'reverse',
+                type: 'tween',
+                duration: 1,
+            },
+        },
+    };
+
+    const messageAnimation = {
+        initial: {
+            opacity: 0,
+        },
+        pulse: {
+            opacity: 1,
+            transition: {
+                repeat: Infinity,
+                repeatType: 'reverse',
+                type: 'tween',
+                duration: 1,
+            },
+        },
+    };
+
     const optionAnimation = {
         option: (custom) => ({
             y: custom.isOpen ? 0 : `${custom.position * 64}px`,
@@ -60,9 +91,28 @@ const Callback = () => {
             <motion.button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`callback ${isOpen ? 'callback_enabled' : ''}`}
-            ></motion.button>
+            >
+                <motion.img
+                    src={phone}
+                    alt="phone"
+                    initial="initial"
+                    animate="pulse"
+                    variants={callAnimation}
+                    loading="lazy"
+                    title="popup image"
+                />
+                <motion.img
+                    src={message}
+                    alt="message"
+                    initial="initial"
+                    animate="pulse"
+                    variants={messageAnimation}
+                    loading="lazy"
+                    title="popup image"
+                />
+            </motion.button>
             <div className="callback-options">
-                <a href="tel:+380975551800">
+                <a href="tel:+380975551800" title="подзвонити нам">
                 <motion.button
                     className="callback-option"
                     variants={optionAnimation}

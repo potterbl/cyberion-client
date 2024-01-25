@@ -56,12 +56,12 @@ const NewFormat = (props) => {
             <div className="new-format-container">
                 <div className="new-format">
                     <div className="new-format_head">
-                        <h3 className="heading-smaller">
+                        <h2 className="heading-smaller">
                             УКРАЇНІ ПОТРІБНІ
-                        </h3>
-                        <h2 className="heading">
-                            КЛУБИ НОВОГО ФОРМАТУ
                         </h2>
+                        <h3 className="heading">
+                            КЛУБИ НОВОГО ФОРМАТУ
+                        </h3>
                     </div>
                     <div className="new-format_body">
                         {

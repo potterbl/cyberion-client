@@ -21,14 +21,14 @@ const GetProposition = () => {
                         </h2>
                     </div>
                     <div className="get-proposition_left-body">
-                        <iframe title="map" src="https://www.google.com/maps/d/u/0/embed?mid=1Q1xwX1oc-gA2XXzaGJOMXqEzkhQPDho&ehbc=2E312F&noprof=1" width="100%"></iframe>
+                        <iframe title="map" src="https://www.google.com/maps/d/u/0/embed?mid=1Q1xwX1oc-gA2XXzaGJOMXqEzkhQPDho&ehbc=2E312F&noprof=1" width="100%" loading="lazy"></iframe>
                     </div>
 
                 </div>
             }
 
             <div className="get-proposition_right">
-                <h3 className="heading-smaller">Отримайте комерційну пропозицію</h3>
+                <h2 className="heading-smaller">Отримайте комерційну пропозицію</h2>
                 <p className="body-text gray-text">Залишіть свої дані, і ми зв'яжемося з вами</p>
                 <div className="get-proposition_right-form">
                     <input type="text" className="get-proposition_right-form_input body-text"

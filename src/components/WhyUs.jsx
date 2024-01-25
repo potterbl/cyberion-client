@@ -123,7 +123,7 @@ const WhyUs = (props) => {
                             Якщо ти вже знаєш чому цей бізнес актуальний,<br/>
                             тисни на кнопку нижче...<br/>
                         </p>
-                        <a href="https://t.me/Artem_Natanzon" className="body-text-bigger">
+                        <a href="https://t.me/Artem_Natanzon" className="body-text-bigger" title="телеграм">
                             Задати питання у
                             Telegram→
                         </a>
@@ -140,6 +140,8 @@ const WhyUs = (props) => {
                     src={whyImage}
                     className="why-us_image"
                     variants={imageAnimation}
+                    loading="lazy"
+                    title="му ми"
                 />
             </motion.div>
         </div>

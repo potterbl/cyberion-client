@@ -22,7 +22,7 @@ const Rebrending = () => {
 
                 <div className="rebrending-left">
                     <div className="rebrending-left_head">
-                        <h3 className="heading-smaller black-font">
+                        <h2 className="heading-smaller black-font">
                             Є свій клуб? Зробіть
                             {
                                 window.innerWidth > 790 ?
@@ -47,7 +47,7 @@ const Rebrending = () => {
                                     <br/>
                                     : ' '
                             }
-                        </h3>
+                        </h2>
                     </div>
                     <div className="rebrending-left_body">
                         <p className="body-text black-font">
@@ -81,8 +81,8 @@ const Rebrending = () => {
                     </div>
                 </div>
                 <div className="rebrending-right">
-                    <img src={rebrending1} alt="" className="rebrending-right_first"/>
-                    <img src={rebrending2} alt="" className="rebrending-right_last"/>
+                    <img src={rebrending1} alt="rebrending" loading="lazy" title="ребрендинг" className="rebrending-right_first"/>
+                    <img src={rebrending2} alt="rebrending" loading="lazy" title="ребрендинг" className="rebrending-right_last"/>
                 </div>
             </div>
         </>

@@ -70,12 +70,12 @@ const Infrastructure = (props) => {
                             className="infrastructure-right_box-gradient"
                         >
                         </motion.div>
-                        <img src={service} alt="service" className="infrastructure-right_box-image"/>
+                        <img src={service} alt="service" className="infrastructure-right_box-image" loading="lazy" title="інфраструктура"/>
                         <motion.div
                             className="infrastructure-right_box-content"
                             variants={textAnimation}
                         >
-                            <img src={x} alt="" className="infrastructure-right_box-content_x"/>
+                            <img src={x} alt="" className="infrastructure-right_box-content_x" loading="lazy" title="інфраструктура"/>
                             <p className={`body-text-card uppercase`}>
                                 поганий<br/>
                                 сервіс
@@ -93,12 +93,12 @@ const Infrastructure = (props) => {
                             className="infrastructure-right_box-gradient"
                         >
                         </motion.div>
-                        <img src={devices} alt="devices" className="infrastructure-right_box-image"/>
+                        <img src={devices} alt="devices" className="infrastructure-right_box-image" loading="lazy" title="інфраструктура"/>
                         <motion.div
                             className="infrastructure-right_box-content"
                             variants={textAnimation}
                         >
-                            <img src={x} alt="" className="infrastructure-right_box-content_x"/>
+                            <img src={x} alt="" className="infrastructure-right_box-content_x" loading="lazy" title="інфраструктура"/>
                             <p className={`body-text-card uppercase`}>
                                 старе<br/>
                                 обладнання
@@ -116,12 +116,12 @@ const Infrastructure = (props) => {
                             className="infrastructure-right_box-gradient"
                         >
                         </motion.div>
-                        <img src={atmosphere} alt="atmosphere" className="infrastructure-right_box-image"/>
+                        <img src={atmosphere} alt="atmosphere" className="infrastructure-right_box-image" loading="lazy" title="інфраструктура"/>
                         <motion.div
                             className="infrastructure-right_box-content"
                             variants={textAnimation}
                         >
-                            <img src={x} alt="" className="infrastructure-right_box-content_x"/>
+                            <img src={x} alt="" className="infrastructure-right_box-content_x" loading="lazy" title="інфраструктура"/>
                             <p className={`body-text-card uppercase`}>
                                 немає<br/>
                                 атмосфери
@@ -139,12 +139,12 @@ const Infrastructure = (props) => {
                             className="infrastructure-right_box-gradient"
                         >
                         </motion.div>
-                        <img src={tournament} alt="tournament" className="infrastructure-right_box-image"/>
+                        <img src={tournament} alt="tournament" className="infrastructure-right_box-image" loading="lazy" title="інфраструктура"/>
                         <motion.div
                             className="infrastructure-right_box-content"
                             variants={textAnimation}
                         >
-                            <img src={x} alt="" className="infrastructure-right_box-content_x"/>
+                            <img src={x} alt="" className="infrastructure-right_box-content_x" loading="lazy" title="інфраструктура"/>
                             <p className={`body-text-card uppercase`}>
                                 відсутні<br/>
                                 турніри

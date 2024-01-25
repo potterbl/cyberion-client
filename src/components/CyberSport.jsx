@@ -9,10 +9,10 @@ const CyberSport = (props) => {
         <div className="cybersport-container">
             <div className="cybersport">
                 <div className="cybersport-right">
-                    <img src={cybersportImg} alt="" className="cybersport-right_image"/>
+                    <img src={cybersportImg} alt="" className="cybersport-right_image" loading="lazy" title="кіберспорт"/>
                 </div>
                 <div className="cybersport-left break-word">
-                    <h3 className="heading-smaller">
+                    <h2 className="heading-smaller">
                     <span className="span-yellow">
                     В 2020 РОЦІ<br/>
                     КІБЕРСПОРТ
@@ -31,7 +31,7 @@ const CyberSport = (props) => {
                                 : ' '
                         }
                         ВИДОМ СПОРТУ<br/>
-                    </h3>
+                    </h2>
                 </div>
             </div>
         </div>
