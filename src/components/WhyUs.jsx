@@ -1,14 +1,12 @@
-/* eslint-disable */
-import React, {useEffect, useRef, useState} from 'react';
+// /* eslint-disable */
+import React from 'react';
 
 import '../styles/WhyUs.css'
 
 import whyImage from '../img/whyUsPeople.png'
-import {motion, useScroll, useTransform} from "framer-motion";
-import {useSelector} from "react-redux";
+import {motion} from "framer-motion";
 
-const WhyUs = (props) => {
-    const childrenRef = useRef(null)
+const WhyUs = () => {
 
     const containerAnimation= {
         initial: {
