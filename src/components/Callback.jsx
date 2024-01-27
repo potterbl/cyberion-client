@@ -92,24 +92,29 @@ const Callback = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className={`callback ${isOpen ? 'callback_enabled' : ''}`}
             >
-                <motion.img
-                    src={phone}
-                    alt="phone"
-                    initial="initial"
-                    animate="pulse"
-                    variants={callAnimation}
-                    loading="lazy"
-                    title="popup image"
-                />
-                <motion.img
-                    src={message}
-                    alt="message"
-                    initial="initial"
-                    animate="pulse"
-                    variants={messageAnimation}
-                    loading="lazy"
-                    title="popup image"
-                />
+                {
+                    !isOpen &&
+                    <>
+                        <motion.img
+                            src={phone}
+                            alt="phone"
+                            initial="initial"
+                            animate="pulse"
+                            variants={callAnimation}
+                            loading="lazy"
+                            title="popup image"
+                        />
+                        <motion.img
+                            src={message}
+                            alt="message"
+                            initial="initial"
+                            animate="pulse"
+                            variants={messageAnimation}
+                            loading="lazy"
+                            title="popup image"
+                        />
+                    </>
+                }
             </motion.button>
             <div className="callback-options">
                 <a href="tel:+380975551800" title="подзвонити нам">

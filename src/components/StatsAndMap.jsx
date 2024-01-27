@@ -133,7 +133,7 @@ const StatsAndMap = () => {
             const map = new google.maps.Map(mapRef.current, {
                 mapId: "d6fbbac220d8c0ea",
                 center: center,
-                zoom: 6,
+                zoom: window.innerWidth > 810 ? 6 : window.innerWidth > 400 ? 5 : 4,
                 mapTypeControl: false,
             });
 
@@ -210,30 +210,34 @@ const StatsAndMap = () => {
     return (
         <div className="statsAndMap">
             <div className="stats" ref={ref}>
-                <div className="stats_item">
-                    <h2 className="heading">Відкрито<br/>
-                        <span className="span-yellow title">{clubsCount.toFixed(0)}</span><br/>
-                        Клубів</h2>
+                <div className="stats_top">
+                    <div className="stats_item">
+                        <h2 className={window.innerWidth > 1200 ? 'heading' : window.innerWidth > 440 ? 'heading-smaller' : "body-text-bigger"}>Відкрито<br/>
+                            <span className={`span-yellow ${window.innerWidth > 1200 ? "title" : window.innerWidth > 440 ? "heading" : "heading-smaller"}`}>{clubsCount.toFixed(0)}</span><br/>
+                            Клубів</h2>
+                    </div>
+                    <div className="stats_item">
+                        <h2 className={window.innerWidth > 1200 ? 'heading' : window.innerWidth > 440 ? 'heading-smaller' : "body-text-bigger"}>Будується<br/>
+                            <span className={`span-yellow ${window.innerWidth > 1200 ? "title" : window.innerWidth > 440 ? "heading" : "heading-smaller"}`}>{buildingCount.toFixed(0)}</span><br/>
+                            Клубів</h2>
+                    </div>
                 </div>
-                <div className="stats_item">
-                    <h2 className="heading">Будується<br/>
-                        <span className="span-yellow title">{buildingCount.toFixed(0)}</span><br/>
-                        Клубів</h2>
-                </div>
-                <div className="stats_item">
-                    <h2 className="heading-smaller">Нам довіряють<br/>
-                        <span className="span-yellow heading">{usersCount.toFixed(0)}</span><br/>
-                        Користувачів</h2>
-                </div>
-                <div className="stats_item">
-                    <h2 className="heading-smaller">Розіграли понад<br/>
-                        <span className="span-yellow heading">{giftsCount.toFixed(0)}</span><br/>
-                        Грн у власних турнірах</h2>
-                </div>
-                <div className="stats_item">
-                    <h2 className="heading-smaller">Кількість ПК<br/>
-                        <span className="span-yellow heading">{computersCount.toFixed(0)}</span><br/>
-                        у мережі</h2>
+                <div className="stats_bottom">
+                    <div className="stats_item">
+                        <h2 className={window.innerWidth > 1200 ? "heading-smaller" : window.innerWidth > 440 ? "body-text-bigger" : "body-text"}>Нам довіряють<br/>
+                            <span className={`span-yellow ${window.innerWidth > 1200 ? 'heading' : window.innerWidth > 440 ? 'heading-smaller' : "body-text-bigger"}`}>{usersCount.toFixed(0)}</span><br/>
+                            Користувачів</h2>
+                    </div>
+                    <div className="stats_item">
+                        <h2 className={window.innerWidth > 1200 ? "heading-smaller" : window.innerWidth > 440 ? "body-text-bigger" : "body-text"}>Розіграли понад<br/>
+                            <span className={`span-yellow ${window.innerWidth > 1200 ? 'heading' : window.innerWidth > 440 ? 'heading-smaller' : "body-text-bigger"}`}>{giftsCount.toFixed(0)}</span><br/>
+                            Грн у власних турнірах</h2>
+                    </div>
+                    <div className="stats_item">
+                        <h2 className={window.innerWidth > 1200 ? "heading-smaller" : window.innerWidth > 440 ? "body-text-bigger" : "body-text"}>Кількість ПК<br/>
+                            <span className={`span-yellow ${window.innerWidth > 1200 ? 'heading' : window.innerWidth > 440 ? 'heading-smaller' : "body-text-bigger"}`}>{computersCount.toFixed(0)}</span><br/>
+                            у мережі</h2>
+                    </div>
                 </div>
             </div>
             <div ref={mapRef} className="map">

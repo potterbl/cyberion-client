@@ -1,7 +1,7 @@
 {
-  "name": "client",
+  "name": "Франшиза CYBERION",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.2",
     "@react-google-maps/api": "^2.19.2",
