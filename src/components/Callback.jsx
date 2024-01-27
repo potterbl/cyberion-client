@@ -43,8 +43,8 @@ const Callback = () => {
             transition: {
                 repeat: Infinity,
                 repeatType: 'reverse',
-                type: 'tween',
-                duration: 1,
+                type: 'impulse',
+                duration: 2,
             },
         },
     };
@@ -58,8 +58,8 @@ const Callback = () => {
             transition: {
                 repeat: Infinity,
                 repeatType: 'reverse',
-                type: 'tween',
-                duration: 1,
+                type: "impulse",
+                duration: 2,
             },
         },
     };

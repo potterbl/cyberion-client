@@ -55,8 +55,8 @@ const Philosophy = () => {
         }
     }, [philosophyRef])
 
-    let y = useTransform(scrollY, [window.scrollY + offsetTop - window.innerHeight + 60, window.scrollY + offsetBottom - window.innerHeight + 60], [-height - 60, 0])
-    let scale = useTransform(scrollY, [window.scrollY + offsetTop - window.innerHeight + 60, window.scrollY + offsetBottom - window.innerHeight + 60], [0.8, 1])
+    let y = useTransform(scrollY, [window.scrollY + offsetTop - window.innerHeight + 10, window.scrollY + offsetBottom - window.innerHeight + 10], [-height - 10, 0])
+    let scale = useTransform(scrollY, [window.scrollY + offsetTop - window.innerHeight + 60, window.scrollY + offsetBottom - window.innerHeight + 60], [0.6, 1])
 
     const handlePauseToggle = () => {
         if (swiperRef.current) {
@@ -85,24 +85,12 @@ const Philosophy = () => {
             <div className="philosophy-left">
                 <div className="philosophy-left_head">
                     <h2 className="heading uppercase">
-                        наша філософія:
-                        {
-                            window.innerWidth >= 1024 || window.innerWidth <= 786 ?
-                                <br/>
-                                : ' '
-                        }
+                        наша<br/>
+                        філософія:<br/>
+
                         <span className={"span-yellow"}>
                             Максимальний
-                            {
-                                window.innerWidth >= 1024 || window.innerWidth <= 786 ?
-                                    <br/>
-                                    : ' '
-                            }
                             комфорт гравця
-                            {
-                                (window.innerWidth >= 1024 || window.innerWidth <= 786) &&
-                                <br/>
-                            }
                         </span>
                     </h2>
                 </div>

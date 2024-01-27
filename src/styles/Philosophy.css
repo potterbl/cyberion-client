@@ -1,9 +1,8 @@
 .philosophy{
     padding: 75px 0 134px 0;
     display: grid;
-    grid-template-columns: 1fr 2fr;
     align-items: center;
-    column-gap: 40px;
+    row-gap: 40px;
 }
 .philosophy-left{
     width: 100%;
@@ -82,7 +81,7 @@
 }
 .slide-custom{
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 2/1;
     background-color: #FFF;
     position: relative;
     display: grid;
@@ -124,27 +123,9 @@
         grid-template-columns: unset;
         row-gap: 70px;
     }
-    .philosophy-right{
-        aspect-ratio: unset;
-    }
-    .slide-custom{
-        aspect-ratio: 4/2;
-    }
 }
 @media (max-width: 768px) {
-    .philosophy-right{
-        aspect-ratio: 4/3;
+    .philosophy{
+        row-gap: 30px;
     }
 }
-/*@media (max-width: 1200px) {*/
-/*    .philosophy{*/
-/*        padding: 75px 0 134px 0;*/
-/*        display: grid;*/
-/*        grid-template-columns: unset;*/
-/*        column-gap: 40px;*/
-/*        row-gap: 24px;*/
-/*    }*/
-/*    .philosophy-right{*/
-/*        aspect-ratio: 4/3;*/
-/*    }*/
-/*}*/

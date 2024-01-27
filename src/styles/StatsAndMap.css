@@ -1,0 +1,34 @@
+.statsAndMap{
+    padding: 96px 0;
+}
+.stats{
+    display: grid;
+    grid-template-areas:
+                ". a . b ."
+                "c . d . e";
+    row-gap: 48px;
+    padding: 48px 0;
+}
+.stats_item{
+    width: 100%;
+    text-align: center;
+}
+.stats_item:nth-child(1){
+    grid-area: a;
+}
+.stats_item:nth-child(2){
+    grid-area: b;
+}
+.stats_item:nth-child(3){
+    grid-area: c;
+}
+.stats_item:nth-child(4){
+    grid-area: d;
+}
+.stats_item:nth-child(5){
+    grid-area: e;
+}
+.map{
+    width: 100%;
+    aspect-ratio: 16/9;
+}

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, {lazy, Suspense, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Container from "../components/Container";
 
@@ -14,7 +14,6 @@ import Infrastructure from "../components/Infrastructure";
 import YellowSection from "../components/YellowSection";
 import OurExperience from "../components/OurExperience";
 import OurAdvantages from "../components/OurAdvantages";
-import GetProposition from "../components/GetProposition";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
@@ -32,6 +31,7 @@ import ReadUTM from "../components/ReadUTM";
 import ArrowToTop from "../components/ArrowToTop";
 import VideoCarousel from "../components/VideoCarousel";
 import NewFormat from "../components/NewFormat";
+import StatsAndMap from "../components/StatsAndMap";
 
 const FranchisePage = () => {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -98,7 +98,7 @@ const FranchisePage = () => {
                 <Reviews/>
             </Container>
             <Container custom={{backgroundImage: getProposition, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"start"}>
-                <GetProposition/>
+                <StatsAndMap/>
             </Container>
             <Container>
                 <Footer/>
