@@ -6,9 +6,9 @@ import {A11y, Navigation} from "swiper/modules";
 import ButtonSlide from "./ButtonSlide";
 import {motion} from "framer-motion";
 
-import observatorna from '../img/observatorna_avatar.png'
-import darnitsya from '../img/darnitsya_avatar.png'
-import politech from '../img/politech_avatar.png'
+import observatorna from '../img/observatorna_avatar.webp'
+import darnitsya from '../img/darnitsya_avatar.webp'
+import politech from '../img/politech_avatar.webp'
 
 const Reviews = () => {
 

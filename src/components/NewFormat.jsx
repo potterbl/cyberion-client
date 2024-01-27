@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 import '../styles/NewFormat.css'
 
-import pc20 from '../img/cyber-72.jpg'
-import pc30 from '../img/cyber-70.jpg'
-import pc40 from '../img/cyber-116.jpg'
+import pc20 from '../img/cyber-72.webp'
+import pc30 from '../img/cyber-70.webp'
+import pc40 from '../img/cyber-116.webp'
 
 import model30 from '../img/pc20.svg'
 import model40 from '../img/pc30.svg'

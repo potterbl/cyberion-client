@@ -7,9 +7,9 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {A11y, Autoplay, Navigation, Pagination, Scrollbar} from "swiper/modules";
 import {motion, useScroll, useTransform} from "framer-motion";
 
-import img1 from '../img/cyber-32.jpg'
-import img2 from '../img/cyber-72.jpg'
-import img3 from '../img/cyber-60.jpg'
+import img1 from '../img/cyber-32.webp'
+import img2 from '../img/cyber-72.webp'
+import img3 from '../img/cyber-60.webp'
 
 const Philosophy = () => {
     const philosophyRef = useRef(null)

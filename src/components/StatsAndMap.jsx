@@ -149,12 +149,17 @@ const StatsAndMap = () => {
                     title: markerData.title,
                     icon: {
                         url: markerData.icon,
-                        scaledSize: new google.maps.Size(50, 50)
+                        scaledSize: new google.maps.Size(30, 30)
                     },
                 });
 
+
                 marker.addListener('click', () => {
-                    const content = `<div style="color: black">${markerData.description}</div>`;
+                    const content =
+                        `<div style="color: black">
+                            <b style="color: black">${markerData.title}</b><br/><br/>
+                            ${markerData.description}
+                            </div>`;
                     infoWindow.setContent(content);
                     infoWindow.open(map, marker);
                 });

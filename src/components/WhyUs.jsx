@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/WhyUs.css'
 
-import whyImage from '../img/whyUsPeople.png'
+import whyImage from '../img/whyUsPeople.webp'
 import {motion} from "framer-motion";
 
 const WhyUs = () => {

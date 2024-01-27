@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, {useEffect, useState} from 'react';
 
 import Container from "../components/Container";
@@ -20,8 +19,8 @@ import Loader from "../components/Loader";
 
 import tournament from '../img/R.jpeg'
 import grid from '../img/grid.svg'
-import ourExperience from '../img/OurExpirience.jpg'
-import getProposition from '../img/getProposition.jpg'
+import ourExperience from '../img/OurExpirience.webp'
+import getProposition from '../img/getProposition.webp'
 
 import Callback from "../components/Callback";
 import TrustUs from "../components/TrustUs";

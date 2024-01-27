@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/CyberSport.css'
 
-import cybersportImg from '../img/cybersport.png'
+import cybersportImg from '../img/cybersport.webp'
 
 const CyberSport = (props) => {
     return (

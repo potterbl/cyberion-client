@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 import '../styles/Rebrending.css'
 import {useSelector} from "react-redux";
 
-import rebrending1 from '../img/rebrending_1.png'
-import rebrending2 from '../img/rebrending_2.png'
+import rebrending1 from '../img/rebrending_1.webp'
+import rebrending2 from '../img/rebrending_2.webp'
 import Modal from "./Modal";
 
 const Rebrending = () => {

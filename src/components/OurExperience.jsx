@@ -2,12 +2,12 @@ import React from 'react';
 
 import '../styles/OurExperience.css'
 
-import ourTeam1 from '../img/команда2 copy 3.png'
-import ourTeam2 from '../img/команда2 copy 4.png'
-import ourTeam3 from '../img/команда2 copy 5.png'
-import ourTeam4 from '../img/команда2 copy 6.png'
-import ourTeam5 from '../img/команда2 copy 7.png'
-import ourTeam6 from '../img/команда2 copy 8.png'
+import ourTeam1 from '../img/команда2 copy 3.webp'
+import ourTeam2 from '../img/команда2 copy 4.webp'
+import ourTeam3 from '../img/команда2 copy 5.webp'
+import ourTeam4 from '../img/команда2 copy 6.webp'
+import ourTeam5 from '../img/команда2 copy 7.webp'
+import ourTeam6 from '../img/команда2 copy 8.webp'
 
 const OurExperience = () => {
     return (

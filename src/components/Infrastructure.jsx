@@ -2,10 +2,10 @@ import React from 'react';
 
 import '../styles/Infrastructure.css'
 
-import atmosphere from '../img/atmosphere.png'
-import tournament from '../img/tournament.png'
-import service from '../img/service.png'
-import devices from '../img/devices.png'
+import atmosphere from '../img/atmosphere.webp'
+import tournament from '../img/tournament.webp'
+import service from '../img/service.webp'
+import devices from '../img/devices.webp'
 import x from '../img/x.svg'
 
 import {motion} from "framer-motion";
