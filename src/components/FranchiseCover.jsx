@@ -58,7 +58,6 @@ const FranchiseCover = (props) => {
                                 style={{
                                     opacity: coverRef.current ? opacity : 0
                                 }}
-                                loading="lazy"
                                 preload
                                 fetchpriority="high"
                             >
@@ -112,7 +111,6 @@ const FranchiseCover = (props) => {
                                     y: coverRef.current ? y : 0,
                                     x: window.innerWidth < 900 ? '20%' : 0
                                 }}
-                                loading="lazy"
                                 title="cover"
                                 fetchpriority="high"
                                 preload
