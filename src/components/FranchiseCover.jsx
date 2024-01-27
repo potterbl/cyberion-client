@@ -58,6 +58,9 @@ const FranchiseCover = (props) => {
                                 style={{
                                     opacity: coverRef.current ? opacity : 0
                                 }}
+                                loading="lazy"
+                                preload
+                                fetchpriority="high"
                             >
                                 Франшиза<br/>
                                 кіберклубів<br/>
@@ -109,8 +112,10 @@ const FranchiseCover = (props) => {
                                     y: coverRef.current ? y : 0,
                                     x: window.innerWidth < 900 ? '20%' : 0
                                 }}
+                                loading="lazy"
                                 title="cover"
-                                loading="eager"
+                                fetchpriority="high"
+                                preload
                             />
                             <motion.div
                                 style={{
