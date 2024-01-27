@@ -24,7 +24,18 @@ const OurAdvantages = () => {
 
     const bodyRef = useRef(null)
 
-    const sections = Array.from({ length: 10 }, () => useRef(null));
+    const sections = [
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+    ]
 
     const [visibleSections, setVisibleSections] = useState({
         0: false,
