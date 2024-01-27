@@ -24,18 +24,7 @@ const OurAdvantages = () => {
 
     const bodyRef = useRef(null)
 
-    const sections = [
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-    ]
+    const sections = Array.from({ length: 10 }, () => useRef(null));
 
     const [visibleSections, setVisibleSections] = useState({
         0: false,
@@ -74,19 +63,10 @@ const OurAdvantages = () => {
         root: null,
     };
 
+    const areSectionsReady = sections.every((section) => section && section.current);
+
     useEffect(() => {
-        if(
-            sections[0].current &&
-            sections[1].current &&
-            sections[2].current &&
-            sections[3].current &&
-            sections[4].current &&
-            sections[5].current &&
-            sections[6].current &&
-            sections[7].current &&
-            sections[8].current &&
-            sections[9].current
-        ){
+        if(areSectionsReady){
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     callbackFunctions(index)([entry]);
@@ -102,22 +82,11 @@ const OurAdvantages = () => {
             };
         }
         //eslint-disable-next-line
-    }, [sections]);
+    }, [sections, areSectionsReady]);
 
 
     useEffect(() => {
-        if(
-            sections[0].current &&
-            sections[1].current &&
-            sections[2].current &&
-            sections[3].current &&
-            sections[4].current &&
-            sections[5].current &&
-            sections[6].current &&
-            sections[7].current &&
-            sections[8].current &&
-            sections[9].current
-        ) {
+        if(areSectionsReady) {
             let lastVisibleSection = Object.keys(visibleSections).findLast((key) => visibleSections[key]);
 
 
@@ -134,7 +103,7 @@ const OurAdvantages = () => {
             }
         }
         //eslint-disable-next-line
-    }, [visibleSections, sections]);
+    }, [visibleSections, sections, areSectionsReady]);
 
     const circleAnimation = {
         initial: {
