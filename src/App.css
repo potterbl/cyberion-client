@@ -1,6 +1,7 @@
 @font-face {
     font-family: "HelveticaNeueCyr";
     src: url("./fonts/HelveticaNeueCyr-Medium.ttf") format('truetype');
+    font-display: swap;
 }
 
 * {
