@@ -17,7 +17,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
 
-import tournament from '../img/R.jpeg'
+import tournament from '../img/R.webp'
 import grid from '../img/grid.svg'
 import ourExperience from '../img/OurExpirience.webp'
 import getProposition from '../img/getProposition.webp'
