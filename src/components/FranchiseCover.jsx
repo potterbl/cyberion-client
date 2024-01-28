@@ -112,8 +112,6 @@ const FranchiseCover = (props) => {
                                     x: window.innerWidth < 900 ? '20%' : 0
                                 }}
                                 title="cover"
-                                fetchpriority="high"
-                                preload
                             />
                             <motion.div
                                 style={{
