@@ -154,7 +154,7 @@ const StatsAndMap = () => {
                     title: markerData.title,
                     icon: {
                         url: markerData.icon,
-                        scaledSize: new google.maps.Size(30, 30)
+                        scaledSize: new google.maps.Size(40, 40)
                     },
                 });
 
@@ -162,16 +162,14 @@ const StatsAndMap = () => {
                 marker.addListener('click', () => {
                     const content =
                         `<div style="color: black">
-                            <b style="color: black">${markerData.title}</b><br/><br/>
-                            ${markerData.description}
-                            ${
-                                markerData.link &&
-                                    <>
-                                        <br/>
-                                        <a style="color: black; font-weight: bold;" href={markerData.link}>Забронювати місце ➜</a>
-                                    </>
-                            }
-                            </div>`;
+        <b style="color: black">${markerData.title}</b><br/><br/>
+        ${markerData.description}
+        ${
+                            markerData.link ?
+                                `<br/><br/><a style="color: black; font-weight: bold" href="${markerData.link}">Забронювати місце ➜</a>` :
+                                ''
+                        }
+    </div>`;
                     infoWindow.setContent(content);
                     infoWindow.open(map, marker);
                 });
