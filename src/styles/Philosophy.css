@@ -90,6 +90,7 @@
     aspect-ratio: 2/1;
 }
 .slide-custom{
+    border-radius: 50px;
     width: 100%;
     height: 100%;
     background-color: #FFF;
