@@ -74,10 +74,19 @@ const OurAdvantages = () => {
         root: null,
     };
 
-    const areSectionsReady = sections.every((section) => section && section.current);
-
     useEffect(() => {
-        if(areSectionsReady){
+        if(
+            sections[0].current &&
+            sections[1].current &&
+            sections[2].current &&
+            sections[3].current &&
+            sections[4].current &&
+            sections[5].current &&
+            sections[6].current &&
+            sections[7].current &&
+            sections[8].current &&
+            sections[9].current
+        ){
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     callbackFunctions(index)([entry]);
@@ -93,11 +102,22 @@ const OurAdvantages = () => {
             };
         }
         //eslint-disable-next-line
-    }, [sections, areSectionsReady]);
+    }, [sections]);
 
 
     useEffect(() => {
-        if(areSectionsReady) {
+        if(
+            sections[0].current &&
+            sections[1].current &&
+            sections[2].current &&
+            sections[3].current &&
+            sections[4].current &&
+            sections[5].current &&
+            sections[6].current &&
+            sections[7].current &&
+            sections[8].current &&
+            sections[9].current
+        ) {
             let lastVisibleSection = Object.keys(visibleSections).findLast((key) => visibleSections[key]);
 
 
@@ -114,7 +134,7 @@ const OurAdvantages = () => {
             }
         }
         //eslint-disable-next-line
-    }, [visibleSections, sections, areSectionsReady]);
+    }, [visibleSections, sections]);
 
     const circleAnimation = {
         initial: {
@@ -181,7 +201,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[0]}
                         >
-                            <h3 className="body-text-bigger uppercase">підбір локації</h3>
+                            <h4 className="body-text-bigger uppercase">підбір локації</h4>
                             <p className="body-text">Допоможемо з підбором та аналізом приміщення у Вашому місті, надамо
                                 технічні рекомендації та чек-лист пошуку приміщення</p>
                         </motion.div>
@@ -207,7 +227,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[1]}
                         >
-                            <h3 className="body-text-bigger uppercase">фірмовий стиль</h3>
+                            <h4 className="body-text-bigger uppercase">фірмовий стиль</h4>
                             <p className="body-text">Надамо доступ до нашого брендбуку та створимо унікальний дизайн
                                 проект
                                 вашого приміщення</p>
@@ -234,7 +254,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[2]}
                         >
-                            <h3 className="body-text-bigger uppercase">ПЕРЕВІРЕНІ ПІДРЯДНИКИ ТА ПОСТАЧАЛЬНИКИ</h3>
+                            <h4 className="body-text-bigger uppercase">ПЕРЕВІРЕНІ ПІДРЯДНИКИ ТА ПОСТАЧАЛЬНИКИ</h4>
                             <p className="body-text">Надамо базу підрядників та постачальників, які підійдуть саме для
                                 вас.
                                 Сформуємо специфікацію для вашого клубу</p>
@@ -261,7 +281,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[3]}
                         >
-                            <h3 className="body-text-bigger uppercase">ПЕРСОНАЛЬНИЙ МЕНЕДЖЕР</h3>
+                            <h4 className="body-text-bigger uppercase">ПЕРСОНАЛЬНИЙ МЕНЕДЖЕР</h4>
                             <p className="body-text">Персональний менеджер та проектна команда для кожного партнера на
                                 кожному етапі будівництва</p>
                         </motion.div>
@@ -287,7 +307,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[4]}
                         >
-                            <h3 className="body-text-bigger uppercase">БАЗА ЗНАНЬ</h3>
+                            <h4 className="body-text-bigger uppercase">БАЗА ЗНАНЬ</h4>
                             <p className="body-text">Передамо Вам наш досвід та знання, позбавимо вас від необхідності
                                 повторювати наш шлях від новачків до досвідчених власників кіберклубів</p>
                         </motion.div>
@@ -313,7 +333,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[5]}
                         >
-                            <h3 className="body-text-bigger uppercase">СТАНДАРТИ ТА РЕГЛАМЕНТИ</h3>
+                            <h4 className="body-text-bigger uppercase">СТАНДАРТИ ТА РЕГЛАМЕНТИ</h4>
                             <p className="body-text">Усі необхідні правила та регламенти по роботі клубу є ключевим
                                 елементом
                                 успішної операційної діяльності і всі вони вже сформовані для Вас</p>
@@ -340,7 +360,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[6]}
                         >
-                            <h3 className="body-text-bigger uppercase">ПІДТРИМКА 24/7</h3>
+                            <h4 className="body-text-bigger uppercase">ПІДТРИМКА 24/7</h4>
                             <p className="body-text">Відділ IT, що займається технічною підтримкою 24/7</p>
                         </motion.div>
                     </div>
@@ -365,7 +385,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[7]}
                         >
-                            <h3 className="body-text-bigger uppercase">ПІДГОТОВКА</h3>
+                            <h4 className="body-text-bigger uppercase">ПІДГОТОВКА</h4>
                             <p className="body-text">Школа франчайзі, навчання та атестація персоналу</p>
                         </motion.div>
                     </div>
@@ -390,7 +410,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[8]}
                         >
-                            <h3 className="body-text-bigger uppercase">КОНТРОЛЬ ЯКОСТІ</h3>
+                            <h4 className="body-text-bigger uppercase">КОНТРОЛЬ ЯКОСТІ</h4>
                             <p className="body-text">Система контролю якості та постійне оцінювання успішності клубу</p>
                         </motion.div>
                     </div>
@@ -415,7 +435,7 @@ const OurAdvantages = () => {
                             animate="visible"
                             custom={visibleSections[9]}
                         >
-                            <h3 className="body-text-bigger uppercase">КЛУБНА ЛІГА</h3>
+                            <h4 className="body-text-bigger uppercase">КЛУБНА ЛІГА</h4>
                             <p className="body-text">Власна ліга, яка доступна тільки клубам-партнерам CYBERION.
                                 Актуальні
                                 дисципліни та формати, великі призові - потужний інструмент для залучення

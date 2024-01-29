@@ -7,8 +7,8 @@ import pc30 from '../img/cyber-70.webp'
 import pc40 from '../img/cyber-116.webp'
 
 import model30 from '../img/pc20.svg'
-import model40 from '../img/pc30.svg'
-import model60 from '../img/pc40.svg'
+import model40 from '../img/pc30.webp'
+import model60 from '../img/pc40.webp'
 
 import {motion} from "framer-motion";
 import Btn from "./Btn";
