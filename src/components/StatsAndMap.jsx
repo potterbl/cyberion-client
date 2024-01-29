@@ -215,7 +215,7 @@ const StatsAndMap = () => {
 
     return (
         <div className="statsAndMap">
-            <div className="stats" ref={ref}>
+            <div className="stats uppercase" ref={ref}>
                 <div className="stats_top">
                     <div className="stats_item">
                         <h2 className="stats_top_heading">Відкрито<br/>
