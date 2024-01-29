@@ -152,10 +152,16 @@
     .slide-custom_wrapper{
         border-radius: 30px;
     }
+    .slide-custom{
+        border-radius: 30px;
+    }
 }
 
 @media (max-width: 480px) {
     .slide-custom_wrapper{
+        border-radius: 20px;
+    }
+    .slide-custom{
         border-radius: 20px;
     }
 }
