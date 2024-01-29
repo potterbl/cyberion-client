@@ -1,11 +1,9 @@
 import React, {useEffect, useRef, useState} from 'react';
 import '../styles/Container.css'
-import {useDispatch, useSelector} from "react-redux";
-import {actions} from "../store/slices/container.slice";
+import {useSelector} from "react-redux";
 import {useScroll, useTransform, motion} from "framer-motion";
 
 const Container = ({children, custom, type}) => {
-    const dispatch = useDispatch()
     const {offsetLeft} = useSelector(state => state.container)
     const containerRef = useRef(null)
 
@@ -13,31 +11,6 @@ const Container = ({children, custom, type}) => {
     const [offsetBottom, setOffsetBottom] = useState(0)
 
     const {scrollY} = useScroll()
-
-    useEffect(() => {
-        const updateSectionLeft = () => {
-            if (window && window.innerWidth <= 550) {
-                dispatch(actions.setOffsetLeft(20))
-            } else if (window && window.innerWidth <= 768) {
-                dispatch(actions.setOffsetLeft(80))
-            } else if (window && window.innerWidth <= 1024) {
-                dispatch(actions.setOffsetLeft(20))
-            } else if (window && window.innerWidth <= 1200) {
-                dispatch(actions.setOffsetLeft(72))
-            } else {
-                dispatch(actions.setOffsetLeft((window.innerWidth - 1200) / 2))
-            }
-        };
-
-        updateSectionLeft();
-
-        window.addEventListener('resize', updateSectionLeft)
-
-        return () => {
-            window.removeEventListener('resize', updateSectionLeft)
-        }
-        //eslint-disable-next-line
-    }, []);
 
     const opacity1 = useTransform(
         scrollY,

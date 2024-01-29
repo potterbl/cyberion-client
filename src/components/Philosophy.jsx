@@ -11,7 +11,7 @@ import img1 from '../img/cyber-32.webp'
 import img2 from '../img/cyber-72.webp'
 import img3 from '../img/cyber-60.webp'
 
-const Philosophy = () => {
+const Philosophy = (props) => {
     const philosophyRef = useRef(null)
     const swiperRef = useRef(null)
 
@@ -80,12 +80,14 @@ const Philosophy = () => {
         {img: img3, text: 'Комфортні TV зони з PS5'},
     ]
 
+    console.log(props.offsetLeft * 2 / window.innerWidth)
+
     return (
         <div className={"philosophy"}>
-            <div className="philosophy-left">
+            <div className="philosophy-left" style={{width: window.innerWidth - (props.offsetLeft * 2)}}>
                 <div className="philosophy-left_head">
                     <h2 className="heading uppercase">
-                        наша<br/>
+                        наша
                         філософія:<br/>
 
                         <span className={"span-yellow"}>
@@ -102,12 +104,14 @@ const Philosophy = () => {
                     </p>
                 </div>
             </div>
-            <div className="philosophy-right">
+            <div className="philosophy-right" style={{left: -props.offsetLeft}}>
                 <div className="philosophy-right__wrapper" ref={philosophyRef}>
 
                     <Swiper
-                        slidesPerView={1}
+                        slidesPerView={1 + ((props.offsetLeft * 2 + 20) / window.innerWidth)}
                         onSlideChange={handleSlideChange}
+                        spaceBetween={20}
+                        centeredSlides={true}
                         modules={[A11y, Scrollbar, Navigation, Pagination, Autoplay]}
                         draggable={false}
                         loop={true}
@@ -126,6 +130,7 @@ const Philosophy = () => {
                         }}
                         speed={2000}
                     >
+
                         <motion.div
                             className="philosophy-right_buttons-wrapper"
                             style={{
@@ -145,6 +150,7 @@ const Philosophy = () => {
                         {
                             slides.map((slide, index) => (
                                 <SwiperSlide>
+                                    <div className="slide-custom_wrapper">
                                     <div
                                         className={`slide-custom ${index === currentIndex && 'slide-custom_active'}`}
                                         style={{
@@ -158,6 +164,8 @@ const Philosophy = () => {
                                         >
                                             {slide.text}
                                         </motion.p>
+                                    </div>
+
                                     </div>
                                 </SwiperSlide>
                             ))

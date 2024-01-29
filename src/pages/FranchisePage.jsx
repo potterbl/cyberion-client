@@ -31,34 +31,74 @@ import ArrowToTop from "../components/ArrowToTop";
 import VideoCarousel from "../components/VideoCarousel";
 import NewFormat from "../components/NewFormat";
 import StatsAndMap from "../components/StatsAndMap";
+import {actions} from "../store/slices/container.slice";
+import {useDispatch, useSelector} from "react-redux";
 
 const FranchisePage = () => {
-    const [isLoaded, setIsLoaded] = useState(false)
-    const [isReady, setIsReady] = useState(false)
+    const dispatch = useDispatch()
+    const {offsetLeft} = useSelector(state => state.container)
 
     useEffect(() => {
+        const handleResize = () => {
+            const newOffset = window && window.innerWidth <= 550 ? 20
+                : window && window.innerWidth <= 768 ? 80
+                    : window && window.innerWidth <= 1024 ? 20
+                        : window && window.innerWidth <= 1200 ? 72
+                            : (window.innerWidth - 1200) / 2;
 
-        window.scrollTo({
-            top: 0,
-        })
+            if (offsetLeft !== newOffset) {
+                dispatch(actions.setOffsetLeft(newOffset));
+            }
 
-        const body = document.querySelector('body')
-        const html = document.querySelector('html')
+        };
 
-        setTimeout(() => {
-            setIsReady(true)
-        }, 3000)
+        handleResize()
 
+        window.addEventListener('resize', handleResize)
 
-        body.style = 'overflow: hidden;';
-        html.style = 'overflow: hidden;';
-
-        if (document.readyState && isReady) {
-            body.style = ''
-            html.style = ''
-            setIsLoaded(true)
+        return () => {
+            window.removeEventListener('resize', handleResize)
         }
-    }, [isReady]);
+        // eslint-disable-next-line
+    }, [offsetLeft]);
+
+    const [isLoaded, setIsLoaded] = useState(false)
+
+    useEffect(() => {
+        let isReady = false;
+
+        const body = document.querySelector('body');
+        const html = document.querySelector('html');
+
+        body.style.overflow = 'hidden';
+        html.style.overflow = 'hidden';
+
+
+        const handleReady = () => {
+            if (isReady) {
+                body.style.overflow = "";
+                html.style.overflow = "";
+
+                window.scrollTo({
+                    top: 0,
+                });
+
+                setIsLoaded(true);
+            }
+        };
+
+        const readyTimeout = setTimeout(() => {
+            isReady = true;
+            handleReady();
+        }, 3000);
+
+        document.addEventListener('readystatechange', handleReady);
+
+        return () => {
+            document.removeEventListener('readystatechange', handleReady);
+            clearTimeout(readyTimeout);
+        };
+    }, []);
 
 
     return (
@@ -71,11 +111,11 @@ const FranchisePage = () => {
             <ArrowToTop/>
             <Callback/>
             <Container custom={{backgroundImage: tournament, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"end"}>
-                <FranchiseCover isLoaded={isReady}/>
+                <FranchiseCover isLoaded={isLoaded}/>
             </Container>
             <Container>
                     <VideoCarousel/>
-                <Philosophy/>
+                <Philosophy offsetLeft={offsetLeft}/>
             </Container>
             <Container custom={{backgroundImage: grid, backgroundColor: 'rgba(14, 14, 14, 0.6)'}} type={"center"}>
                 <WhyUs/>
