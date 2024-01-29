@@ -3,8 +3,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import '../styles/StatsAndMap.css'
 import {Loader} from "@googlemaps/js-api-loader";
 
-import marker from '../img/marker.svg'
-import markerDisabled from '../img/marker_disabled.svg'
+import marker from '../img/on_02.svg'
+import markerDisabled from '../img/off_02.svg'
 import {useInView} from "framer-motion";
 
 const center = {
@@ -18,35 +18,40 @@ const markers = [
         lng: 30.502216067808153,
         title: "CYBERION Оbservatorna",
         icon: marker,
-        description: "вулиця Обсерваторна, 12A, Київ, 02000"
+        description: "вулиця Обсерваторна, 12A, Київ, 02000",
+        link: "https://t.me/cyberionobsv"
     },
     {
         lat: 50.38666303055694,
         lng: 30.46787892883679,
         title: "CYBERION Likohrad",
         icon: marker,
-        description: "вулиця Юлії Здановської, 46/1, Київ, 02000"
+        description: "вулиця Юлії Здановської, 46/1, Київ, 02000",
+        link: "https://t.me/cyberion_likohrad"
     },
     {
         lat: 50.40604586454374,
         lng: 30.609171484324463,
         title: "CYBERION RiverMall",
         icon: marker,
-        description: "Дніпровська набережна, 12, Київ, 02081"
+        description: "Дніпровська набережна, 12, Київ, 02081",
+        link: "https://cyberionrivermall.booking.enes.tech/authentication"
     },
     {
         lat: 50.45787860784336,
         lng: 30.612743991269685,
         title: "CYBERION Darnytsia",
         icon: marker,
-        description: "вулиця Андрія Малишка, 5, Київ, 02000"
+        description: "вулиця Андрія Малишка, 5, Київ, 02000",
+        link: "https://t.me/cyberion_darnytsia"
     },
     {
         lat: 50.45042726829859,
         lng: 30.46836280514628,
         title: "CYBERION Polytech",
         icon: marker,
-        description: "Берестейський проспект, 31, Київ, 02000"
+        description: "Берестейський проспект, 31, Київ, 02000",
+        link: "https://t.me/cyberion_polytech"
     },
 
 
@@ -159,7 +164,13 @@ const StatsAndMap = () => {
                         `<div style="color: black">
                             <b style="color: black">${markerData.title}</b><br/><br/>
                             ${markerData.description}
-                            
+                            ${
+                                markerData.link &&
+                                    <>
+                                        <br/>
+                                        <a style="color: black; font-weight: bold;" href={markerData.link}>Забронювати місце ➜</a>
+                                    </>
+                            }
                             </div>`;
                     infoWindow.setContent(content);
                     infoWindow.open(map, marker);
