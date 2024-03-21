@@ -24,40 +24,40 @@ const Footer = () => {
         splitedCookies[3] = ""
     }
 
-    const handleSend = async () => {
-        if(email === ''){
-            return
-        }
-
-        await axios
-            .post('https://great-wasp-engaged.ngrok-free.app/mail', {
-                name: "",
-                phone: "",
-                email: email,
-                link: window.location.href,
-                form: "Footer залишити заявку",
-                subject: "Footer залишити заявку",
-                time: "",
-                campaign: splitedCookies[1],
-                term: splitedCookies[3],
-                source: splitedCookies[0],
-                content: splitedCookies[2],
-            })
-            .then( () => {
-                setEmail('')
-                swal({
-                    icon: "success",
-                    title: "Ваша заявка була успішно надіслана!"
-                })
-            })
-            .catch(err => {
-                swal({
-                    icon: "error",
-                    title: "Сталася помилка, спробуйте ще раз або пізніше!"
-                })
-                console.log(err)
-            })
-    }
+    // const handleSend = async () => {
+    //     if(email === ''){
+    //         return
+    //     }
+    //
+    //     await axios
+    //         .post('https://great-wasp-engaged.ngrok-free.app/mail', {
+    //             name: "",
+    //             phone: "",
+    //             email: email,
+    //             link: window.location.href,
+    //             form: "Footer залишити заявку",
+    //             subject: "Footer залишити заявку",
+    //             time: "",
+    //             campaign: splitedCookies[1],
+    //             term: splitedCookies[3],
+    //             source: splitedCookies[0],
+    //             content: splitedCookies[2],
+    //         })
+    //         .then( () => {
+    //             setEmail('')
+    //             swal({
+    //                 icon: "success",
+    //                 title: "Ваша заявка була успішно надіслана!"
+    //             })
+    //         })
+    //         .catch(err => {
+    //             swal({
+    //                 icon: "error",
+    //                 title: "Сталася помилка, спробуйте ще раз або пізніше!"
+    //             })
+    //             console.log(err)
+    //         })
+    // }
 
     return (
         <footer className="footer">
