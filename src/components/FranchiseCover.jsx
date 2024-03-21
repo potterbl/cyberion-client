@@ -95,9 +95,9 @@ const FranchiseCover = (props) => {
                                     Відкрити власний клуб
                                 </Btn>
                             </div>
-                            <Btn type={'second'} link={'https://t.me/Artem_Natanzon'}>
-                                Задати питання у телеграм
-                            </Btn>
+                            {/*<Btn type={'second'} link={'https://t.me/Artem_Natanzon'}>*/}
+                            {/*    Задати питання у телеграм*/}
+                            {/*</Btn>*/}
                         </div>
                     </div>
                     {

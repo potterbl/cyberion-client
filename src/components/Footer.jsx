@@ -125,24 +125,24 @@ const Footer = () => {
                         </p>
                     </a>
                 </div>
-                <div className="footer-col">
-                    <p className="body-text footer-header">
-                        Залишай заявку
-                    </p>
-                    <div className="footer-col_cols">
-                        <input
-                            type="text"
-                            className="footer-input"
-                            placeholder="Мій EMAIL"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <button
-                            className="footer-button"
-                            onClick={handleSend}
-                        />
-                    </div>
-                </div>
+                {/*<div className="footer-col">*/}
+                {/*    <p className="body-text footer-header">*/}
+                {/*        Залишай заявку*/}
+                {/*    </p>*/}
+                {/*    <div className="footer-col_cols">*/}
+                {/*        <input*/}
+                {/*            type="text"*/}
+                {/*            className="footer-input"*/}
+                {/*            placeholder="Мій EMAIL"*/}
+                {/*            value={email}*/}
+                {/*            onChange={(e) => setEmail(e.target.value)}*/}
+                {/*        />*/}
+                {/*        <button*/}
+                {/*            className="footer-button"*/}
+                {/*            onClick={handleSend}*/}
+                {/*        />*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
             <div className="footer-footer">
                 <a href="https://cyberion.com.ua" title="кіберіон">
