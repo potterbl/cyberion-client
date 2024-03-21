@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import '../styles/Footer.css'
 import {useSelector} from "react-redux";
-import axios from "axios";
-import swal from "sweetalert";
+// import axios from "axios";
+// import swal from "sweetalert";
 import Cookies from "js-cookie";
 
 const Footer = () => {
     const {offsetLeft} = useSelector(state => state.container)
 
-    const [email, setEmail] = useState('')
+    // const [email, setEmail] = useState('')
 
     const cookies = Cookies.get('_aaa_utmz')
     let splitedCookies;
